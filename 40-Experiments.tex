@@ -1,0 +1,53 @@
+\chapter{Desenvolvimento do tema}
+\label{cap:experiments}
+
+Este capítulo é opcional e, a existir, é aqui que deve descrever como é que o seu projecto evoluiu.
+
+O projeto é constituido em quatro partes:
+
+\begin{itemize}
+    \item \textit{Port Controller} - daemon em C\#;
+    \item API e Interface Web;
+    \item Sitema de notificações;
+    \item Ambiente de teste do projeto;
+\end{itemize}
+
+\section{Port Controller}
+
+\subsection{Escolha da tecnologia}
+
+Uma vez que a plataforma forge funciona no sistema \textit{Alpine Linux} seria
+necessário escolher ferramentas suportadas por esta distribuição.
+
+No caso deste componente do projeto foi escolhida a linguagem C\# com o 
+\textit{framework} .NET Core versão 7.0.
+
+
+\subsection{Funcionalidades}
+
+O \textit{Port Controller} tem como principal função estar à escuta de pedidos do
+administrador e executar estes pedidos no \textit{container} selecionado. Os 
+pedidos são recebidos na componente da \textit{unix socket} em formato
+\textit{JSON}.
+
+O \textit{Port Controller} é também capaz de interagir com \textit{containers}
+do tipo LXD, e Incus e executar comandos dentro destes para interagir com a
+\textit{FireWall} Iptables ou Nftables.
+
+\subsection{Estrutura do código}
+
+
+\subsection{Funcionamento do código}
+
+\section{API e Interface Web}
+
+\subsection{Estrutura da API}
+
+\subsection{Formato do JSON}
+
+
+\section*{Sumário}
+
+Ver o \nameref{sec:intro_summary} página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
+
+

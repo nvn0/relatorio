@@ -1,0 +1,10 @@
+
+%colocar aqui variáveis que serão utilizadas no texto:
+\newcommand\kbps{\text{\textit{k}bit/s}}
+
+\newenvironment{rotatepage}%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}

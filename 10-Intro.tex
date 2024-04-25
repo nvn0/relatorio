@@ -1,0 +1,73 @@
+\chapter{Introdução}
+\label{chap:introduction}
+
+Este relatório pretende demonstrar o trabalho realizado para este projeto. O mesmo consiste num mecanismo de controlo de portas TCP/UDP \cite{rfc9293}, \cite{rfc768} dos \textit{containers} da plataforma Forge do IPMAIA.
+
+Pequeno texto introdutório. Ao longo do documento, não se esqueça de usar citações \cite{ismai_ead} para que 1) reforce a veracidade dos seus conteúdos e 2) reforce a legitimidade da originalidade do seu trabalho, demonstrando que, apesar de ter consultado outras fontes, não está simplesmente a copiar de forma desonrosa o conteúdo de terceiros e a passá-lo como seu.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=9cm]{figs/logo_ipmaia_small.png}
+\caption{Exemplo de inserção de uma imagem.}
+\source{\cite{ismai_ead}}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+\section{Objectivos}
+\label{sec:object}
+
+Aqui deve colocar os objectivos. O que se pretende com este trabalho?
+
+Outra citação de exemplo: \cite{rfc4512}
+
+Com este projeto pretende-se, criar uma extensão à plataforma forge do IPMAIA, com o principal objetivo de facilitar a gestão de portas TCP/UDP dos \textit{containers} que são disponibilizados.
+
+Para a concretização deste trabalho são necessários os seguintes objetivos:\\
+
+\begin{itemize}
+\item \textit{Daemon} que irá interagir com as \textit{firewall's} dos \textit{containers};
+\item Interface \textit{Web} e API para interagir com o Daemon;
+\item Sistema de notificações de eventos para Microsoft Teams e Discord.
+\end{itemize}
+
+\section{Metodologia}
+\label{sec:intro_method}
+Que metodologia pretende aplicar? Que métodos científicos e que métricas?
+
+\section{Recursos tecnológicos}
+\label{sec:intro_resources}
+
+
+No que diz respeito a recursos tecnológicos, optou-se por usar as seguintes opções:
+
+\begin{itemize}
+\item Linguagem C\# com o \textit{framework .NET Core} 7.0 para a criacção do \textit{daemon} que gere
+as portas dos \textit{containers} e \textit{unix socket de servidor};
+\item Linguagem Python versão 3.11 a \textit{unix socket} cliente;
+\item Linguagem Python versão 3.11 com a biblioteca Flask para a API e sistemas de notificações;
+\item Linguagem Python versão 3.11 com a biblioteca Flask interface \textit{Web}, juntamente com HTML, CSS, Javascipt e Bootstrap.
+\item Máquina virtual com alpine linux 3.19 e WSL com ubuntu 22.04 para testar o projeto.
+\end{itemize}
+
+
+\section{Cronograma}
+\label{sec:intro_chronos}
+
+Auto-explicativo e facultativo para projecto, mas altamente recomendado.
+
+
+\section{Organização do relatório}
+\label{sec:intro_struct}
+
+Descreva aqui a organização do relatório. Como está estruturado o seu documento?
+
+\section*{Sumário}
+\label{sec:intro_summary}
+Se considerar relevante, faça um pequeno resumo do capítulo. É uma secção opcional que pode ser eliminada, mas altamente recomendada.
+\\
+\\
+%Abaixo deve usar a instrução {\textbackslash}cite\{\} para colocar uma relação das citações utilizadas no texto deste capítulo. Aqui liste apenas as citações, pela ordem em que aparecem no texto -- não coloque mais texto. Exemplo:
+\\
+\\
+%\textbf{Referências relevantes:}  \cite{ismai_ead}, \cite{rfc4512}.

@@ -1,0 +1,212 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{rfc9293}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=39d34e705690fe1b06091abb5a7faf5c}{%
+           family={W.\bibnamedelimi Eddy},
+           familyi={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Ed.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{fullhash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{fullhashraw}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{bibnamehash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{authorbibnamehash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{authornamehash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{authorfullhash}{39d34e705690fe1b06091abb5a7faf5c}
+      \strng{authorfullhashraw}{39d34e705690fe1b06091abb5a7faf5c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 9293}
+      \field{month}{8}
+      \field{number}{9293}
+      \field{series}{Request for Comments}
+      \field{title}{{Transmission Control Protocol (TCP)}}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.17487/RFC9293
+      \endverb
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc9293.html
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc9293.html
+      \endverb
+    \endentry
+    \entry{rfc768}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=22c8db2c59b26571094b7dab5cefad0e}{%
+           family={Postel},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{fullhash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{fullhashraw}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{bibnamehash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{authorbibnamehash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{authornamehash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{authorfullhash}{22c8db2c59b26571094b7dab5cefad0e}
+      \strng{authorfullhashraw}{22c8db2c59b26571094b7dab5cefad0e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 768}
+      \field{month}{8}
+      \field{number}{768}
+      \field{series}{Request for Comments}
+      \field{title}{{ User Datagram Protocol}}
+      \field{year}{1980}
+      \verb{doi}
+      \verb 10.17487/RFC768
+      \endverb
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc768.html
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc768.html
+      \endverb
+    \endentry
+    \entry{ismai_ead}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=58dc331e84831c457156ba8a1188d93d}{%
+           family={ISMAI},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{fullhash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{fullhashraw}{58dc331e84831c457156ba8a1188d93d}
+      \strng{bibnamehash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{authorbibnamehash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{authornamehash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{authorfullhash}{58dc331e84831c457156ba8a1188d93d}
+      \strng{authorfullhashraw}{58dc331e84831c457156ba8a1188d93d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{EAD - Ensino-Aprendizagem Digital}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2021}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ismai.pt/pt/ensino/ead
+      \endverb
+      \verb{url}
+      \verb https://www.ismai.pt/pt/ensino/ead
+      \endverb
+    \endentry
+    \entry{rfc4512}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e4cbbf7112d4d9e59ec3420e5261c021}{%
+           family={Zeilenga},
+           familyi={Z\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{fullhash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{fullhashraw}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{bibnamehash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{authorbibnamehash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{authornamehash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{authorfullhash}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \strng{authorfullhashraw}{e4cbbf7112d4d9e59ec3420e5261c021}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 4512}
+      \field{month}{6}
+      \field{number}{4512}
+      \field{series}{Request for Comments}
+      \field{title}{{Lightweight Directory Access Protocol (LDAP): Directory Information Models}}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.17487/RFC4512
+      \endverb
+      \verb{urlraw}
+      \verb https://rfc-editor.org/rfc/rfc4512.html
+      \endverb
+      \verb{url}
+      \verb https://rfc-editor.org/rfc/rfc4512.html
+      \endverb
+    \endentry
+    \entry{rfc4253}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=32fb26e7a1c012e7cf9d415edb983688}{%
+           family={Ylonen},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{fullhash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{fullhashraw}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{bibnamehash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{authorbibnamehash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{authornamehash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{authorfullhash}{32fb26e7a1c012e7cf9d415edb983688}
+      \strng{authorfullhashraw}{32fb26e7a1c012e7cf9d415edb983688}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 4253}
+      \field{month}{1}
+      \field{number}{4253}
+      \field{series}{Request for Comments}
+      \field{title}{{The Secure Shell (SSH) Transport Layer Protocol}}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.17487/RFC4253
+      \endverb
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc4253
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc4253
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

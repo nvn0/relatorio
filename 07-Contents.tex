@@ -1,0 +1,15 @@
+%insert index
+\tableofcontents
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename} % PT: lista de tabelas. Não modificar
+\listoftables
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}	% PT: lista de figuras. Não modificar
+\listoffigures
+
+\phantomsection
+\renewcommand{\lstlistlistingname}{Lista de excertos de código e terminal}
+\addcontentsline{toc}{chapter}{\lstlistlistingname}	% The List of Figures (Do not modify)
+\lstlistoflistings

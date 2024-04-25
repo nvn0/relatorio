@@ -1,0 +1,1693 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.24)  25 APR 2024 13:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/delta/Desktop/relatorio/main.tex
+(/home/delta/Desktop/relatorio/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+(/home/delta/.miktex/texmfs/install/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/home/delta/.miktex/texmfs/install/tex/latex/base/size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@chapter=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/home/delta/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/home/delta/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2024/03/29 v24.3 The Babel package
+\babel@savecnt=\count197
+\U@D=\dimen141
+\l@unhyphenated=\language1
+ (/home/delta/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count198
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/delta/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/home/delta/.miktex/texmfs/install/tex/latex/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+) (/home/delta/.miktex/texmfs/install/tex/latex/babel-portuges/portuges.ldf
+Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 53.
+
+Package babel Info: Making " an active character on input line 143.
+)) (/home/delta/.miktex/texmfs/install/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (/home/delta/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/home/delta/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/home/delta/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen142
+)) (/home/delta/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+) (/home/delta/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count199
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count266
+\leftroot@=\count267
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count268
+\DOTSCASE@=\count269
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count270
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count271
+\dotsspace@=\muskip16
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks20
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks21
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks22
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/home/delta/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+) (/home/delta/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/home/delta/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (/home/delta/.miktex/texmfs/install/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+ (/home/delta/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box53
+\extrarowheight=\dimen154
+\NC@list=\toks25
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen155
+\TX@old@table=\dimen156
+\TX@old@col=\dimen157
+\TX@target=\dimen158
+\TX@delta=\dimen159
+\TX@cols=\count277
+\TX@ftn=\toks26
+) (/home/delta/.miktex/texmfs/install/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+ (/home/delta/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/home/delta/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex (/home/delta/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
+)
+\XKV@depth=\count278
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/home/delta/.miktex/texmfs/install/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/home/delta/.miktex/texmfs/install/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/home/delta/.miktex/texmfs/install/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box55
+)
+\tc@llx=\dimen160
+\tc@lly=\dimen161
+\tc@urx=\dimen162
+\tc@ury=\dimen163
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/home/delta/.miktex/texmfs/install/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen164
+\adjbox@Height=\dimen165
+\adjbox@Depth=\dimen166
+\adjbox@Totalheight=\dimen167
+\adjbox@pwidth=\dimen168
+\adjbox@pheight=\dimen169
+\adjbox@pdepth=\dimen170
+\adjbox@ptotalheight=\dimen171
+ (/home/delta/.miktex/texmfs/install/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count279
+) (/home/delta/.miktex/texmfs/install/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box56
+\sift@deathcycles=\count280
+\@vwid@loff=\dimen172
+\@vwid@roff=\dimen173
+)) (/home/delta/.miktex/texmfs/install/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+ (/home/delta/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count281
+)
+\csq@reset=\count282
+\csq@gtype=\count283
+\csq@glevel=\count284
+\csq@qlevel=\count285
+\csq@maxlvl=\count286
+\csq@tshold=\count287
+\csq@ltx@everypar=\toks29
+ (/home/delta/.miktex/texmfs/install/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/home/delta/.miktex/texmfs/install/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/home/delta/.miktex/texmfs/install/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/home/delta/.miktex/texmfs/install/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
+ (/home/delta/.miktex/texmfs/install/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ (/home/delta/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)) (/home/delta/.miktex/texmfs/install/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/home/delta/.miktex/texmfs/install/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count288
+\mult@box=\box57
+\multicol@leftmargin=\dimen174
+\c@unbalance=\count289
+\c@collectmore=\count290
+\doublecol@number=\count291
+\multicoltolerance=\count292
+\multicolpretolerance=\count293
+\full@width=\dimen175
+\page@free=\dimen176
+\premulticols=\dimen177
+\postmulticols=\dimen178
+\multicolsep=\skip55
+\multicolbaselineskip=\skip56
+\partial@page=\box58
+\last@line=\box59
+\mc@boxedresult=\box60
+\maxbalancingoverflow=\dimen179
+\mult@rightbox=\box61
+\mult@grightbox=\box62
+\mult@firstbox=\box63
+\mult@gfirstbox=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\c@minrows=\count294
+\c@columnbadness=\count295
+\c@finalcolumnbadness=\count296
+\last@try=\dimen180
+\multicolovershoot=\dimen181
+\multicolundershoot=\dimen182
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count297
+)) (/home/delta/.miktex/texmfs/install/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip57
+\multirow@cntb=\count298
+\multirow@dima=\skip58
+\bigstrutjot=\dimen183
+) (/home/delta/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/home/delta/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/home/delta/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count299
+\Gm@cntv=\count300
+\c@Gm@tempcnt=\count301
+\Gm@bindingoffset=\dimen184
+\Gm@wd@mp=\dimen185
+\Gm@odd@mp=\dimen186
+\Gm@even@mp=\dimen187
+\Gm@layoutwidth=\dimen188
+\Gm@layoutheight=\dimen189
+\Gm@layouthoffset=\dimen190
+\Gm@layoutvoffset=\dimen191
+\Gm@dimlist=\toks30
+ (/home/delta/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/delta/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+ (/home/delta/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/home/delta/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/home/delta/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/home/delta/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/home/delta/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/home/delta/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/home/delta/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/home/delta/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/home/delta/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/home/delta/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count302
+)
+\@linkdim=\dimen192
+\Hy@linkcounter=\count303
+\Hy@pagecounter=\count304
+ (/home/delta/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/home/delta/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count305
+ (/home/delta/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count306
+ (/home/delta/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen193
+ (/home/delta/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/home/delta/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count307
+\Field@Width=\dimen194
+\Fld@charsize=\dimen195
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+ (/home/delta/.miktex/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count308
+\c@Item=\count309
+\c@Hfootnote=\count310
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/home/delta/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+ (/home/delta/.miktex/texmfs/install/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
+ (/home/delta/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/home/delta/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip59
+) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2024/04/03 v4.54 (NLCT)
+ (/home/delta/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/home/delta/.miktex/texmfs/install/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+\@glsmfirst=\toks31
+\@glsmrest=\toks32
+) (/home/delta/.miktex/texmfs/install/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (/home/delta/.miktex/texmfs/install/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+ (/home/delta/.miktex/texmfs/install/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count313
+) (/home/delta/.miktex/texmfs/install/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+ (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+ `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/home/delta/.miktex/texmfs/install/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count314
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count315
+\FP@xia=\count316
+\FP@xib=\count317
+\FP@xfa=\count318
+\FP@xfb=\count319
+\FP@rega=\count320
+\FP@regb=\count321
+\FP@regs=\count322
+\FP@times=\count323
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count324
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+) (/home/delta/.miktex/texmfs/install/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks33
+\@dtl@tmpcount=\count325
+\dtl@tmplength=\skip60
+\dtl@sortresult=\count326
+\@dtl@numgrpsepcount=\count327
+\@dtl@datatype=\count328
+\dtl@codeA=\count329
+\dtl@codeB=\count330
+\@dtl@foreach@level=\count331
+) (/home/delta/.miktex/texmfs/install/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
+ (/home/delta/.miktex/texmfs/install/tex/generic/tracklang/tracklang.tex)) (/home/delta/.miktex/texmfs/install/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries-portuges/glossaries-portuges.ldf
+File: glossaries-portuges.ldf 2014/11/23 v1.0
+ (/home/delta/.miktex/texmfs/install/tex/latex/glossaries-portuges/glossaries-portuges-utf8.ldf)) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries-english/glossaries-english.ldf
+File: glossaries-english.ldf 2014/11/23 v1.0
+)
+\gls@level=\count332
+\@gls@tmpb=\toks34
+\gls@tmplen=\skip61
+\glskeylisttok=\toks35
+\glslabeltok=\toks36
+\glsshorttok=\toks37
+\glslongtok=\toks38
+ (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2024/04/03 v4.54 (NLCT)
+) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2024/04/03 v4.54 (NLCT)
+\glslistdottedwidth=\skip62
+) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2024/04/03 v4.54 (NLCT)
+ (/home/delta/.miktex/texmfs/install/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip63
+\LTright=\skip64
+\LTpre=\skip65
+\LTpost=\skip66
+\LTchunksize=\count333
+\LTcapwidth=\dimen196
+\LT@head=\box103
+\LT@firsthead=\box104
+\LT@foot=\box105
+\LT@lastfoot=\box106
+\LT@gbox=\box107
+\LT@cols=\count334
+\LT@rows=\count335
+\c@LT@tables=\count336
+\c@LT@chunks=\count337
+\LT@p@ftn=\toks39
+)
+\glsdescwidth=\skip67
+\glspagelistwidth=\skip68
+) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2024/04/03 v4.54 (NLCT)
+ (/home/delta/.miktex/texmfs/install/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count338
+\ST@wd=\dimen197
+\ST@rightskip=\skip69
+\ST@leftskip=\skip70
+\ST@parfillskip=\skip71
+\ST@pageleft=\dimen198
+\ST@headht=\dimen199
+\ST@tailht=\dimen256
+\ST@pagesofar=\dimen257
+\ST@pboxht=\dimen258
+\ST@lineht=\dimen259
+\ST@prevht=\dimen260
+\ST@toadd=\dimen261
+\ST@dimen=\dimen262
+\ST@pbox=\box108
+)) (/home/delta/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2024/04/03 v4.54 (NLCT)
+\glstreeindent=\skip72
+)) (/home/delta/.miktex/texmfs/install/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip73
+\thanksmargin=\skip74
+\droptitle=\skip75
+) (/home/delta/.miktex/texmfs/install/tex/latex/tikzpagenodes/tikzpagenodes.sty
+Package: tikzpagenodes 2012/09/16 v1.1 Special PGF/TikZ nodes for areas of the page
+ (/home/delta/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty (/home/delta/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty (/home/delta/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen263
+\pgfutil@tempdimb=\dimen264
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box109
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/delta/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty (/home/delta/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks43
+))
+\pgf@x=\dimen265
+\pgf@y=\dimen266
+\pgf@xa=\dimen267
+\pgf@ya=\dimen268
+\pgf@xb=\dimen269
+\pgf@yb=\dimen270
+\pgf@xc=\dimen271
+\pgf@yc=\dimen272
+\pgf@xd=\dimen273
+\pgf@yd=\dimen274
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count339
+\c@pgf@countb=\count340
+\c@pgf@countc=\count341
+\c@pgf@countd=\count342
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count343
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count344
+\pgfsyssoftpath@bigbuffer@items=\count345
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen275
+\pgfmath@count=\count346
+\pgfmath@box=\box110
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count347
+)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen276
+\pgf@picmaxx=\dimen277
+\pgf@picminy=\dimen278
+\pgf@picmaxy=\dimen279
+\pgf@pathminx=\dimen280
+\pgf@pathmaxx=\dimen281
+\pgf@pathminy=\dimen282
+\pgf@pathmaxy=\dimen283
+\pgf@xx=\dimen284
+\pgf@xy=\dimen285
+\pgf@yx=\dimen286
+\pgf@yy=\dimen287
+\pgf@zx=\dimen288
+\pgf@zy=\dimen289
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen290
+\pgf@path@lasty=\dimen291
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen292
+\pgf@shorten@start@additional=\dimen293
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box111
+\pgf@hbox=\box112
+\pgf@layerbox@main=\box113
+\pgf@picture@serial@count=\count348
+)
+(/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen294
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen295
+\pgf@pt@y=\dimen296
+\pgf@pt@temp=\dimen297
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen298
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen299
+\pgf@sys@shading@range@num=\count349
+\pgf@shadingcount=\count350
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box114
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box115
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen300
+\pgf@nodesepend=\dimen301
+) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty (/home/delta/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen302
+\pgffor@skip=\dimen303
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
+)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count351
+\pgfplotmarksize=\dimen304
+)
+\tikz@lastx=\dimen305
+\tikz@lasty=\dimen306
+\tikz@lastxsaved=\dimen307
+\tikz@lastysaved=\dimen308
+\tikz@lastmovetox=\dimen309
+\tikz@lastmovetoy=\dimen310
+\tikzleveldistance=\dimen311
+\tikzsiblingdistance=\dimen312
+\tikz@figbox=\box116
+\tikz@figbox@bg=\box117
+\tikz@tempbox=\box118
+\tikz@tempbox@bg=\box119
+\tikztreelevel=\count352
+\tikznumberofchildren=\count353
+\tikznumberofcurrentchild=\count354
+\tikz@fig@count=\count355
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count356
+\pgfmatrixcurrentcolumn=\count357
+\pgf@matrix@numberofcolumns=\count358
+)
+\tikz@expandcount=\count359
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))) (/home/delta/.miktex/texmfs/install/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+ (/home/delta/.miktex/texmfs/install/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2020/01/30 v3.07
+ (/home/delta/.miktex/texmfs/install/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+ (/home/delta/.miktex/texmfs/install/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count360
+))
+\c@padzeroesN=\count361
+\fc@tmpcatcode=\count362
+ (/home/delta/.miktex/texmfs/install/tex/latex/fmtcount/fc-english.def
+File: fc-english.def 2016/01/12
+) (/home/delta/.miktex/texmfs/install/tex/latex/fmtcount/fc-portuges.def
+File: fc-portuges.def 2017/12/26
+)
+\@DT@modctr=\count363
+\@ordinalctr=\count364
+\@orgargctr=\count365
+\@strctr=\count366
+\@tmpstrctr=\count367
+\@DT@loopN=\count368
+\@DT@X=\count369
+) (/home/delta/.miktex/texmfs/install/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count370
+\@month=\count371
+\@year=\count372
+\c@HOUR=\count373
+\c@HOURXII=\count374
+\c@MINUTE=\count375
+\c@TOHOUR=\count376
+\c@TOMINUTE=\count377
+\c@SECOND=\count378
+\currenthour=\count379
+\currentminute=\count380
+\currentsecond=\count381
+Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
+\@dtctr=\count382
+\dayofyear=\count383
+\dayofweek=\count384
+LaTeX Info: Redefining \today on input line 736.
+ (/home/delta/.miktex/texmfs/install/tex/latex/datetime/dt-portuges.def
+File: dt-portuges.def 2013/09/10
+LaTeX Info: Redefining \dateportuges on input line 75.
+)
+\dt@a=\toks52
+\dt@b=\toks53
+) (/home/delta/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/home/delta/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (/home/delta/.miktex/texmfs/install/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count385
+\c@@ppsavesec=\count386
+\c@@ppsaveapp=\count387
+) (/home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks54
+\footnotemargin=\dimen313
+\@outputbox@depth=\dimen314
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
+) (/home/delta/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip76
+\enit@outerparindent=\dimen315
+\enit@toks=\toks55
+\enit@inbox=\box120
+\enit@count@id=\count388
+\enitdp@description=\count389
+) (/home/delta/.miktex/texmfs/install/tex/latex/pgfgantt/pgfgantt.sty
+Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen316
+)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box121
+\pgf@layerboxsaved@background=\box122
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/delta/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfcalendar.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfcalendar.code.tex
+File: pgfcalendar.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfcalendarcurrentjulian=\count390
+\pgf@cal@easter@Y=\count391
+\pgf@cal@easter@G=\count392
+\pgf@cal@easter@C=\count393
+\pgf@cal@easter@X=\count394
+\pgf@cal@easter@Z=\count395
+\pgf@cal@easter@D=\count396
+\pgf@cal@easter@E=\count397
+\pgf@cal@easter@N=\count398
+\pgf@cal@easter@M=\count399
+\pgf@cal@easter@julianday=\count400
+))
+\gtt@currentline=\count401
+\gtt@lasttitleline=\count402
+\gtt@currgrid=\count403
+\gtt@chartwidth=\count404
+\gtt@lasttitleslot=\count405
+\gtt@elementid=\count406
+\gtt@today@slot=\count407
+\gtt@startjulian=\count408
+\gtt@endjulian=\count409
+\gtt@chartid=\count410
+\gtt@vrule@slot=\count411
+\gtt@calendar@slots=\count412
+\gtt@calendar@weeknumber=\count413
+\gtt@calendar@startofweek=\count414
+\gtt@left@slot=\count415
+\gtt@right@slot=\count416
+) (/home/delta/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip77
+\f@nch@O@elh=\skip78
+\f@nch@O@erh=\skip79
+\f@nch@O@olh=\skip80
+\f@nch@O@orh=\skip81
+\f@nch@O@elf=\skip82
+\f@nch@O@erf=\skip83
+\f@nch@O@olf=\skip84
+\f@nch@O@orf=\skip85
+) (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2023/10/14 v2.0e lastpage: 2.09 or 2e? (HMM)
+ (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2023/10/14 v2.0e Decide which 2e lastpage version to use (HMM)
+ (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.sty
+Package: lastpagemodern 2023-10-14 v2.0e Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count417
+) 
+)) (/home/delta/.miktex/texmfs/install/tex/latex/listings/listings.sty
+\lst@mode=\count418
+\lst@gtempboxa=\box123
+\lst@token=\toks56
+\lst@length=\count419
+\lst@currlwidth=\dimen317
+\lst@column=\count420
+\lst@pos=\count421
+\lst@lostspace=\dimen318
+\lst@width=\dimen319
+\lst@newlines=\count422
+\lst@lineno=\count423
+\lst@maxwidth=\dimen320
+ (/home/delta/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/03/11 1.10a (Carsten Heinz)
+) (/home/delta/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
+\c@lstnumber=\count424
+\lst@skipnumbers=\count425
+\lst@framebox=\box124
+) (/home/delta/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/03/11 1.10a listings configuration
+))
+Package: listings 2024/03/11 1.10a (Carsten Heinz)
+ (/home/delta/.miktex/texmfs/install/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
+ (/home/delta/.miktex/texmfs/install/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count426
+\calc@Bcount=\count427
+\calc@Adimen=\dimen321
+\calc@Bdimen=\dimen322
+\calc@Askip=\skip86
+\calc@Bskip=\skip87
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count428
+\calc@Cskip=\skip88
+)
+\c@@todonotes@numberoftodonotes=\count429
+) (/home/delta/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/home/delta/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (/home/delta/.miktex/texmfs/install/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (/home/delta/.miktex/texmfs/install/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count430
+\rotFPtop=\skip89
+\rotFPbot=\skip90
+\rot@float@box=\box125
+\rot@mess@toks=\toks57
+) (/home/delta/.miktex/texmfs/install/tex/latex/numprint/numprint.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+\c@nprt@mantissa@digitsbefore=\count431
+\c@nprt@mantissa@digitsafter=\count432
+\c@nprt@exponent@digitsbefore=\count433
+\c@nprt@exponent@digitsafter=\count434
+\nprt@digitwidth=\skip91
+\nprt@sepwidth=\skip92
+\nprt@decimalwidth=\skip93
+\nprt@blockwidth=\skip94
+\nprt@digittoks=\toks58
+\nprt@pretoks=\toks59
+\nprt@posttoks=\toks60
+\nprt@thisdigit=\count435
+\nprt@curpos=\count436
+\nprt@rndpos=\count437
+\c@nprt@digitsfirstblock=\count438
+\c@nprt@blockcnt=\count439
+\c@nprt@cntprint=\count440
+ No configuration file `numprint.cfg' found.) (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+ (/home/delta/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count441
+ (/home/delta/.miktex/texmfs/install/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count442
+\c@listtotal=\count443
+\c@listcount=\count444
+\c@liststart=\count445
+\c@liststop=\count446
+\c@citecount=\count447
+\c@citetotal=\count448
+\c@multicitecount=\count449
+\c@multicitetotal=\count450
+\c@instcount=\count451
+\c@maxnames=\count452
+\c@minnames=\count453
+\c@maxitems=\count454
+\c@minitems=\count455
+\c@citecounter=\count456
+\c@maxcitecounter=\count457
+\c@savedcitecounter=\count458
+\c@uniquelist=\count459
+\c@uniquename=\count460
+\c@refsection=\count461
+\c@refsegment=\count462
+\c@maxextratitle=\count463
+\c@maxextratitleyear=\count464
+\c@maxextraname=\count465
+\c@maxextradate=\count466
+\c@maxextraalpha=\count467
+\c@abbrvpenalty=\count468
+\c@highnamepenalty=\count469
+\c@lownamepenalty=\count470
+\c@maxparens=\count471
+\c@parenlevel=\count472
+\blx@tempcnta=\count473
+\blx@tempcntb=\count474
+\blx@tempcntc=\count475
+\c@blx@maxsection=\count476
+\blx@maxsegment@0=\count477
+\blx@notetype=\count478
+\blx@parenlevel@text=\count479
+\blx@parenlevel@foot=\count480
+\blx@sectionciteorder@0=\count481
+\blx@sectionciteorderinternal@0=\count482
+\blx@entrysetcounter=\count483
+\blx@biblioinstance=\count484
+\labelnumberwidth=\skip95
+\labelalphawidth=\skip96
+\biblabelsep=\skip97
+\bibitemsep=\skip98
+\bibnamesep=\skip99
+\bibinitsep=\skip100
+\bibparsep=\skip101
+\bibhang=\skip102
+\blx@bcfin=\read4
+\blx@bcfout=\write5
+\blx@langwohyphens=\language2
+\c@mincomprange=\count485
+\c@maxcomprange=\count486
+\c@mincompwidth=\count487
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count488
+\c@savedafterword=\count489
+\c@annotator=\count490
+\c@savedannotator=\count491
+\c@author=\count492
+\c@savedauthor=\count493
+\c@bookauthor=\count494
+\c@savedbookauthor=\count495
+\c@commentator=\count496
+\c@savedcommentator=\count497
+\c@editor=\count498
+\c@savededitor=\count499
+\c@editora=\count500
+\c@savededitora=\count501
+\c@editorb=\count502
+\c@savededitorb=\count503
+\c@editorc=\count504
+\c@savededitorc=\count505
+\c@foreword=\count506
+\c@savedforeword=\count507
+\c@holder=\count508
+\c@savedholder=\count509
+\c@introduction=\count510
+\c@savedintroduction=\count511
+\c@namea=\count512
+\c@savednamea=\count513
+\c@nameb=\count514
+\c@savednameb=\count515
+\c@namec=\count516
+\c@savednamec=\count517
+\c@translator=\count518
+\c@savedtranslator=\count519
+\c@shortauthor=\count520
+\c@savedshortauthor=\count521
+\c@shorteditor=\count522
+\c@savedshorteditor=\count523
+\c@labelname=\count524
+\c@savedlabelname=\count525
+\c@institution=\count526
+\c@savedinstitution=\count527
+\c@lista=\count528
+\c@savedlista=\count529
+\c@listb=\count530
+\c@savedlistb=\count531
+\c@listc=\count532
+\c@savedlistc=\count533
+\c@listd=\count534
+\c@savedlistd=\count535
+\c@liste=\count536
+\c@savedliste=\count537
+\c@listf=\count538
+\c@savedlistf=\count539
+\c@location=\count540
+\c@savedlocation=\count541
+\c@organization=\count542
+\c@savedorganization=\count543
+\c@origlocation=\count544
+\c@savedoriglocation=\count545
+\c@origpublisher=\count546
+\c@savedorigpublisher=\count547
+\c@publisher=\count548
+\c@savedpublisher=\count549
+\c@language=\count550
+\c@savedlanguage=\count551
+\c@origlanguage=\count552
+\c@savedoriglanguage=\count553
+\c@pageref=\count554
+\c@savedpageref=\count555
+\shorthandwidth=\skip103
+\shortjournalwidth=\skip104
+\shortserieswidth=\skip105
+\shorttitlewidth=\skip106
+\shortauthorwidth=\skip107
+\shorteditorwidth=\skip108
+\locallabelnumberwidth=\skip109
+\locallabelalphawidth=\skip110
+\localshorthandwidth=\skip111
+\localshortjournalwidth=\skip112
+\localshortserieswidth=\skip113
+\localshorttitlewidth=\skip114
+\localshortauthorwidth=\skip115
+\localshorteditorwidth=\skip116
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count556
+\c@textcitetotal=\count557
+\c@textcitemaxnames=\count558
+\c@biburlbigbreakpenalty=\count559
+\c@biburlbreakpenalty=\count560
+\c@biburlnumpenalty=\count561
+\c@biburlucpenalty=\count562
+\c@biburllcpenalty=\count563
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count564
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count565
+\c@bbx:relatedtotal=\count566
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (/home/delta/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-03-14 L3 programming layer (loader) 
+ (/home/delta/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count567
+\l__pdf_internal_box=\box126
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-03-14 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/blx-case-expl3.sty (/home/delta/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-03-14 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+)) (/home/delta/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/home/delta/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen323
+\captionmargin=\dimen324
+\caption@leftmargin=\dimen325
+\caption@rightmargin=\dimen326
+\caption@width=\dimen327
+\caption@indent=\dimen328
+\caption@parindent=\dimen329
+\caption@hangindent=\dimen330
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count568
+\c@continuedfloat=\count569
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/home/delta/.miktex/texmfs/install/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: supertabular package is loaded.
+) (/home/delta/.miktex/texmfs/install/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/home/delta/.miktex/texmfs/install/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/home/delta/.miktex/texmfs/install/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (/home/delta/.miktex/texmfs/install/tex/latex/newunicodechar/newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+) (_acro_list.tex)
+\glswrite=\write6
+\glo@main@file=\write7
+\openout7 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 70.
+\glo@acronym@file=\write8
+\openout8 = `main.acn'.
+
+Package glossaries Info: Writing glossary file main.acn on input line 70.
+ (vars.tex)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'portuges'.
+ (main.aux (00-Capa.aux) (01-Ficha.aux) (03-Abstract.aux) (05-Ack.aux) (07-Contents.aux) (09-Siglas.aux) (10-Intro.aux) (15-Problem.aux) (20-Theory.aux) (32-Art.aux) (40-Experiments.aux) (80-Detour.aux) (90-Results.aux) (B0-Future.aux) (F0-Conclusion.aux) (ZA-Annex-Reqs.aux) (ZB-Annex-Inquiry.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+ (/home/delta/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count570
+\scratchdimen=\dimen331
+\scratchbox=\box127
+\nofMPsegments=\count571
+\nofMParguments=\count572
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count573
+\MPscratchDim=\dimen332
+\MPnumerator=\count574
+\makeMPintoPDFobject=\count575
+\everyMPtoPDFconversion=\toks62
+) (/home/delta/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/home/delta/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 87.
+(main.out) (main.out)
+\@outlinefile=\write9
+\openout9 = `main.out'.
+
+ (/home/delta/.miktex/texmfs/install/tex/latex/translator/translator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+\c@lstlisting=\count576
+Package biblatex Info: Trying to load language 'portuges'...
+Package biblatex Info: ... file 'portuges.lbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/lbx/portuges.lbx
+File: portuges.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'portuguese'...
+Package biblatex Info: ... file 'portuguese.lbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/lbx/portuguese.lbx
+File: portuguese.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'portuguese'...
+Package biblatex Info: ... file 'portuguese.lbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/lbx/portuguese.lbx
+File: portuguese.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 87.
+Package biblatex Info: Reference segment=0 on input line 87.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `00-Capa.aux'.
+
+ (00-Capa.tex
+<figs/logo_ipmaia_small.png, id=165, 53.7207pt x 21.681pt>
+File: figs/logo_ipmaia_small.png Graphic file (type png)
+<use figs/logo_ipmaia_small.png>
+Package pdftex.def Info: figs/logo_ipmaia_small.png  used on input line 5.
+(pdftex.def)             Requested size: 214.88226pt x 86.72375pt.
+ [1
+
+\openout6 = `main.ist'.
+
+
+{/home/delta/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./figs/logo_ipmaia_small.png>])
+\openout2 = `01-Ficha.aux'.
+
+ (01-Ficha.tex) [1
+
+
+
+]
+\openout2 = `03-Abstract.aux'.
+
+ (03-Abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.10 \end{abstract}
+                    [1
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 16--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--21
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 \end{abstract}
+                    [1]
+Overfull \hbox (6.03835pt too wide) in paragraph at lines 30--31
+\OT1/cmr/m/n/10.95 identificado como autor, n~ao tendo sido previamente apresentado noutro percurso acad^^Semico
+ []
+
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.92 \include{03-Abstract}
+                           [1
+
+]
+\openout2 = `05-Ack.aux'.
+
+ (05-Ack.tex) [2
+
+
+
+
+]
+\openout2 = `07-Contents.aux'.
+
+ (07-Contents.tex (main.toc [3
+
+
+
+
+])
+\tf@toc=\write10
+\openout10 = `main.toc'.
+
+ [4] (main.lot)
+\tf@lot=\write11
+\openout11 = `main.lot'.
+
+ [5
+
+] (main.lof)
+\tf@lof=\write12
+\openout12 = `main.lof'.
+
+ [6
+
+] (main.lol)
+\tf@lol=\write13
+\openout13 = `main.lol'.
+
+) [7
+
+]
+\openout2 = `09-Siglas.aux'.
+
+ (09-Siglas.tex
+No file main.acr.
+No file main.gls.
+) [8
+
+
+
+]
+\openout2 = `10-Intro.aux'.
+
+ (10-Intro.tex
+Cap\'{\i }tulo 1.
+File: figs/logo_ipmaia_small.png Graphic file (type png)
+<use figs/logo_ipmaia_small.png>
+Package pdftex.def Info: figs/logo_ipmaia_small.png  used on input line 10.
+(pdftex.def)             Requested size: 256.0748pt x 103.352pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27 
+      [1
+
+
+
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 67--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--98
+
+ []
+
+[2] [3]
+\openout2 = `15-Problem.aux'.
+
+ (15-Problem.tex
+Cap\'{\i }tulo 2.
+) [4
+
+
+
+
+] [5]
+\openout2 = `20-Theory.aux'.
+
+ (20-Theory.tex
+Cap\'{\i }tulo 3.
+
+Overfull \hbox (4.94322pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/10.95 Fundamentos Te^^Soricos, o que incluir^^Sa descrever as tecnologias relevantes, sejam concorrentes
+ []
+
+) [6
+
+
+
+
+] [7]
+\openout2 = `32-Art.aux'.
+
+ (32-Art.tex
+Cap\'{\i }tulo 4.
+) [8
+
+
+
+
+]
+\openout2 = `40-Experiments.aux'.
+
+ (40-Experiments.tex
+Cap\'{\i }tulo 5.
+
+Overfull \hbox (2.75317pt too wide) in paragraph at lines 28--32
+[]\OT1/cmr/m/n/10.95 O \OT1/cmr/m/it/10.95 Port Controller \OT1/cmr/m/n/10.95 tem como principal fun^^Xc~ao estar ^^Ra escuta de pedidos do administrador
+ []
+
+) [9
+
+
+
+
+] [10]
+\openout2 = `80-Detour.aux'.
+
+ (80-Detour.tex
+Cap\'{\i }tulo 6.
+) [11
+
+
+
+
+]
+\openout2 = `90-Results.aux'.
+
+ (90-Results.tex
+Cap\'{\i }tulo 7.
+) [12
+
+
+
+
+]
+\openout2 = `B0-Future.aux'.
+
+ (B0-Future.tex
+Cap\'{\i }tulo 8.
+) [13
+
+
+
+
+]
+\openout2 = `F0-Conclusion.aux'.
+
+ (F0-Conclusion.tex
+Cap\'{\i }tulo 9.
+) [14
+
+
+
+
+] [15
+
+
+
+]
+\openout2 = `ZA-Annex-Reqs.aux'.
+
+ (ZA-Annex-Reqs.tex
+Ap\^endice A.
+) [1
+
+
+
+]
+\openout2 = `ZB-Annex-Inquiry.aux'.
+
+ (ZB-Annex-Inquiry.tex
+Ap\^endice B.
+) [2
+
+
+
+
+]
+
+Package caption Warning: Unused \captionsetup[table] on input line 54.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 55.
+See the caption package documentation for explanation.
+
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(main.aux (00-Capa.aux) (01-Ficha.aux) (03-Abstract.aux) (05-Ack.aux) (07-Contents.aux) (09-Siglas.aux) (10-Intro.aux) (15-Problem.aux) (20-Theory.aux) (32-Art.aux) (40-Experiments.aux) (80-Detour.aux) (90-Results.aux) (B0-Future.aux) (F0-Conclusion.aux) (ZA-Annex-Reqs.aux) (ZB-Annex-Inquiry.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D15D503FA0A3930FB706CD7B2A9E21A2;5595.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 45044 strings out of 476359
+ 874398 string characters out of 5793469
+ 1936493 words of memory out of 5000000
+ 66164 multiletter control sequences out of 15000+600000
+ 568428 words of font info for 71 fonts, out of 8000000 for 9000
+ 9 hyphenation exceptions out of 8191
+ 99i,8n,117p,2373b,2311s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, replaced by a fixed one
+
+ </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (29 pages, 281217 bytes).
+PDF statistics:
+ 491 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
+
