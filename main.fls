@@ -709,6 +709,13 @@ OUTPUT 40-Experiments.aux
 INPUT ./40-Experiments.tex
 INPUT ./40-Experiments.tex
 INPUT 40-Experiments.tex
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
+INPUT ./figs/codigo_pc.png
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
