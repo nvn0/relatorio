@@ -29,6 +29,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{listings}
+\usepackage{etoolbox}
 
 \setlength {\marginparwidth }{2cm}
 \usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
@@ -57,6 +58,59 @@
 
 \newcommand{\source}[1]{\vspace{-6pt}\caption*{\emph{(Fonte: {#1})}}}
 \newcommand{\adaptedfrom}[1]{\vspace{-6pt}\caption*{\emph{(Adaptado de {#1})} }}
+
+
+%-----------------------------------------------------------
+
+\lstset{
+   language=csh,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+
+\lstset{
+   language=Python,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+\lstset{
+   language=Bash,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+%------------------------------------------------------------
 
 
 % PT: caracteres

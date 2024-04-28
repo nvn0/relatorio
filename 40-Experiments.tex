@@ -53,12 +53,18 @@ No Ficheiro Program na função \textit{main} está defenido o caminho do fichei
 da unix socket que permite a comunição entre o \textit{"Port Controller"} e 
 a interface \textit{Web} ou API.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=13cm]{figs/codigo_pc.png}
-\caption{Codigo Port Controller}
-\end{center}
-\end{figure}
+
+\begin{lstlisting}[language=csh, caption={teste}]
+// Caminho do ficheiro do socket
+string socketPath = "/tmp/socket_proj";
+
+if (File.Exists(socketPath))
+{
+    Console.WriteLine("O ficheiro do socket ja existe. A criar um novo...");
+    File.Delete(socketPath);
+}
+
+\end{lstlisting}
 
 
 
