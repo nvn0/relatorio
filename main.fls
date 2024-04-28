@@ -364,6 +364,9 @@ INPUT /home/delta/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/appendix/appendix.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/appendix/appendix.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/graphics/color.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
@@ -709,6 +712,9 @@ INPUT ./20-Theory.tex
 INPUT ./20-Theory.tex
 INPUT 20-Theory.tex
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt9.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./32-Art.tex
 INPUT ./32-Art.tex
 OUTPUT 32-Art.aux
@@ -721,8 +727,6 @@ OUTPUT 40-Experiments.aux
 INPUT ./40-Experiments.tex
 INPUT ./40-Experiments.tex
 INPUT 40-Experiments.tex
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt9.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
@@ -824,6 +828,8 @@ INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.p
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb

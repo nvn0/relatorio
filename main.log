@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.28)  28 APR 2024 01:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.28)  28 APR 2024 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -827,9 +827,14 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count385
 \c@@ppsavesec=\count386
 \c@@ppsaveapp=\count387
+) (/home/delta/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
+\everycr=\toks54
+\minrowclearance=\skip76
+\rownum=\count388
 ) (/home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
-\FN@temptoken=\toks54
+\FN@temptoken=\toks55
 \footnotemargin=\dimen313
 \@outputbox@depth=\dimen314
 Package footmisc Info: Declaring symbol style bringhurst on input line 696.
@@ -840,12 +845,12 @@ Package footmisc Info: Declaring symbol style lamport* on input line 744.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
 ) (/home/delta/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip76
+\labelindent=\skip77
 \enit@outerparindent=\dimen315
-\enit@toks=\toks55
+\enit@toks=\toks56
 \enit@inbox=\box120
-\enit@count@id=\count388
-\enitdp@description=\count389
+\enit@count@id=\count389
+\enitdp@description=\count390
 ) (/home/delta/.miktex/texmfs/install/tex/latex/pgfgantt/pgfgantt.sty
 Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
  (/home/delta/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
@@ -871,72 +876,72 @@ File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/home/delta/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfcalendar.sty (/home/delta/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfcalendar.code.tex
 File: pgfcalendar.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfcalendarcurrentjulian=\count390
-\pgf@cal@easter@Y=\count391
-\pgf@cal@easter@G=\count392
-\pgf@cal@easter@C=\count393
-\pgf@cal@easter@X=\count394
-\pgf@cal@easter@Z=\count395
-\pgf@cal@easter@D=\count396
-\pgf@cal@easter@E=\count397
-\pgf@cal@easter@N=\count398
-\pgf@cal@easter@M=\count399
-\pgf@cal@easter@julianday=\count400
+\pgfcalendarcurrentjulian=\count391
+\pgf@cal@easter@Y=\count392
+\pgf@cal@easter@G=\count393
+\pgf@cal@easter@C=\count394
+\pgf@cal@easter@X=\count395
+\pgf@cal@easter@Z=\count396
+\pgf@cal@easter@D=\count397
+\pgf@cal@easter@E=\count398
+\pgf@cal@easter@N=\count399
+\pgf@cal@easter@M=\count400
+\pgf@cal@easter@julianday=\count401
 ))
-\gtt@currentline=\count401
-\gtt@lasttitleline=\count402
-\gtt@currgrid=\count403
-\gtt@chartwidth=\count404
-\gtt@lasttitleslot=\count405
-\gtt@elementid=\count406
-\gtt@today@slot=\count407
-\gtt@startjulian=\count408
-\gtt@endjulian=\count409
-\gtt@chartid=\count410
-\gtt@vrule@slot=\count411
-\gtt@calendar@slots=\count412
-\gtt@calendar@weeknumber=\count413
-\gtt@calendar@startofweek=\count414
-\gtt@left@slot=\count415
-\gtt@right@slot=\count416
+\gtt@currentline=\count402
+\gtt@lasttitleline=\count403
+\gtt@currgrid=\count404
+\gtt@chartwidth=\count405
+\gtt@lasttitleslot=\count406
+\gtt@elementid=\count407
+\gtt@today@slot=\count408
+\gtt@startjulian=\count409
+\gtt@endjulian=\count410
+\gtt@chartid=\count411
+\gtt@vrule@slot=\count412
+\gtt@calendar@slots=\count413
+\gtt@calendar@weeknumber=\count414
+\gtt@calendar@startofweek=\count415
+\gtt@left@slot=\count416
+\gtt@right@slot=\count417
 ) (/home/delta/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2024/04/23 v4.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip77
-\f@nch@O@elh=\skip78
-\f@nch@O@erh=\skip79
-\f@nch@O@olh=\skip80
-\f@nch@O@orh=\skip81
-\f@nch@O@elf=\skip82
-\f@nch@O@erf=\skip83
-\f@nch@O@olf=\skip84
-\f@nch@O@orf=\skip85
+\f@nch@headwidth=\skip78
+\f@nch@O@elh=\skip79
+\f@nch@O@erh=\skip80
+\f@nch@O@olh=\skip81
+\f@nch@O@orh=\skip82
+\f@nch@O@elf=\skip83
+\f@nch@O@erf=\skip84
+\f@nch@O@olf=\skip85
+\f@nch@O@orf=\skip86
 ) (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2023/10/14 v2.0e lastpage: 2.09 or 2e? (HMM)
  (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
 Package: lastpage2e 2023/10/14 v2.0e Decide which 2e lastpage version to use (HMM)
  (/home/delta/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.sty
 Package: lastpagemodern 2023-10-14 v2.0e Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count417
+\c@lastpagecount=\count418
 ) 
 )) (/home/delta/.miktex/texmfs/install/tex/latex/listings/listings.sty
-\lst@mode=\count418
+\lst@mode=\count419
 \lst@gtempboxa=\box123
-\lst@token=\toks56
-\lst@length=\count419
+\lst@token=\toks57
+\lst@length=\count420
 \lst@currlwidth=\dimen317
-\lst@column=\count420
-\lst@pos=\count421
+\lst@column=\count421
+\lst@pos=\count422
 \lst@lostspace=\dimen318
 \lst@width=\dimen319
-\lst@newlines=\count422
-\lst@lineno=\count423
+\lst@newlines=\count423
+\lst@lineno=\count424
 \lst@maxwidth=\dimen320
  (/home/delta/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/03/11 1.10a (Carsten Heinz)
 ) (/home/delta/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
-\c@lstnumber=\count424
-\lst@skipnumbers=\count425
+\c@lstnumber=\count425
+\lst@skipnumbers=\count426
 \lst@framebox=\box124
 ) (/home/delta/.miktex/texmfs/install/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/03/11 1.10a listings configuration
@@ -947,18 +952,18 @@ Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
 Package: todonotes 2024/01/05
  (/home/delta/.miktex/texmfs/install/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count426
-\calc@Bcount=\count427
+\calc@Acount=\count427
+\calc@Bcount=\count428
 \calc@Adimen=\dimen321
 \calc@Bdimen=\dimen322
-\calc@Askip=\skip86
-\calc@Bskip=\skip87
+\calc@Askip=\skip87
+\calc@Bskip=\skip88
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count428
-\calc@Cskip=\skip88
+\calc@Ccount=\count429
+\calc@Cskip=\skip89
 )
-\c@@todonotes@numberoftodonotes=\count429
+\c@@todonotes@numberoftodonotes=\count430
 ) (/home/delta/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (/home/delta/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -969,95 +974,95 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )) (/home/delta/.miktex/texmfs/install/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count430
-\rotFPtop=\skip89
-\rotFPbot=\skip90
+\c@r@tfl@t=\count431
+\rotFPtop=\skip90
+\rotFPbot=\skip91
 \rot@float@box=\box125
-\rot@mess@toks=\toks57
+\rot@mess@toks=\toks58
 ) (/home/delta/.miktex/texmfs/install/tex/latex/numprint/numprint.sty
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count431
-\c@nprt@mantissa@digitsafter=\count432
-\c@nprt@exponent@digitsbefore=\count433
-\c@nprt@exponent@digitsafter=\count434
-\nprt@digitwidth=\skip91
-\nprt@sepwidth=\skip92
-\nprt@decimalwidth=\skip93
-\nprt@blockwidth=\skip94
-\nprt@digittoks=\toks58
-\nprt@pretoks=\toks59
-\nprt@posttoks=\toks60
-\nprt@thisdigit=\count435
-\nprt@curpos=\count436
-\nprt@rndpos=\count437
-\c@nprt@digitsfirstblock=\count438
-\c@nprt@blockcnt=\count439
-\c@nprt@cntprint=\count440
+\c@nprt@mantissa@digitsbefore=\count432
+\c@nprt@mantissa@digitsafter=\count433
+\c@nprt@exponent@digitsbefore=\count434
+\c@nprt@exponent@digitsafter=\count435
+\nprt@digitwidth=\skip92
+\nprt@sepwidth=\skip93
+\nprt@decimalwidth=\skip94
+\nprt@blockwidth=\skip95
+\nprt@digittoks=\toks59
+\nprt@pretoks=\toks60
+\nprt@posttoks=\toks61
+\nprt@thisdigit=\count436
+\nprt@curpos=\count437
+\nprt@rndpos=\count438
+\c@nprt@digitsfirstblock=\count439
+\c@nprt@blockcnt=\count440
+\c@nprt@cntprint=\count441
  No configuration file `numprint.cfg' found.) (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (/home/delta/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count441
+\lrq@indent=\count442
  (/home/delta/.miktex/texmfs/install/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count442
-\c@listtotal=\count443
-\c@listcount=\count444
-\c@liststart=\count445
-\c@liststop=\count446
-\c@citecount=\count447
-\c@citetotal=\count448
-\c@multicitecount=\count449
-\c@multicitetotal=\count450
-\c@instcount=\count451
-\c@maxnames=\count452
-\c@minnames=\count453
-\c@maxitems=\count454
-\c@minitems=\count455
-\c@citecounter=\count456
-\c@maxcitecounter=\count457
-\c@savedcitecounter=\count458
-\c@uniquelist=\count459
-\c@uniquename=\count460
-\c@refsection=\count461
-\c@refsegment=\count462
-\c@maxextratitle=\count463
-\c@maxextratitleyear=\count464
-\c@maxextraname=\count465
-\c@maxextradate=\count466
-\c@maxextraalpha=\count467
-\c@abbrvpenalty=\count468
-\c@highnamepenalty=\count469
-\c@lownamepenalty=\count470
-\c@maxparens=\count471
-\c@parenlevel=\count472
-\blx@tempcnta=\count473
-\blx@tempcntb=\count474
-\blx@tempcntc=\count475
-\c@blx@maxsection=\count476
-\blx@maxsegment@0=\count477
-\blx@notetype=\count478
-\blx@parenlevel@text=\count479
-\blx@parenlevel@foot=\count480
-\blx@sectionciteorder@0=\count481
-\blx@sectionciteorderinternal@0=\count482
-\blx@entrysetcounter=\count483
-\blx@biblioinstance=\count484
-\labelnumberwidth=\skip95
-\labelalphawidth=\skip96
-\biblabelsep=\skip97
-\bibitemsep=\skip98
-\bibnamesep=\skip99
-\bibinitsep=\skip100
-\bibparsep=\skip101
-\bibhang=\skip102
+\c@tabx@nest=\count443
+\c@listtotal=\count444
+\c@listcount=\count445
+\c@liststart=\count446
+\c@liststop=\count447
+\c@citecount=\count448
+\c@citetotal=\count449
+\c@multicitecount=\count450
+\c@multicitetotal=\count451
+\c@instcount=\count452
+\c@maxnames=\count453
+\c@minnames=\count454
+\c@maxitems=\count455
+\c@minitems=\count456
+\c@citecounter=\count457
+\c@maxcitecounter=\count458
+\c@savedcitecounter=\count459
+\c@uniquelist=\count460
+\c@uniquename=\count461
+\c@refsection=\count462
+\c@refsegment=\count463
+\c@maxextratitle=\count464
+\c@maxextratitleyear=\count465
+\c@maxextraname=\count466
+\c@maxextradate=\count467
+\c@maxextraalpha=\count468
+\c@abbrvpenalty=\count469
+\c@highnamepenalty=\count470
+\c@lownamepenalty=\count471
+\c@maxparens=\count472
+\c@parenlevel=\count473
+\blx@tempcnta=\count474
+\blx@tempcntb=\count475
+\blx@tempcntc=\count476
+\c@blx@maxsection=\count477
+\blx@maxsegment@0=\count478
+\blx@notetype=\count479
+\blx@parenlevel@text=\count480
+\blx@parenlevel@foot=\count481
+\blx@sectionciteorder@0=\count482
+\blx@sectionciteorderinternal@0=\count483
+\blx@entrysetcounter=\count484
+\blx@biblioinstance=\count485
+\labelnumberwidth=\skip96
+\labelalphawidth=\skip97
+\biblabelsep=\skip98
+\bibitemsep=\skip99
+\bibnamesep=\skip100
+\bibinitsep=\skip101
+\bibparsep=\skip102
+\bibhang=\skip103
 \blx@bcfin=\read4
 \blx@bcfout=\write5
 \blx@langwohyphens=\language3
-\c@mincomprange=\count485
-\c@maxcomprange=\count486
-\c@mincompwidth=\count487
+\c@mincomprange=\count486
+\c@maxcomprange=\count487
+\c@mincompwidth=\count488
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
@@ -1065,88 +1070,88 @@ File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count488
-\c@savedafterword=\count489
-\c@annotator=\count490
-\c@savedannotator=\count491
-\c@author=\count492
-\c@savedauthor=\count493
-\c@bookauthor=\count494
-\c@savedbookauthor=\count495
-\c@commentator=\count496
-\c@savedcommentator=\count497
-\c@editor=\count498
-\c@savededitor=\count499
-\c@editora=\count500
-\c@savededitora=\count501
-\c@editorb=\count502
-\c@savededitorb=\count503
-\c@editorc=\count504
-\c@savededitorc=\count505
-\c@foreword=\count506
-\c@savedforeword=\count507
-\c@holder=\count508
-\c@savedholder=\count509
-\c@introduction=\count510
-\c@savedintroduction=\count511
-\c@namea=\count512
-\c@savednamea=\count513
-\c@nameb=\count514
-\c@savednameb=\count515
-\c@namec=\count516
-\c@savednamec=\count517
-\c@translator=\count518
-\c@savedtranslator=\count519
-\c@shortauthor=\count520
-\c@savedshortauthor=\count521
-\c@shorteditor=\count522
-\c@savedshorteditor=\count523
-\c@labelname=\count524
-\c@savedlabelname=\count525
-\c@institution=\count526
-\c@savedinstitution=\count527
-\c@lista=\count528
-\c@savedlista=\count529
-\c@listb=\count530
-\c@savedlistb=\count531
-\c@listc=\count532
-\c@savedlistc=\count533
-\c@listd=\count534
-\c@savedlistd=\count535
-\c@liste=\count536
-\c@savedliste=\count537
-\c@listf=\count538
-\c@savedlistf=\count539
-\c@location=\count540
-\c@savedlocation=\count541
-\c@organization=\count542
-\c@savedorganization=\count543
-\c@origlocation=\count544
-\c@savedoriglocation=\count545
-\c@origpublisher=\count546
-\c@savedorigpublisher=\count547
-\c@publisher=\count548
-\c@savedpublisher=\count549
-\c@language=\count550
-\c@savedlanguage=\count551
-\c@origlanguage=\count552
-\c@savedoriglanguage=\count553
-\c@pageref=\count554
-\c@savedpageref=\count555
-\shorthandwidth=\skip103
-\shortjournalwidth=\skip104
-\shortserieswidth=\skip105
-\shorttitlewidth=\skip106
-\shortauthorwidth=\skip107
-\shorteditorwidth=\skip108
-\locallabelnumberwidth=\skip109
-\locallabelalphawidth=\skip110
-\localshorthandwidth=\skip111
-\localshortjournalwidth=\skip112
-\localshortserieswidth=\skip113
-\localshorttitlewidth=\skip114
-\localshortauthorwidth=\skip115
-\localshorteditorwidth=\skip116
+\c@afterword=\count489
+\c@savedafterword=\count490
+\c@annotator=\count491
+\c@savedannotator=\count492
+\c@author=\count493
+\c@savedauthor=\count494
+\c@bookauthor=\count495
+\c@savedbookauthor=\count496
+\c@commentator=\count497
+\c@savedcommentator=\count498
+\c@editor=\count499
+\c@savededitor=\count500
+\c@editora=\count501
+\c@savededitora=\count502
+\c@editorb=\count503
+\c@savededitorb=\count504
+\c@editorc=\count505
+\c@savededitorc=\count506
+\c@foreword=\count507
+\c@savedforeword=\count508
+\c@holder=\count509
+\c@savedholder=\count510
+\c@introduction=\count511
+\c@savedintroduction=\count512
+\c@namea=\count513
+\c@savednamea=\count514
+\c@nameb=\count515
+\c@savednameb=\count516
+\c@namec=\count517
+\c@savednamec=\count518
+\c@translator=\count519
+\c@savedtranslator=\count520
+\c@shortauthor=\count521
+\c@savedshortauthor=\count522
+\c@shorteditor=\count523
+\c@savedshorteditor=\count524
+\c@labelname=\count525
+\c@savedlabelname=\count526
+\c@institution=\count527
+\c@savedinstitution=\count528
+\c@lista=\count529
+\c@savedlista=\count530
+\c@listb=\count531
+\c@savedlistb=\count532
+\c@listc=\count533
+\c@savedlistc=\count534
+\c@listd=\count535
+\c@savedlistd=\count536
+\c@liste=\count537
+\c@savedliste=\count538
+\c@listf=\count539
+\c@savedlistf=\count540
+\c@location=\count541
+\c@savedlocation=\count542
+\c@organization=\count543
+\c@savedorganization=\count544
+\c@origlocation=\count545
+\c@savedoriglocation=\count546
+\c@origpublisher=\count547
+\c@savedorigpublisher=\count548
+\c@publisher=\count549
+\c@savedpublisher=\count550
+\c@language=\count551
+\c@savedlanguage=\count552
+\c@origlanguage=\count553
+\c@savedoriglanguage=\count554
+\c@pageref=\count555
+\c@savedpageref=\count556
+\shorthandwidth=\skip104
+\shortjournalwidth=\skip105
+\shortserieswidth=\skip106
+\shorttitlewidth=\skip107
+\shortauthorwidth=\skip108
+\shorteditorwidth=\skip109
+\locallabelnumberwidth=\skip110
+\locallabelalphawidth=\skip111
+\localshorthandwidth=\skip112
+\localshortjournalwidth=\skip113
+\localshortserieswidth=\skip114
+\localshorttitlewidth=\skip115
+\localshortauthorwidth=\skip116
+\localshorteditorwidth=\skip117
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
@@ -1156,19 +1161,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count556
-\c@textcitetotal=\count557
-\c@textcitemaxnames=\count558
-\c@biburlbigbreakpenalty=\count559
-\c@biburlbreakpenalty=\count560
-\c@biburlnumpenalty=\count561
-\c@biburlucpenalty=\count562
-\c@biburllcpenalty=\count563
+\c@textcitecount=\count557
+\c@textcitetotal=\count558
+\c@textcitemaxnames=\count559
+\c@biburlbigbreakpenalty=\count560
+\c@biburlbreakpenalty=\count561
+\c@biburlnumpenalty=\count562
+\c@biburlucpenalty=\count563
+\c@biburllcpenalty=\count564
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count564
+\c@smartand=\count565
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1178,8 +1183,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count565
-\c@bbx:relatedtotal=\count566
+\c@bbx:relatedcount=\count566
+\c@bbx:relatedtotal=\count567
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1208,7 +1213,7 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2024-03-14 L3 programming layer (loader) 
  (/home/delta/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count567
+\l__color_backend_stack_int=\count568
 \l__pdf_internal_box=\box126
 ))
 Package biblatex Info: ... and expl3
@@ -1233,8 +1238,8 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen330
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count568
-\c@continuedfloat=\count569
+\c@caption@flags=\count569
+\c@continuedfloat=\count570
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1267,11 +1272,11 @@ Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 \glo@main@file=\write7
 \openout7 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 124.
+Package glossaries Info: Writing glossary file main.glo on input line 128.
 \glo@acronym@file=\write8
 \openout8 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 124.
+Package glossaries Info: Writing glossary file main.acn on input line 128.
  (vars.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1280,37 +1285,37 @@ Package csquotes Info: Redefining alias 'default' -> 'portuges'.
  (main.aux (00-Capa.aux) (01-Ficha.aux) (03-Abstract.aux) (05-Ack.aux) (07-Contents.aux) (09-Siglas.aux) (10-Intro.aux) (15-Problem.aux) (20-Theory.aux) (32-Art.aux) (40-Experiments.aux) (80-Detour.aux) (90-Results.aux) (B0-Future.aux) (F0-Conclusion.aux) (ZA-Annex-Reqs.aux) (ZB-Annex-Inquiry.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
  (/home/delta/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count570
+\scratchcounter=\count571
 \scratchdimen=\dimen331
 \scratchbox=\box127
-\nofMPsegments=\count571
-\nofMParguments=\count572
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count573
+\nofMPsegments=\count572
+\nofMParguments=\count573
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count574
 \MPscratchDim=\dimen332
-\MPnumerator=\count574
-\makeMPintoPDFobject=\count575
-\everyMPtoPDFconversion=\toks62
+\MPnumerator=\count575
+\makeMPintoPDFobject=\count576
+\everyMPtoPDFconversion=\toks63
 ) (/home/delta/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1351,7 +1356,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 141.
+Package hyperref Info: Link coloring OFF on input line 145.
 (main.out) (main.out)
 \@outlinefile=\write9
 \openout9 = `main.out'.
@@ -1359,7 +1364,7 @@ Package hyperref Info: Link coloring OFF on input line 141.
  (/home/delta/.miktex/texmfs/install/tex/latex/translator/translator-months-dictionary-English.dict
 Dictionary: translator-months-dictionary, Language: English 
 )
-\c@lstlisting=\count576
+\c@lstlisting=\count577
 Package biblatex Info: Trying to load language 'portuges'...
 Package biblatex Info: ... file 'portuges.lbx' found.
  (/home/delta/.miktex/texmfs/install/tex/latex/biblatex/lbx/portuges.lbx
@@ -1387,8 +1392,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 141.
-Package biblatex Info: Reference segment=0 on input line 141.
+Package biblatex Info: Reference section=0 on input line 145.
+Package biblatex Info: Reference segment=0 on input line 145.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `00-Capa.aux'.
@@ -1452,7 +1457,7 @@ l.23 \end{abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.146 \include{03-Abstract}
+l.150 \include{03-Abstract}
                             [1
 
 ]
@@ -1528,22 +1533,22 @@ l.27
 
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 67--152
+Underfull \hbox (badness 10000) in paragraph at lines 67--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--152
+Underfull \hbox (badness 10000) in paragraph at lines 67--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--152
+Underfull \hbox (badness 10000) in paragraph at lines 67--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--152
+Underfull \hbox (badness 10000) in paragraph at lines 67--156
 
  []
 
@@ -1557,22 +1562,29 @@ Cap\'{\i }tulo 2.
 
 
 
-] [5]
+]
 \openout2 = `20-Theory.aux'.
 
  (20-Theory.tex
 Cap\'{\i }tulo 3.
-) [6
+[5
 
 
 
 
-] [7]
+] [6]
+Overfull \hbox (47.6328pt too wide) in paragraph at lines 137--162
+ [][] 
+ []
+
+[7]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 169.
+) [8]
 \openout2 = `32-Art.aux'.
 
  (32-Art.tex
 Cap\'{\i }tulo 4.
-) [8
+) [9
 
 
 
@@ -1582,21 +1594,20 @@ Cap\'{\i }tulo 4.
 
  (40-Experiments.tex
 Cap\'{\i }tulo 5.
-[9
+[10
 
 
 
 
 ]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 57.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 61.
-) [10]
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 63.
+) [11]
 \openout2 = `80-Detour.aux'.
 
  (80-Detour.tex
 Cap\'{\i }tulo 6.
-) [11
+) [12
 
 
 
@@ -1606,7 +1617,7 @@ Cap\'{\i }tulo 6.
 
  (90-Results.tex
 Cap\'{\i }tulo 7.
-) [12
+) [13
 
 
 
@@ -1616,7 +1627,7 @@ Cap\'{\i }tulo 7.
 
  (B0-Future.tex
 Cap\'{\i }tulo 8.
-) [13
+) [14
 
 
 
@@ -1626,12 +1637,12 @@ Cap\'{\i }tulo 8.
 
  (F0-Conclusion.tex
 Cap\'{\i }tulo 9.
-) [14
+) [15
 
 
 
 
-] [15
+] [16
 
 
 
@@ -1654,12 +1665,7 @@ Ap\^endice B.
 
 
 
-]
-
-Package caption Warning: Unused \captionsetup[table] on input line 55.
-See the caption package documentation for explanation.
-
-
+] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux (00-Capa.aux) (01-Ficha.aux) (03-Abstract.aux) (05-Ack.aux) (07-Contents.aux) (09-Siglas.aux) (10-Intro.aux) (15-Problem.aux) (20-Theory.aux) (32-Art.aux) (40-Experiments.aux) (80-Detour.aux) (90-Results.aux) (B0-Future.aux) (F0-Conclusion.aux) (ZA-Annex-Reqs.aux) (ZB-Annex-Inquiry.aux))
  ***********
@@ -1667,19 +1673,19 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E8BC825970A06DDC72BC5A578F967C82;5989.
+(rerunfilecheck)             Checksum: 975F0CCF5A6A8A915AA8077D94AF71C1;5989.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45433 strings out of 476334
- 878431 string characters out of 5793017
+ 45606 strings out of 476334
+ 880705 string characters out of 5793017
  1970493 words of memory out of 5000000
- 66540 multiletter control sequences out of 15000+600000
- 568595 words of font info for 72 fonts, out of 8000000 for 9000
+ 66703 multiletter control sequences out of 15000+600000
+ 568954 words of font info for 73 fonts, out of 8000000 for 9000
  23 hyphenation exceptions out of 8191
- 99i,8n,117p,2373b,2307s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,117p,2373b,2307s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
@@ -1689,10 +1695,10 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, replaced by a fixed one
 
- </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (29 pages, 303113 bytes).
+ </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (30 pages, 329460 bytes).
 PDF statistics:
- 518 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
  354 words of extra memory for PDF output out of 10000 (max. 10000000)
 
