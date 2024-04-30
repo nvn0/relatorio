@@ -206,6 +206,68 @@
       \verb https://www.rfc-editor.org/rfc/rfc4253
       \endverb
     \endentry
+    \entry{python}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Python}
+      \field{urlday}{30}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Python_(programming_language)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Python_(programming_language)
+      \endverb
+    \endentry
+    \entry{pyyt}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d50363b7a6d43fa340ea688489d5b16}{%
+           family={Cuong\bibnamedelima Do},
+           familyi={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Software\bibnamedelima Architect},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{fullhash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{fullhashraw}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{bibnamehash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{authorbibnamehash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{authornamehash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{authorfullhash}{5d50363b7a6d43fa340ea688489d5b16}
+      \strng{authorfullhashraw}{5d50363b7a6d43fa340ea688489d5b16}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Python on Youtube}
+      \field{urlday}{30}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.python.org/about/quotes/
+      \endverb
+      \verb{url}
+      \verb https://www.python.org/about/quotes/
+      \endverb
+    \endentry
     \entry{netfilter}{online}{}{}
       \name{author}{1}{}{%
         {{hash=87ddda7bb3cb65472e51a21468d560d2}{%
@@ -223,8 +285,8 @@
       \strng{authorfullhash}{87ddda7bb3cb65472e51a21468d560d2}
       \strng{authorfullhashraw}{87ddda7bb3cb65472e51a21468d560d2}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Netfilter}
@@ -256,8 +318,8 @@
       \strng{authorfullhash}{fb688351684aea5a042e73d78ebbdf8d}
       \strng{authorfullhashraw}{fb688351684aea5a042e73d78ebbdf8d}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Nftables}
