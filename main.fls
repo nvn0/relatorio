@@ -367,6 +367,8 @@ INPUT /home/delta/.miktex/texmfs/install/tex/latex/appendix/appendix.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/graphics/color.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/float/float.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/float/float.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/footmisc/footmisc.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty

@@ -69,7 +69,7 @@ As funcionalidades do Iptables são organizadas em \textit{tables} ou tabelas
 sendo as principais as a \textit{Filter Table}, a \textit{Nat Table} e a
 \textit{Mangle Table}, como se pode ver na tabela \ref{ipt1}.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
@@ -93,7 +93,6 @@ FORWARD CHAIN & POSTROUTING CHAIN & FORWARD CHAIN\\
 \end{table}
 
 
-
 As principais funcionalidades de cada Table são:
 
 \begin{itemize}
@@ -102,17 +101,17 @@ políticas de filtragem, como permitir, negar ou descartar pacotes;
 \item \textbf{\textit{Nat Table}}: Esta tabela é usada para modificar endereços IP e portas
 nos cabeçalhos dos pacotes, principalmente para implementar NAT;
 \item \textbf{\textit{Mangle Table}}: Esta tabela é usada para alterar pacotes de maneiras
-não abrangidas pelas outras tabelas. Isso pode incluir marcação de pacotes para fins especiais;
+não abrangidas pelas outras tabelas. Isso pode incluir marcação de pacotes para fins especiais.
 \end{itemize}
 
 
 
-Existe ainda outras duas tabelas secundarias com propositos mais simples, dadas
+Existe ainda outras duas tabelas secundarias com propósitos mais simples, dadas 
 por \textit{Raw Table} e \textit{Security Table}, como se pode ver na
 tabela \ref{ipt2}.
 
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|}
 \hline
@@ -136,27 +135,29 @@ PREROUTING CHAIN & OUTPUT CHAIN \\
 \item \textbf{\textit{Raw Table}}: Esta tabela é usada rastrear conexões, com um mecanismo de
 marcação de pacotes de modo a mostrar conexões ativas. permite também aplicar
 exceções antes que as regras de outras tabelas sejam aplicadas;
-\item \textbf{\textit{Security Table}}: Serve para interagir com o SELinux;
+\item \textbf{\textit{Security Table}}: Serve para interagir com a ferramenta SELinux, marcando
+os pacotes para depois serem interpretados pela ferramenta de segurança.
 \end{itemize}
+
+
+% \title*{\textbf{Chains}}
 
 No Iptables uma \textit{table} é um conjunto de \textit{chains} em que cada Chain tem uma função
 especifica. As \textit{Chains} mais comuns são:
 
-
 \begin{itemize}
 \item \textbf{\textit{INPUT}}: Aplicada a pacotes destinados ao próprio sistema;
 \item \textbf{\textit{OUTPUT}}: Aplicada a pacotes gerados pelo próprio sistema;
-\item \textbf{\textit{FORWARD}}: Aplicada a pacotes que são reencaminhados pelo 
-sistema, ou seja, não são originados ou destinados ao próprio sistema,
-mas estão apenas a passar por ele;
+\item \textbf{\textit{FORWARD}}: Aplicada a pacotes que são reencaminhados pelo sistema, ou seja, não são originados ou destinados ao próprio sistema, mas estão apenas a passar por ele.
 \end{itemize}
+
+% \title*{\textbf{Regras}}
 
 O Iptables funciona de forma sequencial, ou seja, quando uma regra é colocada
 numa \textit{chain} essa regra tem um numero ou posição. Desta forma, quando um 
 pacote está a ser processado por uma \textit{chain} são verificadas as regras 
 dessa \textit{chain} desde a primeira até à última, até que uma corresponda a
 parametros do pacote e portanto, seja ativada.
-
 
 Numa regra é possivel especificar parametros como a interface de entrada, 
 a interface de saída, IP de destino, IP de origem,o protocolo, a porta de 
@@ -165,8 +166,7 @@ origem, porta de destino e ação a tomar na regra (aceitar, rejeitar, descartar
 A seguite tabela \ref{ipt3args} mostra uma lista mais completa de parametros a usar na
 criação de regras do IPTables:
 
-
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|}
 \hline
@@ -209,7 +209,19 @@ iptabels -I INPUT -p tcp --dport 22 -j DROP
 
 \subsection{Nftables}
 
-dsfghsdfh
+O Nftables \cite{nftables} concebido para ser o sucessor do Iptables e disponivel para sistemas 
+Linux apartir da versão 3.13 do \textit{kernel}.
+
+"Este software fornece uma nova estrutura de classificação de pacotes no kernel 
+que é baseada em uma máquina virtual (VM) específica da rede e uma nova ferramenta 
+de linha de comando do espaço do utilizador nft. nftables reutiliza os subsistemas 
+existentes do Netfilter, como a infraestrutura de gancho existente, o sistema de 
+rastreamento de conexão, NAT, enfileiramento do espaço do usuário e subsistema de 
+registro" \cite{nftables}.
+
+A sintaxe do Nftables difere da do Iptables, porém existe uma camada de 
+compatibilidade que permite usar o Iptables sobre a infraestrutura do Nftables.
+
 
 \section*{Sumário}
 
