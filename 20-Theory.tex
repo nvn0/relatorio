@@ -333,6 +333,71 @@ A sintaxe do Nftables difere da do Iptables, porém existe uma camada de
 compatibilidade que permite usar o Iptables sobre a infraestrutura do Nftables.
 
 
+Algumas das principais diferenças entre nftables e iptables do ponto de vista do 
+utilizador são \cite{diffiptenft}:
+
+\begin{enumerate}
+
+\item " \textbf{Sintaxe nova}: nftables utiliza uma nova sintaxe. A ferramenta de 
+linha de comandos iptables usa um \textit{parser} baseado em \textit{getoptlong()}, onde as 
+chaves são sempre precedidas por dois hífens, por exemplo, \texttt{--chave} ou 
+um único hífen, por exemplo, \texttt{-p tcp}. Em contraste, nftables usa uma 
+sintaxe compacta inspirada no tcpdump.
+
+\item \textbf{Tabelas e cadeias totalmente configuráveis}: iptables tem várias 
+tabelas pré-definidas e cadeias base, todas registadas mesmo que só precise de uma 
+delas. Houve relatos de que até cadeias base não utilizadas prejudicam o desempenho. 
+Com nftables não existem tabelas ou cadeias pré-definidas. Cada tabela é explicitamente 
+definida e contém apenas os objetos (cadeias, conjuntos, mapas, tabelas de fluxo e 
+objetos stateful) que você adiciona explicitamente a ela. Agora regista apenas as 
+cadeias base de que precisa. Escolhe nomes de tabela e de cadeia e prioridades de 
+gancho netfilter que implementem eficientemente a pipeline de processamento de 
+pacotes específico.
+
+\item \textbf{Uma única regra nftables pode ter várias ações}: Em vez dos correspondentes 
+e ações de destino únicos utilizados em iptables, uma regra nftables consiste em zero 
+ou mais expressões seguidas de uma ou mais declarações. Cada expressão testa se um pacote 
+corresponde a um campo de carga útil específico ou a metadados do pacote/fluxo. Múltiplas 
+expressões são avaliadas linearmente da esquerda para a direita: se a primeira expressão 
+corresponder, então a próxima expressão é avaliada e assim por diante. Se chegarmos à 
+expressão final, então o pacote corresponde a todas as expressões na regra, e as 
+declarações da regra são executadas. Cada declaração toma uma ação, como definir 
+a marca netfilter, contar o pacote, registar o pacote ou renderizar um veredito 
+como aceitar ou descartar o pacote ou saltar para outra cadeia. Tal como com as 
+expressões, múltiplas declarações são avaliadas linearmente da esquerda para a 
+direita: uma única regra pode ter várias ações utilizando múltiplas declarações. 
+Note que uma declaração de veredito por sua natureza termina a regra.
+
+\item \textbf{Sem contador incorporado por cadeia e regra}: Em nftables, os contadores 
+são opcionais, pode ativá-los conforme necessário.
+
+\item \textbf{Melhor suporte para atualizações dinâmicas do conjunto de regras}: Em 
+contraste com o monólito utilizado por iptables, os conjuntos de regras nftables são 
+representados internamente numa lista encadeada. Agora, adicionar ou remover uma regra 
+deixa o resto do conjunto de regras intocado, simplificando a manutenção da informação 
+de estado interna.
+
+\item \textbf{Administração dual stack IPv4/IPv6 simplificada}: A família inet de 
+nftables permite-lhe registar cadeias base que veem tanto o tráfego IPv4 como IPv6. 
+Já não é necessário depender de scripts para duplicar o seu conjunto de regras.
+
+\item \textbf{Nova infraestrutura de conjunto genérico}: Esta infraestrutura integra-se 
+estreitamente no núcleo nftables e permite configurações avançadas como mapas, mapas 
+de veredito e intervalos para alcançar a classificação de pacotes orientada ao desempenho. O mais importante é que pode utilizar qualquer seletor suportado para classificar o tráfego.
+
+\item \textbf{Suporte para concatenações}: Desde o kernel Linux 4.1, pode concatenar 
+vários chaves e combiná-las com mapas e mapas de veredito. A ideia é construir uma tupla 
+cujos valores são hash para obter a ação a ser executada quase O(1).
+
+\item \textbf{Suporta novos protocolos sem atualização do kernel}: As atualizações do 
+kernel podem ser demoradas e intimidantes, especialmente se tiver que manter mais do 
+que um firewall na sua rede. Os kernels de distribuição geralmente ficam atrás da 
+versão mais recente. Com a nova abordagem de máquina virtual nftables, suportar 
+um novo protocolo frequentemente não requer um novo kernel, apenas uma atualização 
+relativamente simples do software de espaço de utilizador nft."
+\end{enumerate}
+
+
 \section*{Sumário}
 
 dsfg

@@ -334,6 +334,36 @@
       \verb https://www.netfilter.org/projects/nftables/index.html
       \endverb
     \endentry
+    \entry{diffiptenft}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1c68cd8127e251e10468e2064748c23}{%
+           family={nftables.org},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{fullhash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{fullhashraw}{f1c68cd8127e251e10468e2064748c23}
+      \strng{bibnamehash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{authorbibnamehash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{authornamehash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{authorfullhash}{f1c68cd8127e251e10468e2064748c23}
+      \strng{authorfullhashraw}{f1c68cd8127e251e10468e2064748c23}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Difirenças ente Iptables e nftables}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.nftables.org/wiki-nftables/index.php/What_is_nftables%3F
+      \endverb
+      \verb{url}
+      \verb https://wiki.nftables.org/wiki-nftables/index.php/What_is_nftables%3F
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
