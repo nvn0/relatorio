@@ -6,11 +6,141 @@ Este capítulo é opcional e, a existir, é aqui que deve descrever como é que 
 O projeto é constituido em quatro partes:
 
 \begin{itemize}
+    \item Ambiente de teste do projeto;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
     \item Sitema de notificações;
-    \item Ambiente de teste do projeto;
 \end{itemize}
+
+
+\section{Ambiente de testes do projeto}
+
+asfd
+
+\subsection{Alpine Linux}
+
+De modo a obter, os melhores resultados possiveis durate os estes e experiencias
+ao longo deste projeto é de extrema importancia que o sistema operativo de testes
+seja o mesmo da plataforma Forge. Sendo assim foi intalada numa máquina virtual
+VMware com o alpine linux 3.19.
+
+Especificações atribuidas à maquina virtual:
+
+\begin{itemize}
+    \item 4 GB de RAM;
+    \item 3 nucleos de para o CPU;
+    \item Placa de rede no modo Bridge;
+    \item 40 GB de armazenamento;
+\end{itemize}
+
+
+texttt{apk add --upgrade apk-tools \&\& apk upgrade --available}
+
+\subsection{Configuração do LXD/LXC}
+
+No que diz respeito ao LXD/LXC foram instalados os pacotes lxd e lxd-client.
+
+
+Foi ativado o serviço do lxd como default com o comando rc-update add lxd default
+e em seguida ativado com o rc-service lxd start.
+
+Depois foi feita a configuração iniciual com lxd init com a seguintes opções:
+
+\begin{itemize}
+    \item f
+\end{itemize}
+
+De seguida foi editada a configuração \textit{default} com o 
+comando "texttt{lxc profile edit default}" nela deverá ser garantida o
+seguinte:
+
+\begin{lstlisting}[language=csh, caption={edição do perfil padrão}]
+  eth0:
+    name: eth0
+    nictype: bridged
+    parent: lxdbr0
+    type:nic
+
+\end{lstlisting}
+
+\textbf{Nota:} eth0 é a interface do sistema \textit{host} e lxdbr0 é a interface
+de rede criada automaticamente pelo LXD.
+
+Com esta configuração os \textit{containers} irão funcionar em modo NAT.
+
+
+Após isto foram criados dois containers Alpine linux com o seguinte 
+comando \texttt{lxc launch images:alpine/3.19 <nome do container>}
+
+por imagem dos containers
+
+\subsection{Testes de FireWall e conexões}
+
+Uma vez os \textit estarem configurados em modo NAT seria necessário criar regras 
+de redirecionamento de portas ou ips de modo a os \textit{containers} serem acedidos
+por outros dispositivos na rede local.
+
+
+De modo a realizar testes de conexão foram instalados dentro dos containers
+o netcat e o python.
+
+\textbf{Nota:} eth0 é a placa de rede do sistema host e tem o ip local de 192.168.1.80.
+
+
+Durante os testes realizados, concluiu-se que existem três medodos de criar conectividade:
+
+\textbf{Método 1: Criar regras no lxc network e defenir portas de redirecionamento}
+
+\textbf{Nota:} Neste metodo será usado como exemplo o \textit{container} "c2" que
+dentro da máquina virtual host tem o IP 10.195.171.166.
+
+\textbf{Nota nº2:} A máquina virtual \textit{Host} tem o endereço IP 192.168.1.80.
+
+Este metodo usa o comando \texttt{lxc network forward create lxdbr0 192.168.1.80}
+para criar a regra e \texttt{lxc network forward port add lxdbr0 192.168.1.80 tcp 7000 10.195.171.205 8000}
+para adicionar as portas a serem reencaminhadas, neste exemplo o trafego vindo da
+rede local que tenta aceder ao IP 192.168.1.80 (\textit{host}) pela porta 7000 será redirecionado
+para a porta 8000 do IP 10.195.171.205 que pertence ao container "c2".
+
+Nesta experiência o container está a executar um servidor http na porta 8000
+com o comando \texttt{python3 -m http.server}
+
+
+\textbf{Nota:} Porta 8000 é a padrão quando não é especificada outra no final do comando.
+
+
+Foi possivel aceder ao servidor http pelo browser num computador da rede local.
+Foram também usados alguns comandos do netcat como o \texttt{nc -w1 -vz 192.168.1.80 7000}.
+
+-> por imagem do teste
+
+Foram usados tambem usados os comandos \texttt{nc 192.168.1.80 7000} e \texttt{nc -l 8000}
+de modo a criar uma ligação TCP. Foi também testado a ligação reversa
+onde o \textit{container} se tenta ligar ao computador da rede, invertendo os comandos
+\texttt{nc 192.168.1.68 3000} e \texttt{nc -l 3000}, ambos os testes foram bem
+sucedidos.
+
+\textbf{Método 2: Usar um ip para redirecionar o tráfego para o container}
+
+fgh
+
+\textbf{Método 3: Usar o Iptables para criar portas de redirecionamento}
+
+
+
+
+\texttt{nc ip porta}
+\texttt{nc -l porta}
+\texttt{nc -w1 -vz ip porta}
+\texttt{python3 -m http.server}
+
+
+sdf
+
+
+\subsection{intalação do .NET Core}
+
+dsfg
 
 \section{Port Controller}
 
@@ -19,11 +149,19 @@ O projeto é constituido em quatro partes:
 Uma vez que a plataforma forge funciona no sistema \textit{Alpine Linux} seria
 necessário escolher ferramentas suportadas por esta distribuição.
 
-No caso desta parte do projeto foi escolhida a linguagem C\# com o 
+No caso desta parte do projeto, foi escolhida a linguagem C\# com o 
 \textit{framework} .NET Core versão 7.0.
 
 
+
 \subsection{Funcionalidades}
+
+"Em sistemas operativos de computador multitarefa, um daemon é um programa de 
+computador executado como um processo em segundo plano, em vez de estar sob o 
+controle direto de um utilizador interativo. Tradicionalmente, os nomes dos processos
+de um daemon terminam com a letra d, para esclarecer que o processo é de fato um 
+daemon e para diferenciar entre um daemon e um programa de computador normal." \cite{daemon}
+
 
 O \textit{"Port Controller"} tem como principal função estar à escuta de pedidos
 do administrador e executar estes pedidos na \textit{FireWall} do sistema
@@ -76,10 +214,27 @@ As classes Lxc e Incus recebem herença da classe Containers.
 
 \section{API e Interface Web}
 
+sdfg
+
 \subsection{Estrutura da API}
+
+sdfg
 
 \subsection{Formato do JSON}
 
+sdgf
+
+\section{Sistema de notificações}
+
+sdfg
+
+\subsection{Discord}
+
+fhgds
+
+\subsection{Microsoft Teams}
+
+dsfg
 
 \section*{Sumário}
 

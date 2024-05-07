@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.30)  2 MAY 2024 04:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.30)  7 MAY 2024 03:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1407,7 +1407,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `00-Capa.aux'.
 
  (00-Capa.tex
-<figs/logo_ipmaia_small.png, id=177, 53.7207pt x 21.681pt>
+<figs/logo_ipmaia_small.png, id=209, 53.7207pt x 21.681pt>
 File: figs/logo_ipmaia_small.png Graphic file (type png)
 <use figs/logo_ipmaia_small.png>
 Package pdftex.def Info: figs/logo_ipmaia_small.png  used on input line 5.
@@ -1484,27 +1484,27 @@ l.152 \include{03-Abstract}
 
 
 
-])
+] [4])
 \tf@toc=\write10
 \openout10 = `main.toc'.
 
- [4] (main.lot)
+ [5] (main.lot)
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
- [5
+ [6
 
 ] (main.lof)
 \tf@lof=\write12
 \openout12 = `main.lof'.
 
- [6
+ [7
 
 ] (main.lol)
 \tf@lol=\write13
 \openout13 = `main.lol'.
 
-) [7
+) [8
 
 ]
 \openout2 = `09-Siglas.aux'.
@@ -1512,7 +1512,7 @@ l.152 \include{03-Abstract}
  (09-Siglas.tex
 No file main.acr.
 No file main.gls.
-) [8
+) [9
 
 
 
@@ -1611,15 +1611,15 @@ Cap\'{\i }tulo 5.
 
 
 
-]
+] [16] [17]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 63.
-) [16]
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 201.
+ [18]) [19]
 \openout2 = `80-Detour.aux'.
 
  (80-Detour.tex
 Cap\'{\i }tulo 6.
-) [17
+) [20
 
 
 
@@ -1629,7 +1629,7 @@ Cap\'{\i }tulo 6.
 
  (90-Results.tex
 Cap\'{\i }tulo 7.
-) [18
+) [21
 
 
 
@@ -1639,7 +1639,7 @@ Cap\'{\i }tulo 7.
 
  (B0-Future.tex
 Cap\'{\i }tulo 8.
-) [19
+) [22
 
 
 
@@ -1649,7 +1649,7 @@ Cap\'{\i }tulo 8.
 
  (F0-Conclusion.tex
 Cap\'{\i }tulo 9.
-) [20
+) [23
 
 
 
@@ -1669,7 +1669,7 @@ Overfull \hbox (3.42136pt too wide) in paragraph at lines 184--184
 []\OT1/cmr/m/n/10.95 Nftables project. \OT1/cmr/m/it/10.95 Nfta-bles\OT1/cmr/m/n/10.95 . \OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / / www . netfilter . org / projects / nftables /
  []
 
-[21
+[24
 
 
 
@@ -1700,19 +1700,19 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 62D6991292B726D61C8C827DA4F67D70;6267.
+(rerunfilecheck)             Checksum: 02C6411A6F3262A0F27A2512FAA57BB9;7621.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45707 strings out of 476334
- 882609 string characters out of 5793017
- 1970493 words of memory out of 5000000
- 66779 multiletter control sequences out of 15000+600000
- 568954 words of font info for 73 fonts, out of 8000000 for 9000
+ 45811 strings out of 476334
+ 884122 string characters out of 5793017
+ 1972493 words of memory out of 5000000
+ 66863 multiletter control sequences out of 15000+600000
+ 569299 words of font info for 74 fonts, out of 8000000 for 9000
  23 hyphenation exceptions out of 8191
- 99i,10n,117p,2373b,2307s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,117p,2373b,2337s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
@@ -1722,10 +1722,10 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, replaced by a fixed one
 
- </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (35 pages, 357624 bytes).
+ </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk> </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (39 pages, 376096 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
- 132 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

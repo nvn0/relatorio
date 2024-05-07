@@ -729,6 +729,7 @@ OUTPUT 40-Experiments.aux
 INPUT ./40-Experiments.tex
 INPUT ./40-Experiments.tex
 INPUT 40-Experiments.tex
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcbx1095.tfm
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
@@ -822,6 +823,8 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk
+INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk
 INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk
 INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
