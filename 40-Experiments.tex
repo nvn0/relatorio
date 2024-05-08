@@ -3,10 +3,11 @@
 
 Este capítulo é opcional e, a existir, é aqui que deve descrever como é que o seu projecto evoluiu.
 
-O projeto é constituido em quatro partes:
+O projeto é constituido em cinco partes:
 
 \begin{itemize}
     \item Ambiente de teste do projeto;
+    \item Testes realizados;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
     \item Sitema de notificações;
@@ -72,12 +73,26 @@ Com esta configuração os \textit{containers} irão funcionar em modo NAT.
 Após isto foram criados dois containers Alpine linux com o seguinte 
 comando \texttt{lxc launch images:alpine/3.19 <nome do container>}
 
-por imagem dos containers
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=14cm]{figs/lista de containers.png}
+\caption{Containers criados.}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
 
-\subsection{Testes de FireWall e conexões}
+
+
+\subsection{Instalação do .NET Core}
+
+dsfg
+
+
+
+\section{Testes de FireWall e conexões}
 
 Uma vez os \textit estarem configurados em modo NAT seria necessário criar regras 
-de redirecionamento de portas ou ips de modo a os \textit{containers} serem acedidos
+de redirecionamento de portas ou endereços IP de modo a os \textit{containers} serem acedidos
 por outros dispositivos na rede local.
 
 
@@ -89,58 +104,104 @@ o netcat e o python.
 
 Durante os testes realizados, concluiu-se que existem três medodos de criar conectividade:
 
-\textbf{Método 1: Criar regras no lxc network e defenir portas de redirecionamento}
+\subsection{Método 1: Criar regras no lxc network e defenir portas de redirecionamento}
 
 \textbf{Nota:} Neste metodo será usado como exemplo o \textit{container} "c2" que
 dentro da máquina virtual host tem o IP 10.195.171.166.
 
 \textbf{Nota nº2:} A máquina virtual \textit{Host} tem o endereço IP 192.168.1.80.
 
-Este metodo usa o comando \texttt{lxc network forward create lxdbr0 192.168.1.80}
-para criar a regra e \texttt{lxc network forward port add lxdbr0 192.168.1.80 tcp 7000 10.195.171.205 8000}
+Este metodo usa o comando "\texttt{lxc network forward create lxdbr0 192.168.1.80}"
+para criar a regra e "\texttt{lxc network forward port add lxdbr0 192.168.1.80 tcp 7000 10.195.171.205 8000}"
 para adicionar as portas a serem reencaminhadas, neste exemplo o trafego vindo da
-rede local que tenta aceder ao IP 192.168.1.80 (\textit{host}) pela porta 7000 será redirecionado
+rede local que tenta aceder ao endereço IP 192.168.1.80 (\textit{host}) pela porta 7000 será redirecionado
 para a porta 8000 do IP 10.195.171.205 que pertence ao container "c2".
 
 Nesta experiência o container está a executar um servidor http na porta 8000
-com o comando \texttt{python3 -m http.server}
+com o comando "\texttt{python3 -m http.server}".
 
 
 \textbf{Nota:} Porta 8000 é a padrão quando não é especificada outra no final do comando.
 
 
-Foi possivel aceder ao servidor http pelo browser num computador da rede local.
-Foram também usados alguns comandos do netcat como o \texttt{nc -w1 -vz 192.168.1.80 7000}.
+Foi possivel aceder ao servidor HTTP pelo browser num computador da rede local.
 
--> por imagem do teste
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{figs/teste de conexão via browser.png}
+\caption{Teste de conexão via browser.}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
 
-Foram usados tambem usados os comandos \texttt{nc 192.168.1.80 7000} e \texttt{nc -l 8000}
+
+Foram também usados alguns comandos do netcat como o "\texttt{nc -w1 -vz 192.168.1.80 7000}".
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=12cm]{figs/teste de conexão1.png}
+\caption{Teste de conexão com o netcat.}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+Foram usados também usados os comandos "\texttt{nc 192.168.1.80 7000} e \texttt{nc -l 8000}"
 de modo a criar uma ligação TCP. Foi também testado a ligação reversa
 onde o \textit{container} se tenta ligar ao computador da rede, invertendo os comandos
-\texttt{nc 192.168.1.68 3000} e \texttt{nc -l 3000}, ambos os testes foram bem
+"\texttt{nc 192.168.1.68 3000}" e "\texttt{nc -l 3000}", ambos os testes foram bem
 sucedidos.
 
-\textbf{Método 2: Usar um ip para redirecionar o tráfego para o container}
-
-fgh
-
-\textbf{Método 3: Usar o Iptables para criar portas de redirecionamento}
 
 
 
 
-\texttt{nc ip porta}
-\texttt{nc -l porta}
-\texttt{nc -w1 -vz ip porta}
-\texttt{python3 -m http.server}
+\subsection{Método 2: Usar um IP para redirecionar o tráfego para o container}
+
+Neste método é atribuido um endereço ip da rede local, que esteja disponivel, à
+interface de rede do sistema host, eth0, usado o comando
+"\texttt{ip address add 192.168.1.120/24 dev eth0}", para este exemplo foi escolhido o IP
+"192.168.1.120".
+
+De seguida, é necessário criar a regra de redirecionamento do tráfego
+com o IP de destino "192.168.1.120" para o IP de um \textit{container}, que neste esxemplo será o
+IP "10.195.171.166" que pertence ao \textit{container} "c1", para isto foi usado o
+comando "\texttt{lxc network forward create lxdbr0 192.168.1.120 target\_address=10.195.171.166}"
+que automaticamente cria uma regra na tabela NAT do iptables para garantir o correto
+funcionamento do redirecionamento.
+
+Com esta configuração se o \textit{container} "c1" que possui o IP "10.195.171.166" estiver a executar um servidor 
+http na porta 8000, o mesmo serviço estará disponivel para dispositivos da rede local
+através do IP 192.168.1.120 na porta 8000.
+
+\textbf{Nota:} Os testes de conexão usados no método 1 foram igualmente bem sucedidos.
+
+\subsection{Método 3: Usar o Iptables para criar portas de redirecionamento}
+
+O método 3 é o mesmo que o médoto 1 mas só que configurado usando apenas regras
+do Iptables, ou seja, é criaca uma regra na tablea NAT que redireciona o tráfego
+de uma porta do sistema host para um IP e porta de um \textit{container}.
+
+É possivel criar esta configuração com o comando:
 
 
-sdf
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de regra de redirecionamento}]
+    doas iptables -t nat -I PREROUTING -p tcp --dport 5000 -j DNAT --to-destination 10.195.171.205:8000
+\end{lstlisting}
 
 
-\subsection{intalação do .NET Core}
 
-dsfg
+Neste exemplo similar ao exemplo di método 1, se o \textit{container} "c2" com o 
+endereço IP "10.195.171.205", estiver a executar um servidor HTTP na porta
+8000, os dispositivos na rede local poderão aceder a este serviço acedendo à porta 
+5000 do IP do sistema host(192.168.1.80).
+
+\textbf{Nota:} Os testes de conexão usados no método 1/2 foram igualmente bem sucedidos.
+
+
+
+
+
 
 \section{Port Controller}
 
