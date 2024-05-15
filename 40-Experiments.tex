@@ -5,13 +5,13 @@ Este capítulo é opcional e, a existir, é aqui que deve descrever como é que 
 
 O projeto é constituido em cinco partes:
 
-\begin{itemize}
+\begin{enumerate}
     \item Ambiente de teste do projeto;
     \item Testes de FireWall e conexões realizados;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
     \item Sitema de notificações;
-\end{itemize}
+\end{enumerate}
 
 
 \section{Ambiente de testes do projeto}
@@ -42,17 +42,28 @@ texttt{apk add --upgrade apk-tools \&\& apk upgrade --available}
 No que diz respeito ao LXD/LXC foram instalados os pacotes lxd e lxd-client.
 
 
-Foi ativado o serviço do lxd como default com o comando rc-update add lxd default
-e em seguida ativado com o rc-service lxd start.
+Foi ativado o serviço do lxd como default com o comando \texttt{rc-update add lxd default}
+e em seguida ativado com o \texttt{rc-service lxd start}.
 
-Depois foi feita a configuração iniciual com lxd init com a seguintes opções:
+Depois foi feita a configuração iniciul com o comando texttt{lxd init} com a seguintes opções:
 
-\begin{itemize}
-    \item f
-\end{itemize}
+\begin{enumerate}
+    \item \texttt{Would you like to use LXD clustering? (yes/no) [default=no]: no
+    \item Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
+    \item Name of the new storage pool [default=default]: default
+    \item Name of the storage backend to use (btrfs, dir, lvm, zfs) [default=zfs]: dir
+    \item Would you like to connect to a MAAS server? (yes/no) [default=no]: no
+    \item Would you like to create a new local network bridge? (yes/no) [default=yes]: yes
+    \item What should the new bridge be called? [default=lxdbr0]: lxdbr0
+    \item What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: auto
+    \item What IPv6 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: auto
+    \item Would you like LXD to be available over the network? (yes/no) [default=no]: no
+    \item Would you like stale cached images to be updated automatically? (yes/no) [default=yes] yes
+    \item Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: no}
+\end{enumerate}
 
 De seguida foi editada a configuração \textit{default} com o 
-comando "texttt{lxc profile edit default}" nela deverá ser garantida o
+comando "\texttt{lxc profile edit default}" nela deverá ser garantida o
 seguinte:
 
 \begin{lstlisting}[language=csh, caption={edição do perfil padrão}]
@@ -71,7 +82,7 @@ Com esta configuração os \textit{containers} irão funcionar em modo NAT.
 
 
 Após isto foram criados dois containers Alpine linux com o seguinte 
-comando \texttt{lxc launch images:alpine/3.19 <nome do container>}
+comando "\texttt{lxc launch images:alpine/3.19 <nome do container>}"
 
 \begin{figure}[ht]
 \begin{center}
@@ -88,7 +99,7 @@ comando \texttt{lxc launch images:alpine/3.19 <nome do container>}
 
 Para depois poder executar a aplicação que irá controlar as portas dos containers,
 aplicação esta desenvolvida em C\# .NET Core é necessário instalar os pacotes necessários
-para o funcionamento da mesma.
+para o funcionamento da mesma, mais concretamente o sdk e o \textit{runtime}.
 
 Os pacotes necessŕios foram instalados usando os seguintes comandos:
 \begin{itemize}
