@@ -7,7 +7,7 @@ O projeto é constituido em cinco partes:
 
 \begin{itemize}
     \item Ambiente de teste do projeto;
-    \item Testes realizados;
+    \item Testes de FireWall e conexões realizados;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
     \item Sitema de notificações;
@@ -85,11 +85,19 @@ comando \texttt{lxc launch images:alpine/3.19 <nome do container>}
 
 \subsection{Instalação do .NET Core}
 
-dsfg
+
+Para depois poder executar a aplicação que irá controlar as portas dos containers,
+aplicação esta desenvolvida em C\# .NET Core é necessário instalar os pacotes necessários
+para o funcionamento da mesma.
+
+Os pacotes necessŕios foram instalados usando os seguintes comandos:
+\begin{itemize}
+    \item \texttt{doas apk add dotnet7-sdk};
+    \item \texttt{doas apk add dotnet7-runtime};
+\end{itemize}
 
 
-
-\section{Testes de FireWall e conexões}
+\section{Testes de FireWall e conexões realizados}
 
 Uma vez os \textit estarem configurados em modo NAT seria necessário criar regras 
 de redirecionamento de portas ou endereços IP de modo a os \textit{containers} serem acedidos

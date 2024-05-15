@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.30)  8 MAY 2024 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.30)  15 MAY 2024 02:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1628,39 +1628,39 @@ File: figs/lista de containers.png Graphic file (type png)
 Package pdftex.def Info: figs/lista de containers.png  used on input line 78.
 (pdftex.def)             Requested size: 398.33858pt x 63.64954pt.
  [16 <./figs/lista de containers.png>]
-Overfull \hbox (19.50682pt too wide) in paragraph at lines 114--119
+Overfull \hbox (19.50682pt too wide) in paragraph at lines 122--127
 []\OT1/cmr/m/n/10.95 Este metodo usa o co-mando "\OT1/cmtt/m/n/10.95 lxc network forward create lxdbr0 192.168.1.80\OT1/cmr/m/n/10.95 "para
  []
 
 
-Overfull \hbox (59.01924pt too wide) in paragraph at lines 114--119
+Overfull \hbox (59.01924pt too wide) in paragraph at lines 122--127
 \OT1/cmr/m/n/10.95 criar a re-gra e "\OT1/cmtt/m/n/10.95 lxc network forward port add lxdbr0 192.168.1.80 tcp 7000 10.195.171.205
  []
 
 <figs/teste de conexão via browser.png, id=511, 350.81062pt x 175.40532pt>
 File: figs/teste de conexão via browser.png Graphic file (type png)
 <use figs/teste de conexão via browser.png>
-Package pdftex.def Info: figs/teste de conexão via browser.png  used on input line 131.
+Package pdftex.def Info: figs/teste de conexão via browser.png  used on input line 139.
 (pdftex.def)             Requested size: 341.43306pt x 170.72908pt.
 [17]
 <figs/teste de conexão1.png, id=517, 440.39531pt x 33.12375pt>
 File: figs/teste de conexão1.png Graphic file (type png)
 <use figs/teste de conexão1.png>
-Package pdftex.def Info: figs/teste de conexão1.png  used on input line 142.
+Package pdftex.def Info: figs/teste de conexão1.png  used on input line 150.
 (pdftex.def)             Requested size: 341.43306pt x 25.68124pt.
 
-Overfull \hbox (28.3431pt too wide) in paragraph at lines 165--171
+Overfull \hbox (28.3431pt too wide) in paragraph at lines 173--179
 \OT1/cmr/m/n/10.95 tino "192.168.1.120"para o IP de um \OT1/cmr/m/it/10.95 con-tainer\OT1/cmr/m/n/10.95 , que neste es-x-em-plo ser^^Sa o IP "10.195.171.166"que
  []
 
 
-Overfull \hbox (9.32233pt too wide) in paragraph at lines 165--171
+Overfull \hbox (9.32233pt too wide) in paragraph at lines 173--179
 \OT1/cmtt/m/n/10.95 lxdbr0 192.168.1.120 target[]address=10.195.171.166\OT1/cmr/m/n/10.95 "que au-to-mati-ca-mente cria uma
  []
 
 [18 <./figs/teste de conexão via browser.png> <./figs/teste de conexão1.png>] [19]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 262.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 270.
  [20]) [21]
 \openout2 = `80-Detour.aux'.
 
@@ -1751,16 +1751,16 @@ L3 programming layer <2024-03-14>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA1B342D3D5469827C71DA13219636C8;8920.
+(rerunfilecheck)             Checksum: 5333257D059F9753A51216C6FB688541;8978.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45860 strings out of 476334
- 885300 string characters out of 5793017
+ 45861 strings out of 476334
+ 885308 string characters out of 5793017
  1970493 words of memory out of 5000000
- 66902 multiletter control sequences out of 15000+600000
+ 66903 multiletter control sequences out of 15000+600000
  569299 words of font info for 74 fonts, out of 8000000 for 9000
  23 hyphenation exceptions out of 8191
  99i,10n,117p,2373b,2337s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1774,7 +1774,7 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist,
 pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, replaced by a fixed one
 
  </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk> </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (41 pages, 418052 bytes).
+Output written on main.pdf (41 pages, 418497 bytes).
 PDF statistics:
  719 PDF objects out of 1000 (max. 8388607)
  161 named destinations out of 1000 (max. 500000)
