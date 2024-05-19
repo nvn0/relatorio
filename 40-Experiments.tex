@@ -16,26 +16,73 @@ O projeto é constituido em cinco partes:
 
 \section{Ambiente de testes do projeto}
 
-asfd
+Esta secção do relatório irá abordar os passos efetuados na configuração do sistema 
+usado como ambiente de testes do projeto e respetivas aplicações/pacotes instalados.
 
-\subsection{Alpine Linux}
+Sendo os seguintes:
+\begin{enumerate}
+    \item Configuração do Alpine Linux;
+    \item Configuração do LXD/LXC;
+    \item Instalação do .NET Core;
+    \item Instalação de outros pacotes;
+\end{enumerate}
+
+\subsection{Configuração do Alpine Linux}
 
 De modo a obter, os melhores resultados possiveis durate os estes e experiencias
-ao longo deste projeto é de extrema importancia que o sistema operativo de testes
+ao longo deste projeto é de extrema importância que o sistema operativo de testes
 seja o mesmo da plataforma Forge. Sendo assim foi intalada numa máquina virtual
 VMware com o alpine linux 3.19.
 
 Especificações atribuidas à maquina virtual:
 
 \begin{itemize}
-    \item 4 GB de RAM;
+    \item 6 GB de RAM;
     \item 3 nucleos de para o CPU;
     \item Placa de rede no modo Bridge;
     \item 40 GB de armazenamento;
 \end{itemize}
 
+De seguida foi feita a configuração inicial do sistema com os seguintes coamandos:
 
-texttt{apk add --upgrade apk-tools \&\& apk upgrade --available}
+
+\begin{enumerate}
+    \item \texttt{localhost login: root 
+    \item setup-alpine
+    \item Select keyboard layout: pt-pt
+    \item Enter a system hostname : alpine
+    \item Which one do you want to initialize? [eth0]
+    \item Ip address for eth0? [dhcp]
+    \item Do you want to do any manual network configuration? (y/n) [n] n
+    \item (Changing password for root) New password: ******
+    \item which timezone are you in [UTC]
+    \item HTTP/FTP proxy URL? [none]
+    \item Enter mirror number (1-72) or URL to add (or r/f/e/done) [1]
+    \item Setup user? (enter a lower-case loginname, or 'no') [no] delta
+    \item Password: ******}
+\end{enumerate}
+
+
+\textbf{Nota:} As opcções \textit{default} são sugeridas dentro de "[]" caso se pretenda
+usar essa opção é apenas necessário carregar na tecla "\textit{ENTER}". \\
+
+
+Para terminar a configuração foi executado o comando: 
+
+\texttt{apk add --upgrade apk-tools \&\& apk upgrade --available} \\
+
+
+Foi também ativado o repositório da comunidae para ter um maior
+numero de pacotes para instalar. Para isto é necessário descomentar a linha no
+ficheiro "\textit{repositories}" com a localização "/etc/apk/repositories" com o
+URL deste repositório, removendo o "\#".
+
+No final o conteúdo do ficheiro deverá ser este:
+
+\begin{lstlisting}[language=Bash, caption={Ficheiro repositories}]
+http://dl-cdn.alpinelinux.org/alpine/v3.19/main
+http://dl-cdn.alpinelinux.org/alpine/v3.19/community
+\end{lstlisting}
 
 \subsection{Configuração do LXD/LXC}
 
@@ -52,7 +99,7 @@ Depois foi feita a configuração iniciul com o comando texttt{lxd init} com a s
     \item Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
     \item Name of the new storage pool [default=default]: default
     \item Name of the storage backend to use (btrfs, dir, lvm, zfs) [default=zfs]: dir
-    \item Would you like to connect to a MAAS server? (yes/no) [default=no]: no
+    \item Would you like to connect to a MAAS server? (yes/no) [default=no]: no;
     \item Would you like to create a new local network bridge? (yes/no) [default=yes]: yes
     \item What should the new bridge be called? [default=lxdbr0]: lxdbr0
     \item What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: auto
@@ -106,6 +153,36 @@ Os pacotes necessŕios foram instalados usando os seguintes comandos:
     \item \texttt{doas apk add dotnet7-sdk};
     \item \texttt{doas apk add dotnet7-runtime};
 \end{itemize}
+
+
+
+
+\subsection{Instalação de outros pacotes}
+
+Para além do .NET Core, para garantir o funcionamento das aplicações desenvolvidas neste projeto é necessário
+instalar ainda os seguintes pagotes:
+\begin{itemize}
+    \item Python - \texttt{doas apk add python3};
+    \item Pip - \texttt{doas apk add python3-pip}
+    \item Bash - \texttt{doas apk add bash};
+\end{itemize}
+
+
+Para uma maior facilidade de uso do sistema durante o seu uso foi também instalado
+o "tmux" que permite criar "janelas" e trocar rapidamente entre as mesma, funcionalidade
+essa que aumenta a produtividade num ambiente de apenas terminal.
+Para asua instala ção foi usado o comando:
+\begin{itemize}
+    \item \texttt{doas apk add tmux};
+\end{itemize}
+
+
+
+
+
+
+
+
 
 
 \section{Testes de FireWall e conexões realizados}
@@ -169,6 +246,8 @@ de modo a criar uma ligação TCP. Foi também testado a ligação reversa
 onde o \textit{container} se tenta ligar ao computador da rede, invertendo os comandos
 "\texttt{nc 192.168.1.68 3000}" e "\texttt{nc -l 3000}", ambos os testes foram bem
 sucedidos.
+
+
 
 
 
