@@ -3,18 +3,50 @@
 
 Este capítulo é opcional \textbf{mas altamente recomendado} e, a existir, deve descrever os Fundamentos Teóricos, o que incluirá descrever as tecnologias relevantes, sejam concorrentes ou de fundação.
 
+Neste capitulo serão abordadas tecnologias e fundamentos teóricos relevantes para 
+este projeto. \\
 
 \section{Distribuições Linux}
 
-asd
+Sendo Linux apenas um \textit{Kernel}, ou seja, um "nucleo" de um sistema operativo
+o mesmo não pode ser usado si só da mesma forma que outros sistemas operativos.
+Para ter um sistema completo é necessário adicionar multiplos programas/bibliotecas,
+sendo assim, existe um numero elevado de sistemas operativos basedos em Linux.
+Certas distribuições podem ter diferentes alvos de utilizadores/utilização, quer seja,
+para uso pessoal/tradicional de um utilizar comum, quer seja para servidores.
+
+As principais vantagens associadas ao uso de um Sistema operativo baseado em Linux são:
+\begin{enumerate}
+    \item Não é preciso licensa de utilização;
+    \item Código aberto;
+    \item É um sistema que por norma consome menos recursos que a maioria das distribuições disponiveis;
+    \item costumização;
+\end{enumerate} 
+
+
 
 \subsection{Alpine Linux}
 
-ads
+"Alpine Linux é uma distribuição Linux baseada em musl e BusyBox originalmente
+projetada para usuários avançados que apreciam segurança, simplicidade e eficiência 
+no uso de recursos." \cite{alpinewiki}
+
+O Alpine Linux é uma distribuição independente, isto é, não baseda em nunhuma 
+outra distribuição como muitas outras. E usada principalmente em ambientes
+profissionais/servidores.
+
+Principais diferenças do Alpine Linux com a maioria das distribuições Linux disponiveis são:
+\begin{itemize}
+    \item O seu \textit{init system} é o OpenRC;
+    \item A \textit{shell} predefenida é o busybox;
+    \item Gestor de pagotes é o "\texttt{apk}";
+    \item Para executar comandos de forma administrativa é ncessário usar do comados "\texttt{doas}" em vez do "\texttt{sudo}";
+\end{itemize} 
+
 
 \section{Linguagens de programação}
 
-fgdh
+Nesta secção serão abordadas liguagens de programação relevantes no projeto.
 
 \subsection{Linguagem C\# (.NET Core)}
 
