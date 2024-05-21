@@ -20,7 +20,7 @@ As principais vantagens associadas ao uso de um Sistema operativo baseado em Lin
     \item Não é preciso licensa de utilização;
     \item Código aberto;
     \item É um sistema que por norma consome menos recursos que a maioria das distribuições disponiveis;
-    \item costumização;
+    \item costumização.
 \end{enumerate} 
 
 
@@ -40,7 +40,7 @@ Principais diferenças do Alpine Linux com a maioria das distribuições Linux d
     \item O seu \textit{init system} é o OpenRC;
     \item A \textit{shell} predefenida é o busybox;
     \item Gestor de pagotes é o "\texttt{apk}";
-    \item Para executar comandos de forma administrativa é ncessário usar do comados "\texttt{doas}" em vez do "\texttt{sudo}";
+    \item Para executar comandos de forma administrativa é ncessário usar do comados "\texttt{doas}" em vez do "\texttt{sudo}".
 \end{itemize} 
 
 
@@ -84,25 +84,25 @@ As principais carecterias da linguagem C\# são:
 \begin{itemize}
 \item \textbf{Tipagem Estática}: C\# é uma linguagem de tipagem estática, o que 
 significa que o tipo de cada variável é determinado em tempo de compilação e deve 
-ser declarado explicitamente.
+ser declarado explicitamente;
 
 \item \textbf{Orientação a Objetos}: C\# é uma linguagem orientada a objetos, 
 onde os conceitos de classes e objetos são fundamentais. Tem suporte a heranças, 
 encapsulamento, polimorfismo e outras características típicas da programação 
-orientada a objetos.
+orientada a objetos;
 
 \item \textbf{Sintaxe Simples e Legível}: A sintaxe de C\# é projetada para 
 ser fácil de ler e entender. Isto é facilitado pelo uso de palavras-chave intuitivas 
-e pela estrutura clara do código.
+e pela estrutura clara do código;
 
 \item \textbf{Coleta Automática de Lixo (Garbage Collection)}: C\# possui um sistema 
 de coleta automática de lixo que faz a gestão da alocação e libertação de memória, 
 permitindo que os desenvolvedores se concentrem na lógica do programa sem se preocupar
-com bugs relacionados à memória.
+com bugs relacionados à memória;
 
 \item \textbf{Segurança de Tipo}: C\# é uma linguagem fortemente tipada, o que 
 significa que o compilador verifica os tipos em tempo de compilação, ajudando a evitar 
-erros comuns relacionados à manipulação de dados.
+erros comuns relacionados à manipulação de dados;
 
 
 \item \textbf{Biblioteca Padrão Abrangente}: C\# é acompanhado por uma ampla 
@@ -110,6 +110,8 @@ biblioteca padrão, conhecida como .NET \textit{Framework} (ou .NET Core), que o
 suporte a uma variedade de funcionalidades, como manipulação de ficheiros, acesso a bases 
 de dados, desenvolvimento web, entre outros.
 \end{itemize}
+
+
 
 \subsection{Linguagem Python}
 
@@ -141,8 +143,8 @@ incluindo programação orientada a objetos, programação imperativa e programa
 \item \textbf{Biblioteca Padrão Abrangente}: Python vem com uma vasta biblioteca 
 padrão que oferece suporte para uma ampla gama de tarefas, desde manipulação de arquivos 
 até desenvolvimento web;
-\item \textbf{Comunidade Ativa}:Python possui uma comunidade
-enorme e ativa de desenvolvedores em todo o mundo. Isto resulta numa grande quantidade
+\item \textbf{Comunidade Ativa}:Python possui uma comunidade enorme e ativa de 
+desenvolvedores em todo o mundo. Isto resulta numa grande quantidade
 de recursos disponíveis, como bibliotecas de terceiros, frameworks e ferramentas 
 de desenvolvimento.
 \end{itemize}
@@ -151,13 +153,62 @@ de desenvolvimento.
 "Python é suficientemente rápido para o nosso site e permite-nos produzir funcionalidades 
 mantíveis em tempos recorde, com um mínimo de programadores." \cite{pyyt}
 
-\section{API}
+\section{APIs}
 
-fdhg
+Nesta secção serão explicadas as APIs e como esta funcionam.
+
 
 \subsection{O que é uma API?}
 
-fdgh
+Uma API (Application Programming Interface) é uma interface que permite a interação entre diferentes componentes de software. 
+Ela define métodos e protocolos de comunicação para que desenvolvedores possam utilizar 
+funcionalidades específicas sem precisar entender os detalhes internos da implementação.
+O serviço ao qual uma API pode estar associada pode ser um sistema operativo, uma biblioteca
+de \textit{software} ou um serviço \textit{web}.
+
+Alguns exemplos de APIs são a API do sistema de ficheiros do Node.js o "fs" e o DirectX 
+da Microsoft, usada para tarefas relacionadas com multimídia e gráficos.
+
+\subsection{O que é uma REST API?}
+
+
+"A REST API (also called a RESTful API or RESTful web API) is an application 
+programming interface (API) that conforms to the design principles of the representational
+state transfer (REST) architectural style. REST APIs provide a flexible, lightweight way 
+to integrate applications and to connect components in microservices architectures." \cite{ibmrestapi}
+
+
+
+Uma REST API é um tipo de API que adere aos princípios do REST que é uma arquitetura
+de \textit{software} orientada a serviços \textit{WEB}.
+A lógica deste de funcionamento consiste em computadores enviarem recursos textuais através
+de solicitações \textit{HTTP} pela \textit{internet}. \\
+
+Alguns exemplos de REST APIs são a API do Discord que permite um utilizador mandar mensagens fora
+da aplicação de cliente, usando apenas solicitações \textit{HTTP}, outra plataforma é 
+o X (antigo Twitter) fazer "tweets" da mesma forma.
+
+
+As solicitações \textit{HTTP} possuí as seguintes operações:
+\begin{itemize}
+    \item GET;
+    \item HEAD;
+    \item POST; 
+    \item PATCH; 
+    \item DELETE; 
+    \item CONNECT; 
+    \item OPTIONS;
+    \item TRACE.
+\end{itemize}
+
+
+Os principais formatos de texto a serem enviados nas solicitações são:
+\begin{itemize}
+    \item HTML;
+    \item JSON;
+    \item XML.
+\end{itemize}
+
 
 \section{Unix Socket}
 

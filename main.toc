@@ -17,44 +17,45 @@
 \contentsline {section}{\numberline {3.2}Linguagens de programação}{7}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Linguagem C\# (.NET Core)}{7}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Linguagem Python}{8}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}API}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.3}APIs}{9}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}O que é uma API?}{9}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Unix Socket}{9}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}O que é uma unix socket?}{10}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Como funciona?}{10}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Containers}{10}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Tipos de containers}{10}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}LXD e LXC}{10}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Incus}{10}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}FireWalls Linux}{10}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Iptables}{10}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Nftables}{13}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}Estado da Arte}{16}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Desenvolvimento do tema}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Ambiente de testes do projeto}{17}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Configuração do Alpine Linux}{18}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Configuração do LXD/LXC}{19}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Instalação do .NET Core}{20}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Instalação de outros pacotes}{20}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Testes de FireWall e conexões realizados}{21}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Método 1: Criar regras no lxc network e defenir portas de redirecionamento}{21}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Método 2: Usar um IP para redirecionar o tráfego para o container}{22}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Método 3: Usar o Iptables para criar portas de redirecionamento}{23}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Port Controller}{23}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Escolha da tecnologia}{23}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Funcionalidades}{23}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Estrutura do código}{24}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Funcionamento do código}{24}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}API e Interface Web}{24}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Estrutura da API}{24}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Formato do JSON}{24}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Sistema de notificações}{25}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Discord}{25}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Microsoft Teams}{25}{subsection.5.5.2}%
-\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{26}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussão de resultados}{27}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Trabalho futuro}{28}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{29}{chapter.9}%
-\contentsline {chapter}{Referências}{30}{chapter.9}%
+\contentsline {subsection}{\numberline {3.3.2}O que é uma REST API?}{10}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Unix Socket}{10}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}O que é uma unix socket?}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Como funciona?}{11}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Containers}{11}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Tipos de containers}{11}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}LXD e LXC}{11}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Incus}{11}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}FireWalls Linux}{11}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Iptables}{11}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Nftables}{14}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}Estado da Arte}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Desenvolvimento do tema}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ambiente de testes do projeto}{18}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Configuração do Alpine Linux}{19}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Configuração do LXD/LXC}{20}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Instalação do .NET Core}{21}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Instalação de outros pacotes}{21}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Testes de FireWall e conexões realizados}{22}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Método 1: Criar regras no lxc network e defenir portas de redirecionamento}{22}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Método 2: Usar um IP para redirecionar o tráfego para o container}{23}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Método 3: Usar o Iptables para criar portas de redirecionamento}{24}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Port Controller}{24}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Escolha da tecnologia}{24}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Funcionalidades}{24}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Estrutura do código}{25}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Funcionamento do código}{25}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}API e Interface Web}{25}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Estrutura da API}{25}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Formato do JSON}{25}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Sistema de notificações}{26}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Discord}{26}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Microsoft Teams}{26}{subsection.5.5.2}%
+\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussão de resultados}{28}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Trabalho futuro}{29}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{30}{chapter.9}%
+\contentsline {chapter}{Referências}{31}{chapter.9}%
 \contentsline {chapter}{\numberline {A}Especificação de requisitos simplificada}{A1}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Questionários}{A2}{appendix.B}%
