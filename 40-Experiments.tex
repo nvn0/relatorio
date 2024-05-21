@@ -14,6 +14,18 @@ O projeto é constituido em cinco partes:
 \end{enumerate}
 
 
+No final o ambiente do projeto será o da seguinte imagem:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{figs/estrutura2.png}
+\caption{Abiente do projeto}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+
+
 \section{Ambiente de testes do projeto}
 
 Esta secção do relatório irá abordar os passos efetuados na configuração do sistema 
@@ -26,6 +38,7 @@ Sendo os seguintes:
     \item Instalação do .NET Core;
     \item Instalação de outros pacotes;
 \end{enumerate}
+
 
 \subsection{Configuração do Alpine Linux}
 
@@ -60,6 +73,12 @@ De seguida foi feita a configuração inicial do sistema com os seguintes coaman
     \item Enter mirror number (1-72) or URL to add (or r/f/e/done) [1]
     \item Setup user? (enter a lower-case loginname, or 'no') [no] delta
     \item Password: ******}
+    \item Enter ssh key or URL for titus (or 'none') [none]
+    \item Which ssh server ('openssh', 'dropbear', or 'none') [openssh]
+    \item Which disk(s) would you like to use? [none] sda 
+    \item how you would like to use it? ('sys', 'data', 'crypt', 'lvm' or '?'for help) [?] sys 
+    \item Erase the above disk(s) and continue? (y/n) [n] y 
+    \item Instalation Complete. Please reboot.
 \end{enumerate}
 
 

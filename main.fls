@@ -729,6 +729,13 @@ OUTPUT 40-Experiments.aux
 INPUT ./40-Experiments.tex
 INPUT ./40-Experiments.tex
 INPUT 40-Experiments.tex
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
+INPUT ./figs/estrutura2.png
 INPUT ./figs/lista de containers.png
 INPUT ./figs/lista de containers.png
 INPUT ./figs/lista de containers.png
