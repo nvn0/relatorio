@@ -182,7 +182,7 @@ to integrate applications and to connect components in microservices architectur
 Uma REST API é um tipo de API que adere aos princípios do REST que é uma arquitetura
 de \textit{software} orientada a serviços \textit{WEB}.
 A lógica deste de funcionamento consiste em computadores enviarem recursos textuais através
-de solicitações \textit{HTTP} pela \textit{internet}. \\
+de solicitações \textit{HTTP} pela \textit{internet} para um URL específico. \\
 
 Alguns exemplos de REST APIs são a API do Discord que permite um utilizador mandar mensagens fora
 da aplicação de cliente, usando apenas solicitações \textit{HTTP}, outra plataforma é 
@@ -191,14 +191,16 @@ o X (antigo Twitter) fazer "tweets" da mesma forma.
 
 As solicitações \textit{HTTP} possuí as seguintes operações:
 \begin{itemize}
-    \item GET;
-    \item HEAD;
-    \item POST; 
-    \item PATCH; 
-    \item DELETE; 
-    \item CONNECT; 
-    \item OPTIONS;
-    \item TRACE.
+    \item GET - Usado para solicitar dados de um recurso específico;
+    \item HEAD - Similar ao GET, mas só retorna os cabeçalhos da resposta sem o corpo;
+    \item POST - Enviar dados ao servidor para criar um novo recurso; 
+    \item PUT - Atualizar um recurso específico com dados novos;
+    \item PATCH - Atualizar parcialmente um recurso existente; 
+    \item DELETE - Usado para apagar um recurso específico; 
+    \item CONNECT - Principalmente usado para iniciar uma comunicação
+    segura (via SSL/TLS) com um servidor proxy; 
+    \item OPTIONS - Usado para descobrir os métodos suportados pelo servidor para um recurso específico;
+    \item TRACE - Usado para depurar e rastrear o caminho que uma solicitação HTTP percorre.
 \end{itemize}
 
 
@@ -212,32 +214,83 @@ Os principais formatos de texto a serem enviados nas solicitações são:
 
 \section{Unix Socket}
 
-dfgh
+Uma Unix Socket, também conhecida como Unix Domain Socket, 
+é um mecanismo de comunicação interprocessual  que permite a troca de dados 
+entre processos executados no mesmo sistema operativo.
 
-\subsection{O que é uma unix socket?}
+Unix Sockets são frequentemente utilizados em sistemas Unix e Unix-like
+(como Linux e macOS) para proporcionar uma comunicação eficiente e de baixa 
+latência entre processos.
 
-fghdfhg
 
 \subsection{Como funciona?}
 
-fdhg
+Diferente das sockets de rede (TCP/IP), as Unix Sockets são usadas para 
+comunicação local entre processos no mesmo sistema. Estas não dependem de interfaces 
+de rede ou protocolos de rede.
 
+Em vez de usar endereços IP e números de porta, as Unix Sockets utilizam caminhos 
+no sistema de ficheiros (ex.: /tmp/socketfile).
 
 \section{Containers}
 
-dfghj
+\textit{Containers} são uma tecnologia de virtualização a nível de sistema operativo que 
+permite executar várias aplicações ou sistemas operativos isolados em um único \textit{host}, usando o mesmo kernel. 
+Fornecem ainda um ambiente leve, portátil e eficiente para empacotar e executar aplicações,
+oferecendo isolamento semelhante ao das máquinas virtuais, mas com a uma menor
+exigência de recursos.
 
-\subsection{Tipos de containers}
+Alguns exemplos de getores de \textit{containers} disponiveis atualmente:
+\begin{itemize}
+    \item Docker;
+    \item LXD/LXC;
+    \item rkt (Rocket);
+    \item CRI-O;
+    \item Podman.
+\end{itemize}
 
-fdgh
+
 
 \subsection{LXD e LXC}
 
-fdghj
+LXD e LXC serão a principal tecnologia de \textit{containers} abordada neste projeto,
+uma vez que é a mesma usada na plataforma Forge do IPMAIA/UMAIA. \\
+
+
+
+\title*{\textbf{LXC (Linux Containers)}}
+
+LXC é uma tecnologia de \textit{contaianers}, inicialmente desenvolvido pela IBM, 
+de baixo nível que fornece containers leves e isolados usando namespaces e cgroups 
+do kernel do Linux. \\
+
+\begin{itemize}
+    \item Namespaces: Proporcionam isolamento para processos, IDs de utilizadores, 
+    sistema de ficheiros, redes, IPC (Inter-Process Communication), etc.;
+    \item Cgroups: Gerem e limitam os recursos (CPU, memória, I/O) que um
+    \textit{container} pode usar.
+\end{itemize}
+
+\title*{\textbf{LXD}}
+
+Patrocinado pela Canonical Ltd. desde a sua  criação, LXD é uma camada de gestão para LXC, 
+que oferece uma experiência de utilização mais amigável e recursos avançados.
+
+As principais vantagens associadas ao LXD são:
+\begin{itemize}
+\item Interface de Linha de Comando (CLI): Comando "lxc" para gerir \textit{containers}
+de maneira intuitiva;
+\item API REST: Fornece uma API RESTful através de unix sockets ou solicitações HTTP para automação e integração com outras ferramentas.
+\item \textit{Snapshots} e \textit{Backups}: Suporte para \textit{snapshots} e \textit{backups} dos \textit{containers}.
+\item \textit{Live Migration}: Permite a migração ao vivo de \textit{containers} entre \textit{hosts}.
+\item Uso de {Clusters}: Possibilidade de criar clusters de múltiplos hosts para gestão centralizada de \textit{containers}.
+\end{itemize}
+
 
 \subsection{Incus}
 
-dfhg
+Incus é a próxima geração de gestão para LXC, com o princiapl objetivo de substituiur
+O LXD.
 
 \section{FireWalls Linux}
 
