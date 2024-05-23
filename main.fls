@@ -758,6 +758,13 @@ INPUT ./figs/teste de conexão1.png
 INPUT ./figs/teste de conexão1.png
 INPUT ./figs/teste de conexão1.png
 INPUT ./figs/teste de conexão1.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
+INPUT ./figs/fluxo de comunicação.png
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
@@ -865,6 +872,8 @@ INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -877,6 +886,8 @@ INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb

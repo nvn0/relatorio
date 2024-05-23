@@ -316,9 +316,188 @@ endereço IP "10.195.171.205", estiver a executar um servidor HTTP na porta
 \textbf{Nota:} Os testes de conexão usados no método 1/2 foram igualmente bem sucedidos.
 
 
+% =============================================================================
+
+
+\section{Criação da API}
+
+Para interagir com o daemon C\# (Port Controller) responsável por interagir com regras do iptables
+e configurações do LXC/LXD, foi criada uma API em Python com a biblioteca Flask como
+método alternativo à interface \textit{Web}.
+
+O principal motivo da criação desta API é a facilitação nos momentos de teste dos programas
+desenvolvidos, uma vez que pode ser testada no terminal com o comando Curl. Contudo, nada 
+impede o administrador do sistema de usar este método de interação com o "Port Controler"
+como forma principal, uma vez que funciona de formna independente da interface Web.
+
+Sendo assim, neste componente do projeto desenvolvida em Python à três partes essencias:
+
+\begin{enumerate}
+    \item API - que permite ao utilizador (administrador do sistema) interagir com o "Port Controller" daemon em C\#
+    através do terminal fazendo solicitações HTTP com o comando Curl;
+    \item Interface Web - que permite ao utilizador (administrador do sistema) interagir com o "Port Controller"
+    através de uma interface gráfica que pode ser acedida através do \textit{browser};
+    \item O ficheiro que comunica com a unix socket que por sua vez, comunica com o "Port Controller". 
+\end{enumerate}
+
+Nesta secção o foco será a explicação do funcionamento da API, porém, para esclarecer
+melhor o funcionamentodos ficheiros referidos a seguinte imagem mostra o fluxo de comunicação
+entre os ficheiros/programas do projeto.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{figs/fluxo de comunicação.png}
+\caption{Fluxo de comunicação do projeto}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+\subsection{Estrutura da API}
+
+A API está dividida em três partes/caminhos URL:
+
+\begin{enumerate}
+    \item  \slash host\_fw - onde as solicitações feitas para este URL serão relacionadas à interação
+    com a FireWall do sistema, mais concretamnte a tabela Filter do Iptables\slash Nftables;
+    \item  \slash host\_nat - neste caminho as solicitações são relacionadas à interação com
+    com a FireWall do sistema mas direcionadas à tabela NAT ou regras do LXD Forward;
+    \item  \slash cont\_port (caminho secundário/opcional) - Neste caminho as solicitações, têm o objetivo de interagir com regras de FireWall
+    (Iptables ou nftables) dentro de \textit{containers} alojados dendoro do sistema \textit{host}. 
+\end{enumerate}
 
 
 
+\subsection{Definição dos parametros}
+
+Para fazer uma solicitação para um destes caminho foram defenidos parâmetros\slash argumentos
+que podem ser enviados, os mesmos podem visualizados na seguinte tabela:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\rowcolor{yellow!50}\textbf{Parâmetros} & \textbf{Opções}\\
+\hline
+Container & $<$Container name$>$\\
+\hline
+Type & lxc, incus \\
+\hline
+Action & ClosePort, OpenPort, AddNat, RemoveNat, ResetNat, ExecCmd \\
+\hline
+Fw & ipt, nft, lxdforward, lxdapi \\
+\hline
+Port & $<$numero entre 1-65535$>$ \\
+\hline
+protocol & tcp, udp \\
+\hline
+Container\_internal\_ip & $<IP>$ \\
+\hline
+Container\_internal\_port & $<$numero entre 1-65535$>$ \\
+\hline
+Rule & $<$Regra costumizada e opcional para usar na FireWall(Iptables ou Nftables)$>$ \\
+\hline
+\end{tabular}
+\caption{Lista de parâmetros possiveis de usar.}
+\label{arglist}
+\end{table}
+
+\textbf{Nota:} Os parâmetros não são todos obrigatórios, alguns dependem do URl para o qual
+se pretende fazer solicitação.
+
+
+\subsection{Formato da solicitação}
+
+Para fazer uma solicitação para um URL da API será usado o comando curl como exemplo para
+cada um dos caminhos criados.
+
+As solicitações devem ser feitas deve ser do tipo POST de modo a enviar dados com os parãmetros
+corretos para aquele aquele caminho e em formato JSON.
+
+Com comando "curl" é especificado o tipo de solicitação com a "flag" \texttt{-X <tipo de solicitação>},
+o cabeçalho com a flag \texttt{-H "<Conteúdo do cabeçalho>"}, de seguida com a flag -d os parâmetros
+em formato JSON dentro de aspas simples e por fim, o URL completo para o qual se prentende enviar a
+solicitação.
+
+
+
+\title*{\textbf{host\_fw}}
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host}]
+    curl -X POST -H "Content-Type: application/json" -d '{"Action":"OpenPort","Fw":"ipt", "Protocol":"tcp","Port":"22"}' http://localhost:5000/host_fw
+\end{lstlisting}
+
+Como se pode observar neste exemplo para o caminho "host\_fw" os parâmetros passados devem ser:
+
+\begin{enumerate}
+    \item Action;
+    \item Fw;
+    \item protocol;
+    \item Port;
+    \item Rule (Opcional);
+\end{enumerate}
+
+Opcionalmente é possivel usar o parâmetro "Rule" e especificar uma regra para o Iptables\slash Nnftables
+para tal o parâmetro "\textit{Action}" deve ser "ExecCmd", o parâmetro "Fw" deve ser referido normalmente com "ipt" ou "nft" e os restantes devem ser mencionados mas vazios, como no seguinte exemplo:
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host com uma regra personalizada}]
+    curl -X POST -H "Content-Type: application/json" -d '{"Action":"ExecCmd","Fw":"ipt", "Protocol":"","Port":"", "Rule":"INPUT -s 192.168.1.140 -j DROP"}' http://localhost:5000/host_fw
+\end{lstlisting}
+
+
+
+\title*{\textbf{host\_nat}}
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host para associar um IP externo a umIp de container de modo a criar conectividade}]
+    curl -X POST -H "Content-Type: application/json" -d '{"Action":"AddNat","Fw":"ipt", "Protocol":"tcp","Port":"22","External_ip":"192.168.1.120","Container_internal_ip":"10.195.171.205","Container_internal_port":"80" }' http://localhost:5000/host_nat
+\end{lstlisting}
+
+Neste exemplo pretende-se criar conectividade criando uma regra na tabela NAT do iptables de modo a associar
+um IP interno de um \textit{container} com um IP externo escolhido pelo administrador do sistema.
+
+É possivel executar o comando comando de igual forma trocando apenas o parâmetro "Fw" para "lxdforward" 
+ou "lxdapi" de modo a criar a mesma associação mas através do LXD, tanto um como outro criará uma regra
+semelhante ao Iptables de forma automática.
+
+A vantagem principal está em usar a opção "lxdapi", que como nome indica irá usar a API do LXD para
+criar a regra, que em comparação com as outras opções garante performance extra uma vez que não é necessária
+a criação de um novo processo para criar uma regra. De qualquer forma este tópico será abordado e explicado mais detalhadamente 
+na secção de explicação do "Port Controller". \\
+
+
+\title*{\textbf{cont\_port}}
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host para associar um IP externo a umIp de container de modo a criar conectividade}]
+    curl -X POST -H "Content-Type: application/json" -d '{"Container":"c1","Type":"lxc","Action":"OpenPort","Fw":"ipt", "Protocol":"tcp","Port":"22"}' http://localhost:5000/cont_port
+\end{lstlisting}
+
+Com uma estrutura similar à solicitação feita para o "host\_fw", as solicitações para o caminho "cont\_port"
+devem apenas incluir os parâmetros "Container" e "Type".
+\begin{enumerate}
+    \item Container;
+    \item Type;
+    \item Action;
+    \item Fw;
+    \item protocol;
+    \item Port;
+    \item Rule (Opcional);
+\end{enumerate}
+
+\subsection{ligação à unix socket}
+
+dsg
+
+
+
+
+
+
+
+
+
+
+
+
+% =============================================================================
 
 \section{Port Controller}
 
@@ -390,17 +569,10 @@ if (File.Exists(socketPath))
 As classes Lxc e Incus recebem herença da classe Containers.
 
 
-\section{API e Interface Web}
+\section{Interface Web}
 
 sdfg
 
-\subsection{Estrutura da API}
-
-sdfg
-
-\subsection{Formato do JSON}
-
-sdgf
 
 \section{Sistema de notificações}
 
