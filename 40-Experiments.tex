@@ -337,7 +337,7 @@ Sendo assim, neste componente do projeto desenvolvida em Python à três partes 
     através do terminal fazendo solicitações HTTP com o comando Curl;
     \item Interface Web - que permite ao utilizador (administrador do sistema) interagir com o "Port Controller"
     através de uma interface gráfica que pode ser acedida através do \textit{browser};
-    \item O ficheiro que comunica com a unix socket que por sua vez, comunica com o "Port Controller". 
+    \item O ficheiro que comunica com a unix socket (localizada em /tmp/socket\_proj) que por sua vez, comunica com o "Port Controller". 
 \end{enumerate}
 
 Nesta secção o foco será a explicação do funcionamento da API, porém, para esclarecer
@@ -364,6 +364,41 @@ A API está dividida em três partes/caminhos URL:
     \item  \slash cont\_port (caminho secundário/opcional) - Neste caminho as solicitações, têm o objetivo de interagir com regras de FireWall
     (Iptables ou nftables) dentro de \textit{containers} alojados dendoro do sistema \textit{host}. 
 \end{enumerate}
+
+
+\title*{\textbf{Exemplo de código}}
+
+No seguinte excerto de código mostra um a implementação de um caminho da API (\slash host\_nat)
+
+\begin{lstlisting}[language=Bash, caption={Definição de um caminho}]
+@app.route("/host_fw", methods=["POST"]) # executar no host
+def host_fw():
+    
+    try:
+
+        data = request.get_json()
+        
+        action = data['Action']
+        firewall = data['Fw']
+        protocol = data['Protocol']
+        porta = data['Port']
+
+    except:
+        print("Erro ao receber dados!")
+        return "Error ao receber os dados", 500
+    else:
+
+        hostfw(action, firewall, protocol, porta)
+        
+        return jsonify(data, "Solicitacao bem sucedida!"), 201  
+\end{lstlisting}
+
+Neste excerto de código está a função responsável por receber a solicitação \textit{POST}.
+Dentro da secção do "try" os valores enviados em JSON pela solicitação serão guardados em
+variáveis para depois serem passados para a função "hostfw" função essa que percente ao ficheiro
+"unixSocket.py". As funções presentes neste ficheiro após receberem os valores vindos 
+da solicitação enviam os dados formatados em JSON para o ficheiro da unix socket (/tmp/socket\_proj) que por sua vez,
+chegará ao "Port controller".
 
 
 
