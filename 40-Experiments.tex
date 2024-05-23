@@ -519,9 +519,61 @@ devem apenas incluir os parâmetros "Container" e "Type".
 
 \subsection{ligação à unix socket}
 
-dsg
+O seguinte excerto de código mostra como funciona uma função no ficheiro "unixSocket.py" responsável
+para se ligar à unix socket localizada em "/tmp/socket\_proj" e assim enviar os dados atrvés da mesma
+para o "Port Controller".
+
+\begin{lstlisting}[language=Bash, caption={Definição de um caminho}]
+def hostfw(action, firewall, protocol, porta):
+
+socket_path = socketPath()
+
+try:
+    # Criar uma Unix socket
+    client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
+    # Conectar a Unix socket
+    client_socket.connect(socket_path)
+
+    # Enviar uma mensagem para o servidor
+    
+    json_data = {
+        "Type": "host",
+        "Action": action,
+        "Fw": firewall,
+        "Protocol": protocol,
+        "Port": porta
+    }
+    
+    client_socket.send(json.dumps(json_data).encode())
 
 
+    time.sleep(1.5)
+    # Receber a resposta 
+    response_json = client_socket.recv(1024).decode()
+    response = json.loads(response_json)
+
+    # mostrar a resposta
+    print("Status:", response["Status"])
+    print("Mensagem:", response["Mensagem"])
+
+    # Fechar o socket
+    client_socket.close()
+
+except Exception as e:
+    print("Ocorreu um erro:", e)  
+\end{lstlisting}
+
+
+É possivel observar la linha 7 a definição do tipo se socket e o tipo de transferênia,
+na linha 14 é defenida a estrura em JSON que será envida, nela o paraaâmetro "Type" é 
+defenida como "host" de modo a informar o "Port Controller" que é o alvo do comando/regra a ser
+executado é o próprio sistema \textit{host}.
+
+De seguida, na linha 22 a estrutura json é formatada e envida para a unix socket.
+
+O código seguinte é responsável por receber a resposta do "Port Controller", por fim, a conexão
+é com a unix socket é fechada na linha 35. 
 
 
 
