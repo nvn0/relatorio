@@ -12,6 +12,7 @@ Sendo Linux apenas um \textit{Kernel}, ou seja, um "nucleo" de um sistema operat
 o mesmo não pode ser usado si só da mesma forma que outros sistemas operativos.
 Para ter um sistema completo é necessário adicionar multiplos programas/bibliotecas,
 sendo assim, existe um numero elevado de sistemas operativos basedos em Linux.
+
 Certas distribuições podem ter diferentes alvos de utilizadores/utilização, quer seja,
 para uso pessoal/tradicional de um utilizar comum, quer seja para servidores.
 
@@ -25,23 +26,68 @@ As principais vantagens associadas ao uso de um Sistema operativo baseado em Lin
 
 
 
-\subsection{Alpine Linux}
+\section{Alpine Linux}
 
 "Alpine Linux é uma distribuição Linux baseada em musl e BusyBox originalmente
-projetada para usuários avançados que apreciam segurança, simplicidade e eficiência 
+projetada para utilizadores avançados que apreciam segurança, simplicidade e eficiência 
 no uso de recursos." \cite{alpinewiki}
 
 O Alpine Linux é uma distribuição independente, isto é, não baseda em nunhuma 
 outra distribuição como muitas outras. E usada principalmente em ambientes
 profissionais/servidores.
 
+Esta distribuição é projetada para ser extremamente leve, com uma instalação 
+mínima que ocupa apenas alguns megabytes de espaço. \\
+
+\subsection{Segurança do sistema}
+
+É também focada em ser um sistema 
+seguro daí incorporar  medidas como o \textit{Position Independent Executables} (PIE) e 
+o \textit{Stack Smashing Protection} (SSP) por padrão.
+
+O \textit{Position Independent Executables} (PIE) são um tipo de executável que pode ser 
+carregado em qualquer endereço da memória, ao contrário de executáveis tradicionais 
+que são carregados para um endereço fixo. Isto aumenta a segurança do sistema uma vez que
+o PIE usa o ASLR (\textit{Address space layout randomization}) para criar aleatoriedade
+nas posições de áreas-chave de memória, como a \textit{stack}, o heap e as bibliotecas compartilhadas.
+
+Desta forma com os executáveis sendo carregados em diferentes endereços em cada execução, 
+é muito mais difícil para os atacantes desenvolverem explorações confiáveis que funcionem 
+em todas as execuções.
+
+
+O \textit{Stack Smashing Protection} (SSP) é uma técnica de segurança usada para detectar e
+prevenir ataques de \textit{buffer overflow}. Este método consiste no SSP introduzir um valor 
+especial conhecido como "\textit{canary}" entre a \textit{stack} de variáveis locais e o endereço de 
+retorno da função. Antes de uma função retornar, o valor do "\textit{canary}" é verificado.
+Se o "\textit{canary}" tiver sido alterado (indicando assim que a \textit{stack} foi corrompida), 
+o programa é abortado. 
+
+Para garantir estas técnicas de segurança no sistema, todos os pacotes no Alpine Linux
+são compilados com suporte a PIE, garantindo que todos os executáveis possam se 
+beneficiar da ASLR.
+
+O compilador tem que ser também configurado para incluir proteção SSP por padrão,
+adicionando "\textit{canarys}" de \textit{stack} aos binários compilados para detectar 
+e mitigar \textit{buffer overflows}.
+
+
+
+\subsection{Diferenças entre o Alpine Linux em relação a outras distribuições}
+
 Principais diferenças do Alpine Linux com a maioria das distribuições Linux disponiveis são:
 \begin{itemize}
     \item O seu \textit{init system} é o OpenRC;
-    \item A \textit{shell} predefenida é o busybox;
-    \item Gestor de pagotes é o "\texttt{apk}";
-    \item Para executar comandos de forma administrativa é ncessário usar do comados "\texttt{doas}" em vez do "\texttt{sudo}".
+    \item A \textit{shell} predefenida é o busybox ao contrário do famoso \textit{Bash} ou ZSH;
+    \item Gestor de pagotes é o "\texttt{apk} (\textit{Alpine Package Keeper})";
+    \item Por padrão, para executar comandos de forma administrativa é ncessário usar do comados "\texttt{doas}" em vez do "\texttt{sudo}".
 \end{itemize} 
+
+\subsection{Conlusão}
+
+Em suma, o Alpine Linux é uma excelente escolha quando o objetivo é ter um sistema 
+leve, seguro e eficiente, especialmente adequado para ambientes de servidores, containers
+e sistemas embutidos.
 
 
 \section{Linguagens de programação}
