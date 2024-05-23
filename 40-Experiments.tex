@@ -88,8 +88,11 @@ usar essa opção é apenas necessário carregar na tecla "\textit{ENTER}". \\
 
 Para terminar a configuração foi executado o comando: 
 
-\texttt{apk add --upgrade apk-tools \&\& apk upgrade --available} \\
+%\texttt{apk add --upgrade apk-tools \&\& apk upgrade --available} \\
 
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    \verb |doas apk add --upgrade apk-tools \&\& apk upgrade --available |
+\end{tcolorbox}
 
 Foi também ativado o repositório da comunidae para ter um maior
 numero de pacotes para instalar. Para isto é necessário descomentar a linha no
@@ -148,9 +151,22 @@ Com esta configuração os \textit{containers} irão funcionar em modo NAT.
 
 
 Após isto foram criados dois containers Alpine linux com o seguinte 
-comando "\texttt{lxc launch images:alpine/3.19 <nome do container>}"
+comando: % "\texttt{lxc launch images:alpine/3.19 <nome do container>}"
 
-\begin{figure}[ht]
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    \verb |doas lxc launch images:alpine/3.19 <nome do container> |
+\end{tcolorbox}
+
+Podendo assim serem listados com o comando:
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    \verb |doas lxc list |
+\end{tcolorbox}
+
+
+A seguinte imagem mostra o output do comando acima referido.
+
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=14cm]{figs/lista de containers.png}
 \caption{Containers criados.}
@@ -201,7 +217,7 @@ Para asua instala ção foi usado o comando:
 
 
 
-
+%==========================================================================
 
 
 \section{Testes de FireWall e conexões realizados}
@@ -250,7 +266,12 @@ Foi possivel aceder ao servidor HTTP pelo browser num computador da rede local.
 \end{figure}
 
 
-Foram também usados alguns comandos do netcat como o "\texttt{nc -w1 -vz 192.168.1.80 7000}".
+Foram também usados alguns comandos do netcat como o seguinte: % "\texttt{nc -w1 -vz 192.168.1.80 7000}".
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    \verb | nc -w1 -vz 192.168.1.80 7000 |
+\end{tcolorbox} 
+
 
 \begin{figure}[ht]
 \begin{center}
@@ -341,8 +362,8 @@ Sendo assim, neste componente do projeto desenvolvida em Python à três partes 
 \end{enumerate}
 
 Nesta secção o foco será a explicação do funcionamento da API, porém, para esclarecer
-melhor o funcionamentodos ficheiros referidos a seguinte imagem mostra o fluxo de comunicação
-entre os ficheiros/programas do projeto.
+melhor o funcionamentodos ficheiros referidos a seguinte imagem
+mostra o fluxo de comunicação entre os ficheiros/programas do projeto.
 
 \begin{figure}[H]
 \begin{center}
@@ -460,6 +481,9 @@ solicitação.
 \begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host}]
     curl -X POST -H "Content-Type: application/json" -d '{"Action":"OpenPort","Fw":"ipt", "Protocol":"tcp","Port":"22"}' http://localhost:5000/host_fw
 \end{lstlisting}
+
+
+
 
 Como se pode observar neste exemplo para o caminho "host\_fw" os parâmetros passados devem ser:
 
