@@ -323,11 +323,13 @@ de uma porta do sistema host para um IP e porta de um \textit{container}.
 
 
 
-\begin{lstlisting}[language=Bash, caption={Exemplo de regra de redirecionamento}]
+%\begin{lstlisting}[language=Bash, caption={Exemplo de regra de redirecionamento}]
+%    doas iptables -t nat -I PREROUTING -p tcp --dport 5000 -j DNAT --to-destination 10.195.171.205:8000
+%\end{lstlisting}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
     doas iptables -t nat -I PREROUTING -p tcp --dport 5000 -j DNAT --to-destination 10.195.171.205:8000
-\end{lstlisting}
-
-
+\end{tcolorbox}
 
 Neste exemplo similar ao exemplo di método 1, se o \textit{container} "c2" com o 
 endereço IP "10.195.171.205", estiver a executar um servidor HTTP na porta
@@ -351,14 +353,14 @@ desenvolvidos, uma vez que pode ser testada no terminal com o comando Curl. Cont
 impede o administrador do sistema de usar este método de interação com o "Port Controler"
 como forma principal, uma vez que funciona de formna independente da interface Web.
 
-Sendo assim, neste componente do projeto desenvolvida em Python à três partes essencias:
+Sendo assim, neste componente do projeto desenvolvida em Python à três partes essênciais:
 
 \begin{enumerate}
     \item API - que permite ao utilizador (administrador do sistema) interagir com o "Port Controller" daemon em C\#
     através do terminal fazendo solicitações HTTP com o comando Curl;
     \item Interface Web - que permite ao utilizador (administrador do sistema) interagir com o "Port Controller"
     através de uma interface gráfica que pode ser acedida através do \textit{browser};
-    \item O ficheiro que comunica com a unix socket (localizada em /tmp/socket\_proj) que por sua vez, comunica com o "Port Controller". 
+    \item O ficheiro (unixSocketConn.py) que comunica com a unix socket (localizada em /tmp/socket\_proj) que por sua vez, comunica com o "Port Controller". 
 \end{enumerate}
 
 Nesta secção o foco será a explicação do funcionamento da API, porém, para esclarecer
@@ -372,6 +374,42 @@ mostra o fluxo de comunicação entre os ficheiros/programas do projeto.
 \label{fig:bookstack}
 \end{center}
 \end{figure}
+
+
+
+\subsection{Pré-requesitos}
+
+Uma vez que esta componte de API de projeto é feita usando a linguagem Python é necessário
+usar as seguintes bibliotecas:
+
+\begin{itemize}
+    \item Flask - biblioteca responsável pela criação da API;
+    \item re - biblioteca usada para expressões regulares;
+    \item json - biblioteca para manipulação de contúdo em fm formato JSON;
+\end{itemize}
+    
+Das bibliotecas mencionadas apenas o "Flask" é externa, sendo necessário instalar a mesma
+com o seguinte comando:
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    \verb | doas apk add py-flask |
+\end{tcolorbox}
+
+\textbf{Nota:} O Alpine linux não permite instalar bibliotcas/pacotes usando o "pip" (gestor de pacotes
+do python) de forma direta.
+
+Após intalado é necessário garantir as seguintes linhas no ficheiro "main" da API.
+
+\begin{lstlisting}[language=csh, caption={Importações necessárias}]
+from flask import Flask, request, jsonify
+import re
+import json
+from unixSocketConn import *
+\end{lstlisting}
+
+A linha 4 é faz importação das funções defenidas do ficheiro "unixSocketConn.py", ficheiro esse, 
+responsável for enviar dados para o ficheiro da unxix socket.
+
 
 \subsection{Estrutura da API}
 
@@ -417,7 +455,7 @@ def host_fw():
 Neste excerto de código está a função responsável por receber a solicitação \textit{POST}.
 Dentro da secção do "try" os valores enviados em JSON pela solicitação serão guardados em
 variáveis para depois serem passados para a função "hostfw" função essa que percente ao ficheiro
-"unixSocket.py". As funções presentes neste ficheiro após receberem os valores vindos 
+"unixSocketConn.py". As funções presentes neste ficheiro após receberem os valores vindos 
 da solicitação enviam os dados formatados em JSON para o ficheiro da unix socket (/tmp/socket\_proj) que por sua vez,
 chegará ao "Port controller".
 
@@ -476,12 +514,11 @@ solicitação.
 
 
 
-\title*{\textbf{host\_fw}}
+\title*{Exemplo para \slash \textbf{host\_fw}}
 
 \begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host}]
-    curl -X POST -H "Content-Type: application/json" -d '{"Action":"OpenPort","Fw":"ipt", "Protocol":"tcp","Port":"22"}' http://localhost:5000/host_fw
+    curl -X POST -H "Content-Type:application/json" -d '{"Action":"OpenPort","Fw":"ipt","Protocol":"tcp","Port":"22"}' http://localhost:5000/host_fw
 \end{lstlisting}
-
 
 
 
@@ -499,7 +536,7 @@ Opcionalmente é possivel usar o parâmetro "Rule" e especificar uma regra para 
 para tal o parâmetro "\textit{Action}" deve ser "ExecCmd", o parâmetro "Fw" deve ser referido normalmente com "ipt" ou "nft" e os restantes devem ser mencionados mas vazios, como no seguinte exemplo:
 
 \begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host com uma regra personalizada}]
-    curl -X POST -H "Content-Type: application/json" -d '{"Action":"ExecCmd","Fw":"ipt", "Protocol":"","Port":"", "Rule":"INPUT -s 192.168.1.140 -j DROP"}' http://localhost:5000/host_fw
+    curl -X POST -H "Content-Type:application/json" -d '{"Action":"ExecCmd","Fw":"ipt","Protocol":"","Port":"", "Rule":"INPUT -s 192.168.1.140 -j DROP"}' http://localhost:5000/host_fw
 \end{lstlisting}
 
 
@@ -507,7 +544,7 @@ para tal o parâmetro "\textit{Action}" deve ser "ExecCmd", o parâmetro "Fw" de
 \title*{\textbf{host\_nat}}
 
 \begin{lstlisting}[language=Bash, caption={Exemplo de solicitação para a firewal do sistema host para associar um IP externo a umIp de container de modo a criar conectividade}]
-    curl -X POST -H "Content-Type: application/json" -d '{"Action":"AddNat","Fw":"ipt", "Protocol":"tcp","Port":"22","External_ip":"192.168.1.120","Container_internal_ip":"10.195.171.205","Container_internal_port":"80" }' http://localhost:5000/host_nat
+    curl -X POST -H "Content-Type:application/json" -d '{"Action":"AddNat","Fw":"ipt","Protocol":"tcp","Port":"22","External_ip":"192.168.1.120","Container_internal_ip":"10.195.171.205","Container_internal_port":"80" }' http://localhost:5000/host_nat
 \end{lstlisting}
 
 Neste exemplo pretende-se criar conectividade criando uma regra na tabela NAT do iptables de modo a associar
@@ -541,11 +578,14 @@ devem apenas incluir os parâmetros "Container" e "Type".
     \item Rule (Opcional);
 \end{enumerate}
 
+
+
+
 \subsection{ligação à unix socket}
 
-O seguinte excerto de código mostra como funciona uma função no ficheiro "unixSocket.py" responsável
-para se ligar à unix socket localizada em "/tmp/socket\_proj" e assim enviar os dados atrvés da mesma
-para o "Port Controller".
+O seguinte excerto de código mostra como funciona uma função no ficheiro "unixSocketConn.py" responsável
+para se ligar à unix socket, localizada em "/tmp/socket\_proj" (localização da unix socket
+é opcional) e assim enviar os dados atrvés da mesma para o "Port Controller".
 
 \begin{lstlisting}[language=Bash, caption={Definição de um caminho}]
 def hostfw(action, firewall, protocol, porta):
