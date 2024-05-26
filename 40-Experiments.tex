@@ -3,11 +3,12 @@
 
 Este capítulo é opcional e, a existir, é aqui que deve descrever como é que o seu projecto evoluiu.
 
-O projeto é constituido em cinco partes:
+O projeto é constituido em seis partes:
 
 \begin{enumerate}
     \item Ambiente de teste do projeto;
     \item Testes de FireWall e conexões realizados;
+    \item Testes da API do LXD;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
     \item Sitema de notificações;
@@ -313,9 +314,22 @@ através do IP 192.168.1.120 na porta 8000.
 
 \textbf{Nota:} Os testes de conexão usados no método 1 foram igualmente bem sucedidos.
 
+
+Após usar o comando "\texttt{lxc network create <network name> <listen address>}", é ainda possivel pecificar portas com o seguinte comando:
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    lxc network forward port add $<$network\_name$>$ $<$listen\_address$>$ $<$protocol$>$ $<$listen\_ports$>$ $<$target\_address$>$ $[<$target\_ports$>]$
+\end{tcolorbox}
+
+O seguinte exemplo mostra a associação do IP do \textit{container} da porta 22 com a porta 22 do IP externo atribuído (192.168.1.120).
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    lxc network forward port add lxdbr0 192.168.1.120 tcp 22 10.195.171.166 22
+\end{tcolorbox}
+
 \subsection{Método 3: Usar o Iptables para criar portas de redirecionamento}
 
-O método 3 é o mesmo que o médoto 1 mas só que configurado usando apenas regras
+O método 3 é o mesmo que o médotos anteriores mas só que configurado usando apenas regras
 do Iptables, ou seja, é criaca uma regra na tablea NAT que redireciona o tráfego
 de uma porta do sistema host para um IP e porta de um \textit{container}.
 
@@ -331,14 +345,112 @@ de uma porta do sistema host para um IP e porta de um \textit{container}.
     doas iptables -t nat -I PREROUTING -p tcp --dport 5000 -j DNAT --to-destination 10.195.171.205:8000
 \end{tcolorbox}
 
-Neste exemplo similar ao exemplo di método 1, se o \textit{container} "c2" com o 
+Neste exemplo similar ao exemplo do método 1, se o \textit{container} "c2" com o 
 endereço IP "10.195.171.205", estiver a executar um servidor HTTP na porta
 8000, os dispositivos na rede local poderão aceder a este serviço acedendo à porta 
 5000 do IP do sistema host(192.168.1.80).
 
+
+Da mesma forma que o método 2 è possivel associar também um IP externo com o seguinte comando de exemplo
+onde é feita a associação da porta 22 juntamente com o ip externo atribuído:
+
+Importante referir, que antes deste de criar a regra no iptables é necessário usar o
+comando ”\texttt{ip address add 192.168.1.120/24 dev eth0}”, para adicionar o endereço IP
+à placa de rede do sistema.
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    doas iptables -t nat -I PREROUTING -p tcp --dport 22 -d 192.168.1.120 -j DNAT --to-destination 10.195.171.166:22
+\end{tcolorbox}
+
+
+
 \textbf{Nota:} Os testes de conexão usados no método 1/2 foram igualmente bem sucedidos.
 
 
+
+
+% =============================================================================
+% =============================================================================
+
+
+
+\section{Testes da API do LXD}
+
+
+Após os testes referidos na secção anterior, terem sido concluídos, foi necessário
+reproduzir os mesmos resultados, mas com a API do LXD.
+
+A vantagem principal em usar este método está na performance da interação do "Port Controller" com
+o LXC, que no momento de criar uma regra, será criado menos um processo, do que 
+usar o "Port Controller" para executar um comando do LXC/LXD na \textit{shell} do sistema.
+
+Portanto, após consultar a \href{https://documentation.ubuntu.com/lxd/en/latest/api/#/}{documentação oficial da API do LXD},
+nomeadamente, a secção "network-forwards" foram realizados com sucesso, auxilio do comando curl, os seguintes testes:
+
+
+Importante referir que para um melhor funciuonamento da API e de modo a evitar erros,
+é recomendado os endereços IP, que se prentendam atribuir a um \textit{container} 
+sejam previamente adicionados e associados ao "LXC forward" com um dos seguintes comandos:
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    lxc network forward create $<$network\_name$>$ $<$listen\_address$>$
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+    lxc network forward create lxdbr0 192.168.1.120
+\end{tcolorbox}
+
+
+ou com o curl e com o IP "192.168.1.120" a servir de IP externo:
+
+
+\begin{lstlisting}[language=Bash, caption={Exemplo para registar um IP para redirecionar trafego (API do LXD)}]
+    curl --unix-socket /var/lib/lxd/unix.socket -X POST -d '{"config":{},"description":"","listen_address":"192.168.1.120","ports":[]}'  lxd/1.0/networks/lxdbr0/forwards
+\end{lstlisting}
+
+
+Após isso, exclusicamente através da API do LXD é necessário associar o IP externo previamente
+adicionado com o endereço IP do \textit{container} e respetivas portas.
+
+É possivel realizar esta operação com uma solicitação "PUT" para a API do LXD
+
+\begin{lstlisting}[language=Bash, caption={Exemplo de associação de IPs e portas usando a API do LXD}]
+    curl --unix-socket /var/lib/lxd/unix.socket -X PUT -d '{"config":{},"description":"10.195.171.166","listen_address":"192.168.1.120","ports":[{"description":"","listen_port":"7000","protocol":"tcp","target_address":"","target_port":"8000"}]}'  lxd/1.0/networks/lxdbr0/forwards/192.168.120
+\end{lstlisting}
+
+
+No exemplo acima é criada a associação entre a potra 8000 do IP "10.195.171.166" que pertence a 
+um \textit{container} e a porta 7000 do IP externo "192.168..1.120".
+
+Uma fez realizado com sucesso este teste será apenas necessário implementar esta 
+mesma solicitação no "Port Controller". \\
+
+
+
+
+
+
+\textbf{Nota:} Caso se pretenda criar conexão exclusivamente através de IPs sem especificar portas é 
+possivel, no momento de adição do IP externo ao "LXD forward" usar a seguinte comando:
+
+\begin{lstlisting}[language=Bash, caption={Exemplo para registar um IP e associá-lo a um cinatiner (API do LXD)}]
+    curl --unix-socket /var/lib/lxd/unix.socket -X POST -d '{"config":{"target_address":"10.195.171.166"},"description":"","listen_address":"192.168.1.120","ports":[]}'  lxd/1.0/networks/lxdbr0/forwards
+\end{lstlisting}
+
+Esta solicitação efetuada com o curl tem o mesmo resultado do comando:
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+   lxc network forward create lxdbr0 192.168.1.120 target\_address=10.195.171.166
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+% =============================================================================
 % =============================================================================
 
 
@@ -461,7 +573,7 @@ chegará ao "Port controller".
 
 
 
-\subsection{Definição dos parametros}
+\subsection{Definição dos parâmetros}
 
 Para fazer uma solicitação para um destes caminho foram defenidos parâmetros\slash argumentos
 que podem ser enviados, os mesmos podem visualizados na seguinte tabela:
