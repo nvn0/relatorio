@@ -774,6 +774,10 @@ INPUT ./figs/fluxo de comunicação.png
 INPUT ./figs/fluxo de comunicação.png
 INPUT ./figs/fluxo de comunicação.png
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmitt10.tfm
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tctt0900.tfm
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
@@ -867,6 +871,8 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk
+INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk
 INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk
 INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk
 INPUT /home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk

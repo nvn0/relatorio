@@ -507,7 +507,7 @@ com o seguinte comando:
     \verb | doas apk add py-flask |
 \end{tcolorbox}
 
-\textbf{Nota:} O Alpine linux não permite instalar bibliotcas/pacotes usando o "pip" (gestor de pacotes
+\textbf{Nota:} O Alpine linux não permite instalar bibliotecas/pacotes usando o "pip" (gestor de pacotes
 do python) de forma direta.
 
 Após intalado é necessário garantir as seguintes linhas no ficheiro "main" da API.
@@ -782,16 +782,20 @@ controle direto de um utilizador interativo. Tradicionalmente, os nomes dos proc
 de um daemon terminam com a letra d, para esclarecer que o processo é de fato um 
 daemon e para diferenciar entre um daemon e um programa de computador normal." \cite{daemon}
 
+Este componente do projeto, denominado de "Port Controller", tem como objetivo,
+funcionar constantemente em segundo plano, para controlar as conexões ao
+sistema\textit{host} e dos \textit{containers} nele alojados.
 
 O \textit{"Port Controller"} tem como principal função estar à escuta de pedidos
 do administrador e executar estes pedidos na \textit{FireWall} do sistema
-\textit{host} de modo a gerir conexões relacionadas com os \textit{containers}
-ativos. Os pedidos são recebidos na componente da \textit{unix socket} em formato
+\textit{host} (Iptables) ou a API do LXD de modo a gerir conexões relacionadas 
+com os \textit{containers} ativos ou ao próprio sistema \textit{host}.
+Os pedidos são recebidos na componente da \textit{unix socket} em formato
 \textit{JSON}.
 
 
-O \textit{"Port Controller"} é também capaz de interagir com \textit{containers}
-do tipo LXD, e Incus e executar comandos dentro destes para interagir com a
+Opcionalmente, o \textit{"Port Controller"} é também capaz de interagir com \textit{containers}
+do tipo LXC e executar comandos dentro destes para interagir com a
 \textit{FireWall} Iptables ou Nftables.
 
 \subsection{Estrutura do código}
@@ -801,20 +805,23 @@ O código do "Port Controller" é constituido pelos seguintes ficheiros:
 \begin{itemize}
     \item Program.cs;
     \item SocketData.cs;
-    \item Containers.cs;
-    \item Lxc.cs;
-    \item Incus.cs;
+    \item Firewall.cs
+    \item Container.cs
+    \item Lxc.cs
+
 \end{itemize}
+
 
 \subsection{Funcionamento do código}
 
+\title*{\textbf{Program.cs}}
 
-No Ficheiro Program na função \textit{main} está defenido o caminho do ficheiro 
+No Ficheiro Program, na função \textit{main} está defenido o caminho do ficheiro 
 da unix socket que permite a comunição entre o \textit{"Port Controller"} e 
 a interface \textit{Web} ou API.
 
 
-\begin{lstlisting}[language=csh, caption={teste}]
+\begin{lstlisting}[language=csh, caption={verificação da existência da unix socket}]
 // Caminho do ficheiro do socket
 string socketPath = "/tmp/socket_proj";
 
@@ -826,11 +833,66 @@ if (File.Exists(socketPath))
 
 \end{lstlisting}
 
+Neste excerto de código é feita uma verificação, se o ficheiro já existe e se sim, este será apagado,
+para depois ser criado um novo.\\
 
 
 
-As classes Lxc e Incus recebem herença da classe Containers.
+O seguinte excerto de código mostra a criação de uma nova instância de uma \textit{Socket}
+(linha 2), a ligação ao ficheiro da unix socket é feito na linha 7.
 
+\begin{lstlisting}[language=csh, caption={ligação do Port Controller à unix socket}]
+// Criar a unix socket
+Socket serverSocket = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.Unspecified);
+
+try
+{
+    // ligar o socket a unix socket
+    serverSocket.Bind(new UnixDomainSocketEndPoint(socketPath));
+
+    // Definir o tamanho maximo da fila de conexoes pendentes
+    serverSocket.Listen(5);
+
+    Console.WriteLine("A espera de pedidos...");
+
+    // Loop para aceitar conexaes
+    while (true)
+    {
+        // Aceitar a conexao do cliente
+        Socket clientSocket = serverSocket.Accept();
+
+        SocketData data = new SocketData();
+
+        Thread thread = new Thread(() => data.ReceberJson(clientSocket));
+        thread.Start();
+    }
+
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Ocorreu um erro: {ex.Message}");
+}
+finally
+{
+    // Fechar o socket
+    serverSocket.Close();
+}
+\end{lstlisting}
+
+Na linha 15 está um ciclo que aceita conexões e os dados recevbidos da conexão
+são enviados para um função "ReceberJson" (que pertence à classe "SocketData") 
+numa nova \textit{thread}.
+
+Com o uso, de \textit{threads} é garantido que o "Port Controller" consegue efetuar múltiplas 
+ações em simultâneo.
+
+
+
+
+
+
+%==================================================================================
+%==================================================================================
 
 \section{Interface Web}
 

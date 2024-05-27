@@ -11,4 +11,5 @@
 \contentsline {lstlisting}{\numberline {5.10}{\ignorespaces Exemplo de solicitação para a firewal do sistema host para associar um IP externo a umIp de container de modo a criar conectividade}}{34}{lstlisting.5.10}%
 \contentsline {lstlisting}{\numberline {5.11}{\ignorespaces Exemplo de solicitação para a firewal do sistema host para associar um IP externo a umIp de container de modo a criar conectividade}}{34}{lstlisting.5.11}%
 \contentsline {lstlisting}{\numberline {5.12}{\ignorespaces Definição de um caminho}}{35}{lstlisting.5.12}%
-\contentsline {lstlisting}{\numberline {5.13}{\ignorespaces teste}}{37}{lstlisting.5.13}%
+\contentsline {lstlisting}{\numberline {5.13}{\ignorespaces verificação da existência da unix socket}}{37}{lstlisting.5.13}%
+\contentsline {lstlisting}{\numberline {5.14}{\ignorespaces ligação do Port Controller à unix socket}}{37}{lstlisting.5.14}%
