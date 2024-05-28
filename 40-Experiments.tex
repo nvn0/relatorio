@@ -590,7 +590,7 @@ Type & lxc, incus \\
 \hline
 Action & ClosePort, OpenPort, AddNat, RemoveNat, ResetNat, ExecCmd \\
 \hline
-Fw & ipt, nft, lxdforward, lxdapi \\
+Fw & ipt, nft, lxcforward, lxdapi \\
 \hline
 Port & $<$numero entre 1-65535$>$ \\
 \hline
@@ -881,14 +881,190 @@ finally
 
 Na linha 15 está um ciclo que aceita conexões e os dados recevbidos da conexão
 são enviados para um função "ReceberJson" (que pertence à classe "SocketData") 
-numa nova \textit{thread}.
-
-Com o uso, de \textit{threads} é garantido que o "Port Controller" consegue efetuar múltiplas 
-ações em simultâneo.
+numa nova \textit{thread}, conseguindo assim, executar múltiplos 
+pedidos em simultâneo. \\
 
 
+\title*{\textbf{SocketData.cs}}
 
 
+Nesta classe "Socketdata" está presente a função "ReceberJson", responsável por ler 
+os dados recebidos da API ou da interface \textit{web} através da unix socket.
+
+\begin{lstlisting}[language=csh, caption={Leitura dos dados recebidos}]
+// Ler os dados recebidos do cliente(socket)
+byte[] buffer = new byte[1024];
+int bytesRead = clientSocket.Receive(buffer);
+string jsonData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+dynamic receivedData = JsonConvert.DeserializeObject(jsonData);
+
+// Imprime os dados recebidos
+Console.WriteLine("Dados recebidos do client:");
+Console.WriteLine($"Nome: {receivedData.Container}");
+Console.WriteLine($"Type: {receivedData.Type}");
+Console.WriteLine($"Action: {receivedData.Action}");
+Console.WriteLine($"Firewall: {receivedData.Fw}");
+Console.WriteLine($"Protocol: {receivedData.Protocol}");
+Console.WriteLine($"Port: {receivedData.Port}");
+Console.WriteLine($"External_ip: {receivedData.External_ip}");
+Console.WriteLine($"Container_internal_ip: {receivedData.Container_internal_ip}");
+Console.WriteLine($"Container_internal_port: {receivedData.Container_internal_port}");
+Console.WriteLine($"Rule: {receivedData.Rule}");
+
+// conversao das variaveis para string
+string scont_name = receivedData.Container;
+string stype = receivedData.Type;
+string saction = receivedData.Action;
+string sfw = receivedData.Fw;
+string sprotocol = receivedData.Protocol;
+string sport = receivedData.Port;
+string sexternal_ip = receivedData.External_ip;
+string scont_internal_ip = receivedData.Container_internal_ip;
+string scont_internal_port = receivedData.Container_internal_port;
+string srule = receivedData.Rule;
+\end{lstlisting}  
+
+
+De seguida, conforme os dados recebidos é determinado qual ação o programa deve executar,
+passado pela seguinte sequência de "ifs"
+
+\begin{lstlisting}[language=csh, caption={Opções possiveis em Firewall.cs}]
+if (receivedData.Type == "host" && receivedData.Action == "ClosePort" || receivedData.Type == "host" && receivedData.Action == "OpenPort" || receivedData.Type == "host" && receivedData.Action == "ExecCmd")
+{
+    clientSocket.Close();
+    
+    Firewall fwh = new Firewall();
+
+    fwh.AddRule(saction, sfw, sprotocol, sport, srule);
+}
+if (receivedData.Type == "host" && receivedData.Action == "AddNat" || receivedData.Type == "host" && receivedData.Action == "RemoveNat" || receivedData.Type == "host" && receivedData.Action == "ResetNat")
+{  
+    clientSocket.Close();
+
+    Firewall fwn = new Firewall();
+
+    fwn.AddRuleNat(saction, sfw, sprotocol, sport, sexternal_ip, scont_internal_ip, scont_internal_port, srule);
+
+}
+if (receivedData.Type == "lxc" || receivedData.Type == "incus")
+{
+    clientSocket.Close();
+
+    switch (stype)
+    {
+        case "lxc":
+            Console.WriteLine("Opcao 1 selecionada.");
+
+            Lxc lxc = new Lxc();
+
+            lxc.AddRule(scont_name, saction, sfw, sprotocol, sport, srule);
+
+            break;
+        case "incus":
+            Console.WriteLine("Opcao 2 selecionada.");
+
+            Incus incus = new Incus();
+
+            incus.AddRule(scont_name, saction, sfw, sprotocol, sport, srule);
+
+            break;
+        default:
+            Console.WriteLine("Opcao invalida. (execRegraContainer)");
+            break;
+    }
+}
+clientSocket.Close();
+
+\end{lstlisting}  
+
+Neste excerto código, são verificados os dados recebidos, caso estes se destinem a 
+instruções para a \textit{firewall} do sistema o primeiro "if" será executado, se forem dados relacionados
+à adição de regras NAT será executado o segundo "if" e por fim se o objetivo for executar comandos de
+\textit{firewall} dentro de um \textit{container} será o terceiro "if" executado. \\
+
+
+
+\title*{\textbf{Firewall.cs}}
+
+Caso os dados se destinem às conexões do sistema \textit{host} ou a regras NAT (por Iptables 
+ou API do LXD) são recebidos pela função "AddRule" e "AddRuleNat" respetivamente.
+
+
+
+
+\begin{lstlisting}[language=csh, caption={Funções de firewall.cs}]
+public void AddRule(string action, string firewall, string protocol, string port, string rule = "")
+{
+    if (firewall == "ipt" && action == "OpenPort")
+    {
+        OpenPort(protocol, port);
+    }
+    else if (firewall == "ipt" && action == "ClosePort")
+    {
+        ClosePort(protocol, port);
+    }
+    else if (firewall == "nft" && action == "OpenPort")
+    {
+        NFOpenPort(protocol, port);
+    }
+    else if (firewall == "nft" && action == "ClosePort")
+    {
+        NFClosePort(protocol, port);
+    }
+    else if (firewall == "ipt" && action == "ExecCmd" && rule != "")
+    {
+        iptCustomRule(rule);
+    }
+}
+
+
+public void AddRuleNat(string action, string firewall, string protocol, string port, string external_ip, string cont_internal_ip, string cont_internal_port, string rule = "")
+{
+
+    string sbridge_interface = bridge_interface;
+
+    if (firewall == "ipt" && action == "AddNat")
+    {
+        criar_ligacao(port, external_ip, cont_internal_port, cont_internal_ip, protocol);
+    }
+    else if (firewall == "lxcforward" && action == "AddNat")
+    {
+        Lxc_forward(sbridge_interface, port, external_ip, cont_internal_port, cont_internal_ip, protocol);
+    }
+    else if (firewall == "lxdapi" && action == "AddNat")
+    {
+        Lxd_api_forward(sbridge_interface, protocol, port, external_ip, cont_internal_ip, cont_internal_port);
+    }
+    else if (firewall == "lxdapi" && action == "RemoveNat")
+    {
+        Lxd_api_forward_remove(sbridge_interface, protocol, port, external_ip, cont_internal_ip, cont_internal_port);
+    }
+    else if (firewall == "lxdapi" && action == "ResetNat")
+    {
+        Lxd_api_forward_reset(sbridge_interface, external_ip);
+    }
+}
+
+\end{lstlisting} 
+
+
+
+\textbf{Nota:} No topo desta classe estão defenidas as seguintes constantes que são usas por
+por funções presentes neste ficheiro:
+
+\begin{lstlisting}[language=csh, caption={Constantes defenidas}]
+private const string host_ip = "192.168.1.80";
+private const string bridge_interface = "lxdbr0";
+\end{lstlisting} 
+
+
+\title*{\textbf{Regras para o sistema host (Firewall.cs)}}
+
+associa654udos
+
+\title*{\textbf{Implementação da API do LXD (Firewall.cs)}}
+
+sdf
 
 
 %==================================================================================
