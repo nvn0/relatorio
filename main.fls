@@ -701,14 +701,8 @@ INPUT ./10-Intro.tex
 INPUT ./10-Intro.tex
 INPUT 10-Intro.tex
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./figs/logo_ipmaia_small.png
-INPUT ./figs/logo_ipmaia_small.png
-INPUT ./figs/logo_ipmaia_small.png
-INPUT ./figs/logo_ipmaia_small.png
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti8.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tcrm1095.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./15-Problem.tex
 INPUT ./15-Problem.tex
 OUTPUT 15-Problem.aux
@@ -723,6 +717,8 @@ INPUT ./20-Theory.tex
 INPUT 20-Theory.tex
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti8.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt9.tfm
 INPUT ./32-Art.tex

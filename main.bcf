@@ -2374,20 +2374,16 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">rfc9293</bcf:citekey>
     <bcf:citekey order="2" intorder="1">rfc768</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">ismai_ead</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">ismai_ead</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">ismai_ead</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">rfc4512</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">rfc4253</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">alpinewiki</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">python</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">pyyt</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">ibmrestapi</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">netfilter</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">nftables</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">nftables</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">diffiptenft</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">daemon</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">rfc4253</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">alpinewiki</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">python</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">pyyt</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ibmrestapi</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">netfilter</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">nftables</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">nftables</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">diffiptenft</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">daemon</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
