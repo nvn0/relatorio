@@ -56,14 +56,14 @@
 \contentsline {subsection}{\numberline {5.5.2}Funcionalidades}{36}{subsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.5.3}Estrutura do código}{36}{subsection.5.5.3}%
 \contentsline {subsection}{\numberline {5.5.4}Funcionamento do código}{37}{subsection.5.5.4}%
-\contentsline {section}{\numberline {5.6}Interface Web}{42}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Sistema de notificações}{42}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Discord}{42}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{42}{subsection.5.7.2}%
-\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{43}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussão de resultados}{44}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Trabalho futuro}{45}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{46}{chapter.9}%
-\contentsline {chapter}{Referências}{47}{chapter.9}%
+\contentsline {section}{\numberline {5.6}Interface Web}{48}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Sistema de notificações}{48}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Discord}{49}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{49}{subsection.5.7.2}%
+\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{50}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussão de resultados}{51}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Trabalho futuro}{52}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{53}{chapter.9}%
+\contentsline {chapter}{Referências}{54}{chapter.9}%
 \contentsline {chapter}{\numberline {A}Especificação de requisitos simplificada}{A1}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Questionários}{A2}{appendix.B}%

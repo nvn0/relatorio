@@ -17,3 +17,9 @@
 \contentsline {lstlisting}{\numberline {5.16}{\ignorespaces Opções possiveis em Firewall.cs}}{39}{lstlisting.5.16}%
 \contentsline {lstlisting}{\numberline {5.17}{\ignorespaces Funções de firewall.cs}}{40}{lstlisting.5.17}%
 \contentsline {lstlisting}{\numberline {5.18}{\ignorespaces Constantes defenidas}}{41}{lstlisting.5.18}%
+\contentsline {lstlisting}{\numberline {5.19}{\ignorespaces Função que executa comandos na shell}}{42}{lstlisting.5.19}%
+\contentsline {lstlisting}{\numberline {5.20}{\ignorespaces Função que executa comandos na shell}}{42}{lstlisting.5.20}%
+\contentsline {lstlisting}{\numberline {5.21}{\ignorespaces Função que cria uma associação de ip e portas para um container}}{43}{lstlisting.5.21}%
+\contentsline {lstlisting}{\numberline {5.22}{\ignorespaces Editar o conteúdo Json}}{44}{lstlisting.5.22}%
+\contentsline {lstlisting}{\numberline {5.23}{\ignorespaces Fazer solicitação PUT com os novos dados}}{46}{lstlisting.5.23}%
+\contentsline {lstlisting}{\numberline {5.24}{\ignorespaces Edição do objeto Json "ports" para remover contúdo especificado}}{47}{lstlisting.5.24}%

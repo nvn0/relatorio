@@ -1058,14 +1058,328 @@ private const string bridge_interface = "lxdbr0";
 \end{lstlisting} 
 
 
+
+
+
 \title*{\textbf{Regras para o sistema host (Firewall.cs)}}
 
-associa654udos
+As seguintes funções são executadas conforme os dados recebidos na função "Addrule".
 
-\title*{\textbf{Implementação da API do LXD (Firewall.cs)}}
+\begin{lstlisting}[language=csh, caption={Função que executa comandos na shell}]
+// funcao para de defenir uma regra personalizada 
+private void iptCustomRule(string rule)
+{
+    ExecuteCommand($"iptables -I {rule} && /sbin/iptables-save"); // -A para adicionar no fundo da lista ou -I para adicionar ao topo da lista
+}
 
-sdf
+private void OpenPort(string protocol, string port)
+{
+    ExecuteCommand($"iptables -A  INPUT -p {protocol} --dport {port} -j ACCEPT && /sbin/iptables-save");
+}
 
+private void ClosePort( string protocol, string port)
+{
+    ExecuteCommand($"iptables -A  INPUT -p {protocol} --dport {port} -j DROP && /sbin/iptables-save");
+}
+\end{lstlisting} 
+
+Para os comandos do iptables presentes nestas funções serem executados é necessário
+usar a função "ExecuteCommand".
+
+
+
+
+\title*{\textbf{Execução de comandos na shell (Firewall.cs)}}
+
+
+Para o "port Controller" executar comandos no sistema foi criada a seguinte função
+para criar um processo e executar estes usando o bash. 
+
+\begin{lstlisting}[language=csh, caption={Função que executa comandos na shell}]
+private string ExecuteCommand(string command)
+{
+    try
+    {
+        var processInfo = new ProcessStartInfo("bash", $"-c \"{command}\"")
+        {
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        };
+
+        var process = Process.Start(processInfo);
+        if (process != null)
+        {
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+            if (!string.IsNullOrWhiteSpace(error))
+            {
+                throw new Exception(error);
+            }
+            return output;
+        }
+        else
+        {
+            throw new Exception("Falha ao comecar o processo.");
+        }
+    }
+    catch (Exception ex)
+    {
+        throw new Exception($"Erro a executar o comando: {command}. {ex.Message}");
+    }
+}
+\end{lstlisting} 
+
+
+
+
+\title*{\textbf{Implementação da API do LXD para dar conectividade aos containers (Firewall.cs)}}
+
+
+A função "lxd\_api\_forward" tem o objetivo de criar a associação entre portas e
+IPs, de modo dar conectividade a um \textit{container}.
+
+No topo da função são defenidas a variável "portsJson" e a lista portsList que são usadas
+na manipulação dos dados json durante a execução da função.
+
+De seguida, está defenido o caminho da unix socket do LXD para onde as solicitações
+serão enviadas.
+
+\begin{lstlisting}[language=csh, caption={Função que cria uma associação de ip e portas para um container}]
+private void Lxd_api_forward(string bridge_interface, string sprotocol,string port, string external_ip, string cont_internal_ip, string cont_internal_port) //criar comandos de forward
+{
+    string portsJson = string.Empty;
+    List<dynamic> portsList = new List<dynamic>();
+
+    try
+    {
+        // caminho do Unix socket
+        string socketPath = "/var/lib/lxd/unix.socket";
+
+        // Criar unix socket
+        using (var socket = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.Unspecified))
+        {
+            // Conectar ao socket
+            ConnectToUnixSocket(socket, socketPath);
+
+            // Enviar uma solicitacao HTTP GET
+            string requestPath1 = $"/1.0/networks/{bridge_interface}/forwards/{external_ip}";
+            string request1 = $"GET {requestPath1} HTTP/1.1\r\nHost: dummy\r\n\r\n";
+
+            // Enviar a solicitacao
+            byte[] requestBytes1 = Encoding.UTF8.GetBytes(request1);
+            socket.Send(requestBytes1);
+
+            // Receber resposta do socket
+            byte[] receiveBuffer = new byte[1024];
+            int receivedBytes = socket.Receive(receiveBuffer);
+            string responseData = Encoding.UTF8.GetString(receiveBuffer, 0, receivedBytes);
+            Console.WriteLine("Response from server: " + responseData);
+
+
+\end{lstlisting} 
+
+É enviada uma solitação GET para o caminho \\
+"\texttt{/1.0/networks/{bridge\_interface}/forwards/{external\_ip}}"
+(onde são incluidos parâmetros recebidos pela função), para obter quais dados já estavam 
+a configurados naquele endereço IP, como por exemplo associações entre portas. \\
+
+De seguida, os dados recebidos são analisados, principalmente o elemento "ports"
+que é um \textit{array} guardado o seu conteúdo na lista "potsList". Após isso
+é criado o novo contúdo de associação de portas a ser adicionado a esta mesma lista.
+
+
+\begin{lstlisting}[language=csh, caption={Editar o conteúdo Json}]
+
+            //------ Edicao do JSON ------------------------
+
+            // Encontra o indice do final dos cabecalhos na resposta
+            int headersEndIndex = responseData.IndexOf("\r\n\r\n");
+
+            // Extrai a parte do corpo da resposta (apos o final dos cabecalhos)
+            string responseBody = responseData.Substring(headersEndIndex + 4);
+
+            // Analisa o JSON do corpo da resposta
+            dynamic jsonResponseObject = JsonSerializer.Deserialize<dynamic>(responseBody);
+            Console.WriteLine("OBJETO JSON: " + jsonResponseObject);
+
+            // Inicializa metadataElement com um valor padrao
+            JsonElement metadataElement = default;
+
+  
+
+            // Verifica se o objeto contem a propriedade "metadata"
+            if (jsonResponseObject is not null && jsonResponseObject.TryGetProperty("metadata", out metadataElement))
+            {
+                // Obtem o objeto "metadata"
+                dynamic metadataObject = metadataElement;
+
+                // Verifica se "metadata" contem a propriedade "ports"
+                if (metadataObject.TryGetProperty("ports", out JsonElement portsElement))
+                {
+                    
+
+                    // Verifica se "ports" e um array
+                    if (portsElement.ValueKind == JsonValueKind.Array)
+                    {
+                        // Converte o elemento "ports" para uma lista de portas
+                        foreach (var portas in portsElement.EnumerateArray())
+                        {
+                            portsList.Add(portas);
+                        }
+
+                        // Cria um novo objeto para adicionar a lista de portas
+                        dynamic newPort = new
+                        {
+                            description = "",
+                            listen_port = port,
+                            protocol = sprotocol,
+                            target_address = cont_internal_ip,
+                            target_port = cont_internal_port
+                        };
+
+                        // Adiciona o novo objeto a lista de portas
+                        portsList.Add(newPort);
+                        portsJson = JsonSerializer.Serialize(portsList);
+
+                        Console.WriteLine("PORTAS: " + portsJson);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("A propriedade 'ports' em 'metadata' nao e um array.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("O objeto 'metadata' nao possui a propriedade 'ports'.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("O objeto JSON nao possui a propriedade 'metadata' ou e nulo.");
+            }
+        
+
+\end{lstlisting}   
+
+
+Por fim, é apenas necessário fazer uma solicitação PUT, para atualizar os dados, com a nova 
+lista gurdada em "portsList" no elemento "ports" como é possível observar
+na linha 5 do excerto de código que se segue.
+
+\begin{lstlisting}[language=csh, caption={Fazer solicitação PUT com os novos dados}]
+            // -------------------- PUT ----------------
+
+            dynamic requestBodyObject = new
+            {
+                config = new { },
+                description = "",
+                listen_address = external_ip,
+                ports = portsList
+            };
+
+            // Converte o objeto dinamico para uma string JSON
+            string requestBody = JsonSerializer.Serialize(requestBodyObject);
+            Console.WriteLine("enviar: " + requestBody);
+
+            // Construir a solicitacao PUT
+            string requestPath2 = $"/1.0/networks/lxdbr0/forwards/{external_ip}";
+            string request2 = $"PUT {requestPath2} HTTP/1.1\r\nHost: dummy\r\nContent-Length: {Encoding.UTF8.GetBytes(requestBody).Length}\r\n\r\n{requestBody}";
+
+            // Enviar a solicitacao
+            byte[] requestBytes2 = Encoding.UTF8.GetBytes(request2);
+            socket.Send(requestBytes2);
+
+
+            // Receber resposta do socket
+            byte[] receiveBuffer2 = new byte[1024];
+            int receivedBytes2 = socket.Receive(receiveBuffer2);
+            string responseData2 = Encoding.UTF8.GetString(receiveBuffer2, 0, receivedBytes2);
+            Console.WriteLine("Response from server: " + responseData2);
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Error: " + ex.Message);
+    }
+}
+\end{lstlisting} 
+
+
+\title*{\textbf{Remover uma associação de portas através da API do LXD(Firewall.cs)}}
+
+Através da função "Lxd\_api\_forward\_remove" é possível remover uma associação de portas
+anterormente defenida.
+
+
+Com um funcionamento idêntico à função anteriormente explicada ("Lxd\_api\_forward")
+a principal diferença está na edição do objeto JSON recebido da solicitação GET inicial,
+onde ao invés de adicionar conteúdo, neste caso será retirado.
+
+
+\begin{lstlisting}[language=csh, caption={Edição do objeto Json "ports" para remover contúdo especificado}]
+//------ Edicao do JSON ------------------------
+
+// Encontra o indice do final dos cabecalhos na resposta
+int headersEndIndex = responseData.IndexOf("\r\n\r\n");
+
+// Extrai a parte do corpo da resposta (apos o final dos cabecalhos)
+string responseBody = responseData.Substring(headersEndIndex + 4);
+
+// Analisa o JSON do corpo da resposta
+dynamic jsonResponseObject = JsonSerializer.Deserialize<dynamic>(responseBody);
+Console.WriteLine("OBJETO JSON: " + jsonResponseObject);
+
+
+
+// Inicializa metadataElement com um valor padrao
+JsonElement metadataElement = default;
+
+// Verifica se o objeto contem a propriedade "metadata"
+if (jsonResponseObject is not null && jsonResponseObject.TryGetProperty("metadata", out metadataElement))
+{
+    // Verifica se "metadata" contem a propriedade "ports"
+    if (metadataElement.TryGetProperty("ports", out JsonElement portsElement))
+    {
+        if (portsElement.ValueKind == JsonValueKind.Array)
+        {
+            // Especifica o "target_address" e o "target_port" a serem removidos
+            string targetAddressToRemove = cont_internal_ip;
+            string targetPortToRemove = cont_internal_port;
+            string listenPortToRemove = port;
+
+            // Converte o elemento "ports" para uma lista de portas
+            foreach (JsonElement portas in portsElement.EnumerateArray())
+            {
+                // Verifica se o objeto contem as propriedades "target_address" e "target_port" e "listen_port"
+                if (portas.TryGetProperty("target_address", out JsonElement targetAddressElement) &&
+                    portas.TryGetProperty("target_port", out JsonElement targetPortElement) &&
+                    portas.TryGetProperty("listen_port", out JsonElement listenPortElement))
+                {
+                    // Verifica se o "target_address", o "target_port" e o "listen_port" correspondem aos especificados
+                    if (targetAddressElement.GetString() == targetAddressToRemove && targetPortElement.GetString() == targetPortToRemove && listenPortElement.GetString() == listenPortToRemove)
+                    {
+                        // Se corresponderem, o obj nao e adicionado lista de portas
+                        continue;
+                    }
+                }
+
+                // Adiciona o objeto a lista de portas
+                portsList.Add(portas);
+            }
+\end{lstlisting} 
+
+Neste excerto, é mostrado como o \textit{array} "ports" recebido da solicitação GET é analisado
+de modo a encontrar os objetos com os parâmetros que dizem respeito à porta e ao endereço IP do 
+\textit{container} e à porta externa associada (o endereço IP externo fora 
+do \textit{array} "ports")
+
+Neste excerto, todos os objetos que não tiverem os três parametros especifcos são adicionados
+a uma nova lista, para que de seguida como na função anterior seja inserida numa nova
+solicitação PUT para atualizar o conteúdo da configuração do endereço IP registado.
 
 %==================================================================================
 %==================================================================================
