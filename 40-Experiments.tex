@@ -1391,23 +1391,186 @@ PUT com o \textit{array} "ports" vazio para o caminho referente ao endereço IP 
 
 \section{Interface Web}
 
-sdfg
+A interface \textit{web} foi desenvolvida usando a linguagem Python juntamente com
+a bibliotecas/\textit{frameworks} Flask e Bootstrap. \\
 
+Este comopnete está organizado com a seguinte estrutura de ficheiros:
+\begin{itemize}
+    \item Templates(páginas em HTML);
+    \item Ficheiros Python - reponsáveies pelo login/registo e envcio de dados para o "Port Controller;
+    \item Base de dados (SQLAlchemy).
+\end{itemize}
+
+
+
+\title*{\textbf{Página de Login e Registo}}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/login.png}
+\caption{Página de login}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+De modo, evitar uso não autorizado de gestão de portas, existe uma página de 
+\textit{login} deverá ser usada exclusivamente pelos
+administradores de sistema.\\
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/registo.png}
+\caption{Página de registo}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+No caso da página de registo, poderá opcionalmente ser desativada, uma vez que 
+apenas um numero mínimo
+de utilizadores deverá ter acesso à funcionalidades de gestão de portas. \\
+
+\title*{\textbf{Página para fazer pedidos sobre portas}}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/pedido2.png}
+\caption{Página de de pedidos}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+Nesta pagina é possível inserir os dados para fazer o pedido ao administrador do
+sitema para abrir uma determinada porta de modo dar aos utilizazdores da rede local
+conectividade ao serviço aloja no \textit{container} na porta em questão. \\
+
+
+\title*{\textbf{Página para criar a ligação NAT}}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/criar nat 2.png}
+\caption{Página para criar ligações NAT}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+O administrador do sistema ao inserir as suas credênciais tem acesso à página
+para criar a ligação NAT. Nesta pagina é apresentado do lado direito
+os pedidos pendentes, podendo associar uma porta juntamente com 
+endereço IP do \textit{container} com uma porta e endereço IP exerternos. \\
+
+
+\title*{\textbf{Página para abrir/fechar portas do sistema host}}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/sysfirewall.png}
+\caption{Página de da firewall do sistema}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+É também possível abrir e fechar portas da \textit{firewall} (Iptables) 
+do sistema \textit{host}.
 
 \section{Sistema de notificações}
 
-sdfg
+Para notificar os utilizadores que fizeram pedidos para abrir uma determinada
+porta podem opcionalmente receber uma notificação quando o seu pedido é aceite 
+através do Discord ou Microsoft Teams.
 
 \subsection{Discord}
 
-fhgds
+Para a implemetação de enviar notificações para um utilizador no Discord,
+não foi criado um "\textit{Bot}", mas sim uma conta normal, uma vez que o objetivo é apenas
+enviar mensagem direta para um utilizador e não gerir um servidor.
+
+\begin{lstlisting}[language=csh, caption={Envio de notificação via Discord}]
+import os
+from dotenv import load_dotenv, dotenv_values
+import requests
+
+#load from .env
+load_dotenv('.env')
+key: str = os.getenv('KEY')
+
+
+def createDm(user_id):
+    payload = {
+        'recipient_id': user_id
+    }
+    
+    header = {
+        'Content-Type': 'application/json',
+        'authorization': key
+    }
+
+    url = "https://discord.com/api/v9/users/@me/channels"
+    
+    r = requests.post(url, json=payload, headers=header)
+    print(r.status_code)
+    #print(r.json())
+
+    channel_id = r.json()['id']
+    
+    return channel_id
+
+def send_dm(user_id):
+
+#id = int(input("user ID: "))
+
+channel_id = createDm(user_id)
+
+url = f"https://discord.com/api/v9/channels/{channel_id}/messages"
+
+
+header = {  
+    'authorization': key
+}
+
+payload = {
+    'content': "O seu pedido foi conluido"
+}
+
+
+r = requests.post(url, data=payload, headers=header)
+print(r.status_code)
+\end{lstlisting}
+
+Neste excerto de código é carregado de um ficheiro .env o token da conta, usado para
+a autenticação das solicitações feitas ao longo do procedimento.
+
+A função "createDm" (linha 10) envia uma solicitação POST apenas para criar o canal de texto
+com o utilizador e enviar o ID desse mesmo canal para a função "send\_dm".
+
+Para de seguida, a função "send\_dm" (linha 30) enviar a mensagem (solicitação POST) para 
+o canal. Fazendo assim, que o utilizador receba uma mensagem direta.
+
+Sendo assim, é apenas chamar a função "send\_dm" e passar-lhe o argumento do ID do utilizador. \\
+
+
+
 
 \subsection{Microsoft Teams}
 
-dsfg
+Para enviar notificações para um utilizador via Miscrosoft Teams, ao contrário do Discord,
+é necessário criar um \textit{Bot} com um Framewok fornecido pela Microsoft.
+Para tal é necessário instalar as seguintes bibliotecas:
+\begin{itemize}
+    \item botbuilder-core
+    \item botbuilder-schema
+    \item botbuilder-integration-aiohttp
+    \item aiohttp
+\end{itemize}
+
 
 \section*{Sumário}
 
 Ver o \nameref{sec:intro_summary} página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
+
+
+
+
 
 

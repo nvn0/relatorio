@@ -774,6 +774,41 @@ INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/jknappen/ec/tctt0900.tfm
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/login.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/registo.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/pedido2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/criar nat 2.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
+INPUT ./figs/sysfirewall.png
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux
