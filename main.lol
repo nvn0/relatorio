@@ -23,4 +23,9 @@
 \contentsline {lstlisting}{\numberline {5.22}{\ignorespaces Editar o conteúdo Json}}{43}{lstlisting.5.22}%
 \contentsline {lstlisting}{\numberline {5.23}{\ignorespaces Fazer solicitação PUT com os novos dados}}{45}{lstlisting.5.23}%
 \contentsline {lstlisting}{\numberline {5.24}{\ignorespaces Edição do objeto Json "ports" para remover contúdo especificado}}{46}{lstlisting.5.24}%
-\contentsline {lstlisting}{\numberline {5.25}{\ignorespaces Envio de notificação via Discord}}{50}{lstlisting.5.25}%
+\contentsline {lstlisting}{\numberline {5.25}{\ignorespaces Código em javascript par verificar parâmetros da interface web}}{50}{lstlisting.5.25}%
+\contentsline {lstlisting}{\numberline {5.26}{\ignorespaces Código em python da interface web}}{50}{lstlisting.5.26}%
+\contentsline {lstlisting}{\numberline {5.27}{\ignorespaces Envio de notificação via Discord}}{52}{lstlisting.5.27}%
+\contentsline {lstlisting}{\numberline {5.28}{\ignorespaces Envio de notificação via Microsoft Teams}}{54}{lstlisting.5.28}%
+\contentsline {lstlisting}{\numberline {5.29}{\ignorespaces Solicitação para enviar mensagem}}{55}{lstlisting.5.29}%
+\contentsline {lstlisting}{\numberline {5.30}{\ignorespaces Teste de notificação via Microsoft Teams}}{56}{lstlisting.5.30}%

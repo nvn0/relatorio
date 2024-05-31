@@ -1403,7 +1403,9 @@ Este comopnete está organizado com a seguinte estrutura de ficheiros:
 
 
 
-\title*{\textbf{Página de Login e Registo}}
+\subsection{Ficheiro base.html}
+
+\subsection{Página de Login e Registo}
 
 \begin{figure}[H]
 \begin{center}
@@ -1430,7 +1432,7 @@ No caso da página de registo, poderá opcionalmente ser desativada, uma vez que
 apenas um numero mínimo
 de utilizadores deverá ter acesso à funcionalidades de gestão de portas. \\
 
-\title*{\textbf{Página para fazer pedidos sobre portas}}
+\subsection{Página para fazer pedidos sobre portas}
 
 \begin{figure}[H]
 \begin{center}
@@ -1445,7 +1447,7 @@ sitema para abrir uma determinada porta de modo dar aos utilizazdores da rede lo
 conectividade ao serviço aloja no \textit{container} na porta em questão. \\
 
 
-\title*{\textbf{Página para criar a ligação NAT}}
+\subsection{Página para criar a ligação NAT}
 
 \begin{figure}[H]
 \begin{center}
@@ -1460,6 +1462,96 @@ para criar a ligação NAT. Nesta pagina é apresentado do lado direito
 os pedidos pendentes, podendo associar uma porta juntamente com 
 endereço IP do \textit{container} com uma porta e endereço IP exerternos. \\
 
+O seguinte excerto de código mostra uma função em javascript onde é verificado
+se todos os campos foram preenchidos e aplicada uma 
+expressão regular para os campos de endreçoes IP, para garantir o formato correto.
+
+\begin{lstlisting}[language=csh, caption={Código em javascript par verificar parâmetros da interface web}]
+function validateForm() {
+    const action = document.getElementById("action").value;
+    const fw = document.getElementById("fw").value;
+    const protocol = document.getElementById("protocol").value;
+    const extPort = document.getElementById("ext_port").value;
+    const extIp = document.getElementById("ext_ip").value;
+    const intPort = document.getElementById("int_port").value;
+    const intIp = document.getElementById("int_ip").value;
+
+    if (!action || !fw || !protocol || !extPort || !extIp || !intPort || !intIp) {
+        alert("Todos os campos devem ser preenchidos!");
+        return false;
+    }
+
+    const ipPattern = /^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}$/;
+    if (!ipPattern.test(intIp)) {
+        alert("Por favor, insira um endereco IP valido.");
+        return false;
+    }
+
+    if (!ipPattern.test(extIp)) {
+        alert("Por favor, insira um endereco IP valido.");
+        return false;
+    }
+
+    return true;
+}
+\end{lstlisting}
+
+
+
+
+O seguinte excerto de código python mostra o que acontece quando os dados são enviados.
+\begin{lstlisting}[language=csh, caption={Código em python da interface web}]
+@views.route('/nat', methods=['GET', 'POST']) 
+def nat():
+
+    if request.method == 'POST':
+        
+        action = request.form.get('action')
+        fw = request.form.get('fw')
+        protocol= request.form.get('protocol')
+        ext_port = request.form.get('ext_port')
+        ext_ip = request.form.get('ext_ip')
+        int_port = request.form.get('int_port')
+        int_ip = request.form.get('int_ip')
+        chave = request.form.get('key_to_remove')
+        
+        
+        try:
+            notificar(int(chave))
+            remove_item(int(chave))
+        except:
+            print("Erro nao foi recebido nenhum valor para remover da lista de pedidos")
+
+
+        print(action)
+        print(fw)
+        print(protocol)
+        print(ext_port)
+        print(ext_ip)
+        print(int_port)
+        print(int_ip)
+        
+        hostnat(action, fw, protocol, ext_port, ext_ip, int_ip, int_port)
+        return redirect(url_for('views.nat', dicionario=pedidos , user=current_user))
+
+    return render_template('nat.html', dicionario=pedidos , user=current_user)
+\end{lstlisting}
+
+É possivel reparar que este código recebe os dados do formulário preenchido da página HTML
+para, de seguida, na linha 17 serem enviadas notificações para os utilizadores que inseriram
+pelo menos um ID (Discord ou Microsoft Teams).
+
+Na linha 18 é removido o pedido, referente aos dados preenchidos, do dicionário no qual estava guardado.
+
+Na linha 31 é chamada a função "hostnat" do ficheiro "unisSocketConn.py" onde são passados 
+os valores do formulário para serem enviados para o "Port Controller" e por sua vez execudada
+a ação de acordo com esses mesmos dados.
+
+Por fim na linha 32, a página é atualizada e juntamente com o contéuda do dicionário "pedidos".
+
+
+
+
 
 \title*{\textbf{Página para abrir/fechar portas do sistema host}}
 
@@ -1473,6 +1565,15 @@ endereço IP do \textit{container} com uma porta e endereço IP exerternos. \\
 
 É também possível abrir e fechar portas da \textit{firewall} (Iptables) 
 do sistema \textit{host}.
+
+
+
+
+
+
+
+
+%================================================================================
 
 \section{Sistema de notificações}
 
@@ -1551,6 +1652,7 @@ Sendo assim, é apenas chamar a função "send\_dm" e passar-lhe o argumento do 
 
 
 
+%======================================================================================
 
 \subsection{Microsoft Teams}
 
@@ -1563,6 +1665,101 @@ Para tal é necessário instalar as seguintes bibliotecas:
     \item botbuilder-integration-aiohttp
     \item aiohttp
 \end{itemize}
+
+O seguinte excerto de código mostra o funcionamento do envio de mensagens via Microsoft Teams.
+
+\begin{lstlisting}[language=csh, caption={Envio de notificação via Microsoft Teams}]
+from aiohttp import web
+from botbuilder.core import BotFrameworkAdapter, BotFrameworkAdapterSettings, TurnContext
+from botbuilder.schema import Activity, ActivityTypes, ConversationReference
+
+import os
+import asyncio
+
+app_id = os.getenv("MICROSOFT_APP_ID", "my-app-id")
+app_password = os.getenv("MICROSOFT_APP_PASSWORD", "my-app-password")
+settings = BotFrameworkAdapterSettings(app_id, app_password)
+adapter = BotFrameworkAdapter(settings)
+
+
+conversation_references = {}
+
+async def send_proactive_message(conversation_reference: ConversationReference, message: str):
+    async def aux(turn_context: TurnContext):
+        await turn_context.send_activity(Activity(type=ActivityTypes.message, text=message))
+
+    await adapter.continue_conversation(conversation_reference, aux, app_id)
+
+async def messages(req: web.Request) -> web.Response:
+    body = await req.json()
+    activity = Activity().deserialize(body)
+
+    if activity.type == ActivityTypes.message and "Ola" in activity.text:
+        # Criar a referencia da conversa
+        conversation_reference = TurnContext.get_conversation_reference(activity)
+        user_id = activity.from_property.id
+        conversation_references[user_id] = conversation_reference
+
+        # Enviar mensagem para o utilizador
+        asyncio.create_task(send_proactive_message(conversation_reference, "Ola! o seu pedido foi concluido."))
+
+    return web.Response(text="OK")
+
+
+async def send_message_to_user(req: web.Request) -> web.Response:
+data = await req.json()
+user_id = data.get("user_id")
+message = data.get("message")
+
+if user_id in conversation_references:
+    conversation_reference = conversation_references[user_id]
+    await send_proactive_message(conversation_reference, message)
+    return web.Response(text="Mensagem enviada.")
+else:
+    return web.Response(status=404, text="Utilizador nao encontrado.")
+
+
+
+app = web.Application()
+app.router.add_post("/api/messages", messages)
+app.router.add_post("/api/send-message", send_message_to_user)
+
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 3900))
+    web.run_app(app, port=port)
+
+\end{lstlisting}
+
+O código apresentado deve estar a ser executado num servidor que seja acessivel pela
+aplicação da interface \textit{web} para apartir desta, ser enviada uma solicitação POST
+para o caminho "/api/send-message". \\
+
+O seguinte excerto de código mostra a função que é chamada apartir da aplicação
+da interface \textit{web} para enviar notificação para os utilizadores.
+\begin{lstlisting}[language=csh, caption={Solicitação para enviar mensagem}]
+import requests
+
+def SendeDm(user_id):
+
+    payload = {
+        "user_id": user_id,
+        "message": "O seu pedido foi conluido"
+    }
+    
+    header = {
+        'Content-Type': 'application/json'
+    }
+
+    url = "http://localhost:3900/api/send-message"
+    
+    r = requests.post(url, data=payload, headers=header)
+    print(r.status_code)
+\end{lstlisting}
+
+Esta funcionalidae de notificações pode ser testada também com o seguinte comando.
+\begin{lstlisting}[language=csh, caption={Teste de notificação via Microsoft Teams}]
+    curl -X POST -H "Content-Type: application/json" -d '{"user_id": "USER_ID", "message": "conteudo da mensagem direta"}' http://localhost:3978/api/send-message
+\end{lstlisting}
 
 
 \section*{Sumário}
