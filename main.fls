@@ -788,13 +788,13 @@ INPUT ./figs/registo.png
 INPUT ./figs/registo.png
 INPUT ./figs/registo.png
 INPUT ./figs/registo.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
-INPUT ./figs/pedido2.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
+INPUT ./figs/pedido3.png
 INPUT ./figs/criar nat 2.png
 INPUT ./figs/criar nat 2.png
 INPUT ./figs/criar nat 2.png
@@ -809,6 +809,20 @@ INPUT ./figs/sysfirewall.png
 INPUT ./figs/sysfirewall.png
 INPUT ./figs/sysfirewall.png
 INPUT ./figs/sysfirewall.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/marketplace azure bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
+INPUT ./figs/detalhes do bot.png
 INPUT ./80-Detour.tex
 INPUT ./80-Detour.tex
 OUTPUT 80-Detour.aux

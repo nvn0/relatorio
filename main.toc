@@ -57,16 +57,16 @@
 \contentsline {subsection}{\numberline {5.5.4}Funcionamento do código}{36}{subsection.5.5.4}%
 \contentsline {section}{\numberline {5.6}Interface Web}{47}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Ficheiro base.html}{48}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{48}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{49}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{49}{subsection.5.6.4}%
-\contentsline {section}{\numberline {5.7}Sistema de notificações}{52}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Discord}{52}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{54}{subsection.5.7.2}%
-\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{57}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussão de resultados}{58}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Trabalho futuro}{59}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{60}{chapter.9}%
-\contentsline {chapter}{Referências}{61}{chapter.9}%
+\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{50}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{52}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{53}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Sistema de notificações}{55}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Discord}{56}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{57}{subsection.5.7.2}%
+\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{63}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussão de resultados}{64}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Trabalho futuro}{65}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{66}{chapter.9}%
+\contentsline {chapter}{Referências}{67}{chapter.9}%
 \contentsline {chapter}{\numberline {A}Especificação de requisitos simplificada}{A1}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Questionários}{A2}{appendix.B}%

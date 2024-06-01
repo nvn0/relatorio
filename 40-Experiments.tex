@@ -1405,7 +1405,86 @@ Este comopnete está organizado com a seguinte estrutura de ficheiros:
 
 \subsection{Ficheiro base.html}
 
+O seguinte excerto de código em HTML, não é uma pagina diretamente acessivel, é 
+usado como base para as páginas que são disponibilizadas.
+
+Serve, simplesmente para importar o Bootstrap e defenir algumas definições
+relacionadas ao aspecto das páginas, como por exemplo a \textit{navbar}.
+
+\begin{lstlisting}[language=csh, caption={Ficheiro base.html}]
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+        {% if user.is_authenticated %}
+        <a class="nav-item nav-link" id="home" href="/">Home</a>
+        <a class="nav-item nav-link" id="ports" href="/ports">Ports</a>
+        <a class="nav-item nav-link" id="FireWall" href="/firewall">System FireWall</a>
+        <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+        {% else %}
+        <a class="nav-item nav-link" id="login" href="/login">Login</a>
+        <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+        {% endif %}
+        </div>
+    </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    
+        <div class="container">{% block content %} {% endblock %}</div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+\end{lstlisting}
+
 \subsection{Página de Login e Registo}
+
+Para impedir acesso não autoriazado a utilazadores,não administrativos, às 
+funcionalidades oferecidas pela 
+interface \textit{web}, existe uma página de \textit{login}, como mostra a 
+seguinte imagem.
+
 
 \begin{figure}[H]
 \begin{center}
@@ -1415,10 +1494,58 @@ Este comopnete está organizado com a seguinte estrutura de ficheiros:
 \end{center}
 \end{figure}
 
-De modo, evitar uso não autorizado de gestão de portas, existe uma página de 
-\textit{login} deverá ser usada exclusivamente pelos
-administradores de sistema.\\
 
+Neste projeto foi usada como base de dados o SQLAlchemy do próprio Flask com a
+seguinte estrura.
+\begin{lstlisting}[language=csh, caption={Estrutura da base de dados}]
+from . import db
+from flask_login import UserMixin
+from sqlalchemy.sql import func
+
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(150), unique=True)
+    password = db.Column(db.String(150))
+\end{lstlisting}
+
+
+Já no processo de autenticação os dados recebidos através do formulário da
+página para serem verificados pelo seguinte código.
+
+\begin{lstlisting}[language=csh, caption={Autenticação na página de login}]
+@auth.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(email=email).first()
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Login efetuado com sucesso!', category='success')
+                login_user(user, remember=True)
+                return redirect(url_for('views.home'))
+            else:
+                # messagem de erro opcional, o admin do sistema deve decidir se quer usar ou nao
+                flash('Password incorreta', category='error') # pass incorreta
+        else:
+            flash('Credencias incorretas ou nao registadas', category='error') # email nao registado
+
+    return render_template("login.html", user=current_user)
+\end{lstlisting}
+
+O \textit{email} e a hash (sha 256) da \textit{password} inseridos são verificados 
+se existem na base de dados, se sim, a sessão é iniciada, caso contrário, o utilizador 
+continua na página de \textit{login} e recebe (configuração de aviso de erro opcional
+das linhas 13 e 16) um aviso do erro na página. \\
+
+
+
+
+No caso da página de registo, poderá opcionalmente ser desativada, uma vez que 
+apenas um numero mínimo
+de utilizadores deverá ter acesso à funcionalidades de gestão de portas. \\
 
 \begin{figure}[H]
 \begin{center}
@@ -1428,15 +1555,14 @@ administradores de sistema.\\
 \end{center}
 \end{figure}
 
-No caso da página de registo, poderá opcionalmente ser desativada, uma vez que 
-apenas um numero mínimo
-de utilizadores deverá ter acesso à funcionalidades de gestão de portas. \\
+
+
 
 \subsection{Página para fazer pedidos sobre portas}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=16cm]{figs/pedido2.png}
+\includegraphics[width=16cm]{figs/pedido3.png}
 \caption{Página de de pedidos}
 \label{fig:bookstack}
 \end{center}
@@ -1446,6 +1572,8 @@ Nesta pagina é possível inserir os dados para fazer o pedido ao administrador 
 sitema para abrir uma determinada porta de modo dar aos utilizazdores da rede local
 conectividade ao serviço aloja no \textit{container} na porta em questão. \\
 
+Opcionalmente, é possivel inserir o ID do Discord ou Microsoft Teams para receber
+notificação sobre o pedido.
 
 \subsection{Página para criar a ligação NAT}
 
@@ -1619,8 +1747,6 @@ def createDm(user_id):
 
 def send_dm(user_id):
 
-#id = int(input("user ID: "))
-
 channel_id = createDm(user_id)
 
 url = f"https://discord.com/api/v9/channels/{channel_id}/messages"
@@ -1658,7 +1784,36 @@ Sendo assim, é apenas chamar a função "send\_dm" e passar-lhe o argumento do 
 
 Para enviar notificações para um utilizador via Miscrosoft Teams, ao contrário do Discord,
 é necessário criar um \textit{Bot} com um Framewok fornecido pela Microsoft.
-Para tal é necessário instalar as seguintes bibliotecas:
+
+
+\title*{\textbf{Registo do Bot no Azure}}
+
+Para poder criar um Bot para o Microsoft Teams é necessário registar o mesmo 
+no "Azure Bot" do \textit{Marketplace} do Azure.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{figs/marketplace azure bot.png}
+\caption{Azure Bot do Marketplace do Azure}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+De seguida é apenas necessário preencher os parâmetros necessários de modo a obter
+a seguinte configuração.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{figs/detalhes do bot.png}
+\caption{Detalhes do registo do BOT}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+
+\title*{\textbf{Funcionamento do código}
+
+Para garatir o funcionamento do bot é necessário instalar as seguintes bibliotecas:
 \begin{itemize}
     \item botbuilder-core
     \item botbuilder-schema
