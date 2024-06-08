@@ -716,11 +716,11 @@ INPUT ./20-Theory.tex
 INPUT ./20-Theory.tex
 INPUT 20-Theory.tex
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti8.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt9.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./32-Art.tex
 INPUT ./32-Art.tex
 OUTPUT 32-Art.aux

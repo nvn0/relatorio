@@ -7,7 +7,7 @@ O projeto é constituido em seis partes:
 
 \begin{enumerate}
     \item Ambiente de teste do projeto;
-    \item Testes de FireWall e conexões realizados;
+    \item Testes de Firewall e conexões realizados;
     \item Testes da API do LXD;
     \item \textit{"Port Controller"} - daemon em C\#;
     \item API e Interface Web;
@@ -221,7 +221,7 @@ Para asua instala ção foi usado o comando:
 %==========================================================================
 
 
-\section{Testes de FireWall e conexões realizados}
+\section{Testes de Firewall e conexões realizados}
 
 Uma vez os \textit estarem configurados em modo NAT seria necessário criar regras 
 de redirecionamento de portas ou endereços IP de modo a os \textit{containers} serem acedidos
@@ -529,10 +529,10 @@ A API está dividida em três partes/caminhos URL:
 
 \begin{enumerate}
     \item  \slash host\_fw - onde as solicitações feitas para este URL serão relacionadas à interação
-    com a FireWall do sistema, mais concretamnte a tabela Filter do Iptables\slash Nftables;
+    com a Firewall do sistema, mais concretamnte a tabela Filter do Iptables\slash Nftables;
     \item  \slash host\_nat - neste caminho as solicitações são relacionadas à interação com
-    com a FireWall do sistema mas direcionadas à tabela NAT ou regras do LXD Forward;
-    \item  \slash cont\_port (caminho secundário/opcional) - Neste caminho as solicitações, têm o objetivo de interagir com regras de FireWall
+    com a Firewall do sistema mas direcionadas à tabela NAT ou regras do LXD Forward;
+    \item  \slash cont\_port (caminho secundário/opcional) - Neste caminho as solicitações, têm o objetivo de interagir com regras de firewall
     (Iptables ou nftables) dentro de \textit{containers} alojados dendoro do sistema \textit{host}. 
 \end{enumerate}
 
@@ -600,7 +600,7 @@ Container\_internal\_ip & $<IP>$ \\
 \hline
 Container\_internal\_port & $<$numero entre 1-65535$>$ \\
 \hline
-Rule & $<$Regra costumizada e opcional para usar na FireWall(Iptables ou Nftables)$>$ \\
+Rule & $<$Regra costumizada e opcional para usar na Firewall(Iptables ou Nftables)$>$ \\
 \hline
 \end{tabular}
 \caption{Lista de parâmetros possiveis de usar.}
@@ -787,7 +787,7 @@ funcionar constantemente em segundo plano, para controlar as conexões ao
 sistema\textit{host} e dos \textit{containers} nele alojados.
 
 O \textit{"Port Controller"} tem como principal função estar à escuta de pedidos
-do administrador e executar estes pedidos na \textit{FireWall} do sistema
+do administrador e executar estes pedidos na \textit{Firewall} do sistema
 \textit{host} (Iptables) ou a API do LXD de modo a gerir conexões relacionadas 
 com os \textit{containers} ativos ou ao próprio sistema \textit{host}.
 Os pedidos são recebidos na componente da \textit{unix socket} em formato
@@ -796,7 +796,7 @@ Os pedidos são recebidos na componente da \textit{unix socket} em formato
 
 Opcionalmente, o \textit{"Port Controller"} é também capaz de interagir com \textit{containers}
 do tipo LXC e executar comandos dentro destes para interagir com a
-\textit{FireWall} Iptables ou Nftables.
+\textit{Firewall} Iptables ou Nftables.
 
 \subsection{Estrutura do código}
 
@@ -1436,7 +1436,7 @@ relacionadas ao aspecto das páginas, como por exemplo a \textit{navbar}.
         {% if user.is_authenticated %}
         <a class="nav-item nav-link" id="home" href="/">Home</a>
         <a class="nav-item nav-link" id="ports" href="/ports">Ports</a>
-        <a class="nav-item nav-link" id="FireWall" href="/firewall">System FireWall</a>
+        <a class="nav-item nav-link" id="Firewall" href="/firewall">System Firewall</a>
         <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
         {% else %}
         <a class="nav-item nav-link" id="login" href="/login">Login</a>

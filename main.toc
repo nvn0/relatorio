@@ -5,68 +5,62 @@
 \contentsline {chapter}{Lista de Figuras}{vi}{section*.6}%
 \contentsline {chapter}{Lista de excertos de código e terminal}{vii}{section*.8}%
 \contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Metodologia}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Recursos tecnológicos}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Cronograma}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Organização do relatório}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.1}Objetivos}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Metodologia}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Recursos tecnológicos}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Cronograma}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Organização do relatório}{2}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Análise do problema}{3}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Fundamentos teóricos}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Distribuições Linux}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Alpine Linux}{6}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Segurança do sistema}{6}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Diferenças entre o Alpine Linux em relação a outras distribuições}{7}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Conlusão}{7}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Linguagens de programação}{7}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Linguagem C\# (.NET Core)}{7}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Linguagem Python}{8}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Bibliotecas/FrameWorks relevantes para o projeto}{9}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Flask (Python)}{9}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}APIs}{9}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}O que é uma API?}{10}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}O que é uma REST API?}{10}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Unix Socket}{11}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Como funciona?}{11}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Containers}{11}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}LXD e LXC}{12}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Incus}{12}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}FireWalls Linux}{13}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Iptables}{13}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Nftables}{15}{subsection.3.8.2}%
-\contentsline {chapter}{\numberline {4}Estado da Arte}{18}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Desenvolvimento do tema}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Ambiente de testes do projeto}{20}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Configuração do Alpine Linux}{21}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Configuração do LXD/LXC}{22}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Instalação do .NET Core}{24}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Instalação de outros pacotes}{24}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Testes de FireWall e conexões realizados}{24}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Método 1: Criar regras no lxc network e defenir portas de redirecionamento}{25}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Método 2: Usar um IP para redirecionar o tráfego para o container}{26}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Método 3: Usar o Iptables para criar portas de redirecionamento}{26}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Testes da API do LXD}{27}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Criação da API}{28}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Pré-requesitos}{29}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Estrutura da API}{30}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Definição dos parâmetros}{31}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Formato da solicitação}{32}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}ligação à unix socket}{34}{subsection.5.4.5}%
-\contentsline {section}{\numberline {5.5}Port Controller}{35}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Escolha da tecnologia}{35}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Funcionalidades}{35}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Estrutura do código}{35}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Funcionamento do código}{36}{subsection.5.5.4}%
-\contentsline {section}{\numberline {5.6}Interface Web}{47}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Ficheiro base.html}{48}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{50}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{52}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{53}{subsection.5.6.4}%
-\contentsline {section}{\numberline {5.7}Sistema de notificações}{55}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Discord}{56}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{57}{subsection.5.7.2}%
-\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{63}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussão de resultados}{64}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Trabalho futuro}{65}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{66}{chapter.9}%
-\contentsline {chapter}{Referências}{67}{chapter.9}%
+\contentsline {section}{\numberline {3.1}Linguagens de programação}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Bibliotecas/FrameWorks relevantes para o projeto}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Flask (Python)}{5}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}APIs}{5}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}O que é uma API?}{6}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}O que é uma REST API?}{6}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Unix Socket}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Como funciona?}{7}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Containers}{7}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}LXD e LXC}{8}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Incus}{8}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Firewalls Linux}{9}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Iptables}{9}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Nftables}{11}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}Estado da Arte}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Desenvolvimento do tema}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ambiente de testes do projeto}{16}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Configuração do Alpine Linux}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Configuração do LXD/LXC}{18}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Instalação do .NET Core}{20}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Instalação de outros pacotes}{20}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Testes de Firewall e conexões realizados}{20}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Método 1: Criar regras no lxc network e defenir portas de redirecionamento}{21}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Método 2: Usar um IP para redirecionar o tráfego para o container}{22}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Método 3: Usar o Iptables para criar portas de redirecionamento}{22}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Testes da API do LXD}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Criação da API}{24}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Pré-requesitos}{25}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Estrutura da API}{26}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Definição dos parâmetros}{27}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Formato da solicitação}{28}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}ligação à unix socket}{30}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Port Controller}{31}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Escolha da tecnologia}{31}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Funcionalidades}{31}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Estrutura do código}{31}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Funcionamento do código}{32}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Interface Web}{43}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Ficheiro base.html}{44}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{46}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{48}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{49}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Sistema de notificações}{51}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Discord}{52}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{53}{subsection.5.7.2}%
+\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{59}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussão de resultados}{60}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Trabalho futuro}{61}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{62}{chapter.9}%
+\contentsline {chapter}{Referências}{63}{chapter.9}%
 \contentsline {chapter}{\numberline {A}Especificação de requisitos simplificada}{A1}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Questionários}{A2}{appendix.B}%

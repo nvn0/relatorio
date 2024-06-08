@@ -1,10 +1,12 @@
 \chapter{Fundamentos teóricos}
 \label{chap:theo}
 
-Este capítulo é opcional \textbf{mas altamente recomendado} e, a existir, deve descrever os Fundamentos Teóricos, o que incluirá descrever as tecnologias relevantes, sejam concorrentes ou de fundação.
 
 Neste capitulo serão abordadas tecnologias e fundamentos teóricos relevantes para 
 este projeto. \\
+
+
+\begin{comment}
 
 \section{Distribuições Linux}
 
@@ -90,9 +92,28 @@ leve, seguro e eficiente, especialmente adequado para ambientes de servidores, c
 e sistemas embutidos.
 
 
+\end{comment}
+
+%=============================================================================================
+
 \section{Linguagens de programação}
 
-Nesta secção serão abordadas liguagens de programação relevantes no projeto.
+
+
+
+No que diz respeito às linguagens de programação utilizadas neste projeto, foram 
+escolhidas o C\# (Csharp) para o "Port Controller" e o Python para a API, 
+interface web e sistema de notificações.
+
+Ambas as linguagens são suportadas em sistemas Linux e possuem bibliotecas mais 
+que permitem de forma eficaz executar os diversos componentes do projeto.
+
+
+
+
+%=============================================================================================
+
+\begin{comment}
 
 \subsection{Linguagem C\# (.NET Core)}
 
@@ -199,6 +220,7 @@ de desenvolvimento.
 "Python é suficientemente rápido para o nosso site e permite-nos produzir funcionalidades 
 mantíveis em tempos recorde, com um mínimo de programadores." \cite{pyyt}
 
+\end{comment}
 
 \section{Bibliotecas/FrameWorks relevantes para o projeto}
 
@@ -206,6 +228,8 @@ dfgs
 
 \subsection{Flask (Python)}
 
+O Flask pode ser descrito como uma biblioteca ou um "microframework" que permite 
+criar aplicações web como APIs.
 
 dfgs
 
@@ -348,7 +372,7 @@ de maneira intuitiva;
 Incus é a próxima geração de gestão para LXC, com o princiapl objetivo de substituiur
 O LXD.
 
-\section{FireWalls Linux}
+\section{Firewalls Linux}
 
 O \textit{kernel} Linux possui desde a versão 2.4, um \textit{framework} de filtragem de pacotes 
 conhecido por Netfilter \cite{netfilter}. Este é utilizado utilizado para manipular e inspecionar 

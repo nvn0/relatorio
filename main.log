@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.30)  1 JUN 2024 03:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.30)  8 JUN 2024 03:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1305,11 +1305,11 @@ Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 \glo@main@file=\write7
 \openout7 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 131.
+Package glossaries Info: Writing glossary file main.glo on input line 132.
 \glo@acronym@file=\write8
 \openout8 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 131.
+Package glossaries Info: Writing glossary file main.acn on input line 132.
  (vars.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1352,24 +1352,24 @@ LaTeX Warning: Label `fig:bookstack' multiply defined.
 ) (80-Detour.aux) (90-Results.aux) (B0-Future.aux) (F0-Conclusion.aux) (ZA-Annex-Reqs.aux) (ZB-Annex-Inquiry.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
  (/home/delta/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count575
@@ -1423,7 +1423,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 148.
+Package hyperref Info: Link coloring OFF on input line 149.
 (main.out) (main.out)
 \@outlinefile=\write9
 \openout9 = `main.out'.
@@ -1459,14 +1459,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 148.
-Package biblatex Info: Reference segment=0 on input line 148.
+Package biblatex Info: Reference section=0 on input line 149.
+Package biblatex Info: Reference segment=0 on input line 149.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `00-Capa.aux'.
 
  (00-Capa.tex
-<figs/logo_ipmaia_small.png, id=281, 53.7207pt x 21.681pt>
+<figs/logo_ipmaia_small.png, id=257, 53.7207pt x 21.681pt>
 File: figs/logo_ipmaia_small.png Graphic file (type png)
 <use figs/logo_ipmaia_small.png>
 Package pdftex.def Info: figs/logo_ipmaia_small.png  used on input line 5.
@@ -1524,7 +1524,7 @@ l.23 \end{abstract}
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \include{03-Abstract}
+l.154 \include{03-Abstract}
                             [1
 
 ]
@@ -1589,29 +1589,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 \item L
+l.44 \item L
             inguagem Python versão 3.11 com a biblioteca Flask interface \t... [1
 
 
 
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 55--159
+Underfull \hbox (badness 10000) in paragraph at lines 62--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--159
+Underfull \hbox (badness 10000) in paragraph at lines 62--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--159
+Underfull \hbox (badness 10000) in paragraph at lines 62--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--159
+Underfull \hbox (badness 10000) in paragraph at lines 62--160
 
  []
 
@@ -1631,7 +1631,7 @@ Cap\'{\i }tulo 2.
  (20-Theory.tex
 Cap\'{\i }tulo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
@@ -1641,41 +1641,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 262--266
 
  []
 
-[6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 238--242
-
- []
-
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--322
+Underfull \hbox (badness 10000) in paragraph at lines 343--346
 
  []
 
-[12]
+[8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14]
-Overfull \hbox (47.6328pt too wide) in paragraph at lines 481--506
+[9] [10]
+Overfull \hbox (47.6328pt too wide) in paragraph at lines 505--530
  [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 513.
-[15] [16]) [17]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 537.
+[11] [12]) [13]
 \openout2 = `32-Art.aux'.
 
  (32-Art.tex
 Cap\'{\i }tulo 4.
-) [18
+) [14
 
 
 
@@ -1685,17 +1680,17 @@ Cap\'{\i }tulo 4.
 
  (40-Experiments.tex
 Cap\'{\i }tulo 5.
-<figs/estrutura2.png, id=675, 1093.08376pt x 1061.9675pt>
+<figs/estrutura2.png, id=618, 1093.08376pt x 1061.9675pt>
 File: figs/estrutura2.png Graphic file (type png)
 <use figs/estrutura2.png>
 Package pdftex.def Info: figs/estrutura2.png  used on input line 22.
 (pdftex.def)             Requested size: 398.33858pt x 386.99104pt.
-[19
+[15
 
 
 
 
-] [20 <./figs/estrutura2.png>] [21]
+] [16 <./figs/estrutura2.png>] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
@@ -1730,7 +1725,7 @@ Overfull \hbox (31.73529pt too wide) in paragraph at lines 132--132
 []\OT1/cmtt/m/n/10.95 What IPv4 address should be used? (CIDR subnet notation, \auto" or \none")
  []
 
-[22]
+[18]
 Overfull \hbox (31.73529pt too wide) in paragraph at lines 132--132
 []\OT1/cmtt/m/n/10.95 What IPv6 address should be used? (CIDR subnet notation, \auto" or \none")
  []
@@ -1750,12 +1745,12 @@ Overfull \hbox (48.98135pt too wide) in paragraph at lines 132--133
 []\OT1/cmtt/m/n/10.95 Would you like a YAML "lxd init"preseed to be printed? (yes/no) [default=no]:
  []
 
-<figs/lista de containers.png, id=730, 692.5875pt x 110.66344pt>
+<figs/lista de containers.png, id=674, 692.5875pt x 110.66344pt>
 File: figs/lista de containers.png Graphic file (type png)
 <use figs/lista de containers.png>
 Package pdftex.def Info: figs/lista de containers.png  used on input line 172.
 (pdftex.def)             Requested size: 398.33858pt x 63.64954pt.
-[23 <./figs/lista de containers.png>] [24]
+[19 <./figs/lista de containers.png>] [20]
 Overfull \hbox (19.50682pt too wide) in paragraph at lines 246--251
 []\OT1/cmr/m/n/10.95 Este metodo usa o co-mando "\OT1/cmtt/m/n/10.95 lxc network forward create lxdbr0 192.168.1.80\OT1/cmr/m/n/10.95 "para
  []
@@ -1765,17 +1760,17 @@ Overfull \hbox (59.01924pt too wide) in paragraph at lines 246--251
 \OT1/cmr/m/n/10.95 criar a re-gra e "\OT1/cmtt/m/n/10.95 lxc network forward port add lxdbr0 192.168.1.80 tcp 7000 10.195.171.205
  []
 
-<figs/teste de conexão via browser.png, id=752, 350.81062pt x 175.40532pt>
+<figs/teste de conexão via browser.png, id=695, 350.81062pt x 175.40532pt>
 File: figs/teste de conexão via browser.png Graphic file (type png)
 <use figs/teste de conexão via browser.png>
 Package pdftex.def Info: figs/teste de conexão via browser.png  used on input line 263.
 (pdftex.def)             Requested size: 341.43306pt x 170.72908pt.
-<figs/teste de conexão1.png, id=753, 440.39531pt x 33.12375pt>
+<figs/teste de conexão1.png, id=696, 440.39531pt x 33.12375pt>
 File: figs/teste de conexão1.png Graphic file (type png)
 <use figs/teste de conexão1.png>
 Package pdftex.def Info: figs/teste de conexão1.png  used on input line 279.
 (pdftex.def)             Requested size: 341.43306pt x 25.68124pt.
-[25 <./figs/teste de conexão via browser.png> <./figs/teste de conexão1.png>]
+[21 <./figs/teste de conexão via browser.png> <./figs/teste de conexão1.png>]
 Overfull \hbox (28.3431pt too wide) in paragraph at lines 304--310
 \OT1/cmr/m/n/10.95 tino "192.168.1.120"para o IP de um \OT1/cmr/m/it/10.95 con-tainer\OT1/cmr/m/n/10.95 , que neste es-x-em-plo ser^^Sa o IP "10.195.171.166"que
  []
@@ -1785,26 +1780,26 @@ Overfull \hbox (9.32233pt too wide) in paragraph at lines 304--310
 \OT1/cmtt/m/n/10.95 lxdbr0 192.168.1.120 target[]address=10.195.171.166\OT1/cmr/m/n/10.95 "que au-to-mati-ca-mente cria uma
  []
 
-[26] [27]
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 425--427
 
  []
 
-[28]
-<figs/fluxo de comunicação.png, id=778, 539.01375pt x 286.06876pt>
+[24]
+<figs/fluxo de comunicação.png, id=722, 539.01375pt x 286.06876pt>
 File: figs/fluxo de comunicação.png Graphic file (type png)
 <use figs/fluxo de comunicação.png>
 Package pdftex.def Info: figs/fluxo de comunicação.png  used on input line 484.
 (pdftex.def)             Requested size: 398.33858pt x 211.41257pt.
- [29 <./figs/fluxo de comunicação.png>] [30]
+ [25 <./figs/fluxo de comunicação.png>] [26]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 559.
 
-Overfull \hbox (84.59526pt too wide) in paragraph at lines 583--606
+Overfull \hbox (81.85776pt too wide) in paragraph at lines 583--606
  [][] 
  []
 
-[31] [32]
+[27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 669--673
 
  []
@@ -1814,12 +1809,12 @@ Overfull \hbox (17.34116pt too wide) in paragraph at lines 698--701
 \OT1/cmr/m/n/10.95 Conn.py"respons^^Savel para se ligar ^^Ra unix socket, lo-cal-izada em "/tm-p/-socket[]proj"(localiza^^Xc~ao
  []
 
-[33] [34] [35]
+[29] [30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 836--838
 
  []
 
-[36]
+[32]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 873.
  (/home/delta/.miktex/texmfs/install/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1828,12 +1823,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 882--886
 
  []
 
-[37] [38]
+[33] [34]
 Underfull \hbox (badness 10000) in paragraph at lines 980--984
 
  []
 
-[39] [40] [41] [42]
+[35] [36] [37] [38]
 Overfull \hbox (19.14932pt too wide) in paragraph at lines 1184--1188
 \OT1/cmr/m/n/10.95 "\OT1/cmtt/m/n/10.95 /1.0/networks/bridge[]interface/forwards/external[]ip\OT1/cmr/m/n/10.95 "(onde s~ao in-clu-i-dos par^ametros
  []
@@ -1843,13 +1838,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1184--1188
 
  []
 
-[43] [44] [45] [46]
+[39] [40] [41] [42]
 Underfull \hbox (badness 10000) in paragraph at lines 1394--1396
 
  []
 
-[47] [48] [49]
-<figs/login.png, id=1423, 1435.61343pt x 359.84438pt>
+[43] [44] [45]
+<figs/login.png, id=1366, 1435.61343pt x 359.84438pt>
 File: figs/login.png Graphic file (type png)
 <use figs/login.png>
 Package pdftex.def Info: figs/login.png  used on input line 1491.
@@ -1859,7 +1854,7 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 1491--1492
  [] 
  []
 
-[50 <./figs/login.png>]
+[46 <./figs/login.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1538--1542
 
  []
@@ -1869,7 +1864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1546--1549
 
  []
 
-<figs/registo.png, id=1452, 1159.33125pt x 390.70969pt>
+<figs/registo.png, id=1395, 1159.33125pt x 390.70969pt>
 File: figs/registo.png Graphic file (type png)
 <use figs/registo.png>
 Package pdftex.def Info: figs/registo.png  used on input line 1552.
@@ -1879,7 +1874,7 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 1552--1553
  [] 
  []
 
-<figs/pedido3.png, id=1453, 872.50969pt x 383.18156pt>
+<figs/pedido3.png, id=1396, 872.50969pt x 383.18156pt>
 File: figs/pedido3.png Graphic file (type png)
 <use figs/pedido3.png>
 Package pdftex.def Info: figs/pedido3.png  used on input line 1565.
@@ -1889,12 +1884,12 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 1565--1566
  [] 
  []
 
-[51 <./figs/registo.png>]
+[47 <./figs/registo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1571--1574
 
  []
 
-<figs/criar nat 2.png, id=1464, 1159.33125pt x 560.0925pt>
+<figs/criar nat 2.png, id=1408, 1159.33125pt x 560.0925pt>
 File: figs/criar nat 2.png Graphic file (type png)
 <use figs/criar nat 2.png>
 Package pdftex.def Info: figs/criar nat 2.png  used on input line 1582.
@@ -1904,13 +1899,13 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 1582--1583
  [] 
  []
 
-[52 <./figs/pedido3.png>]
+[48 <./figs/pedido3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1588--1592
 
  []
 
-[53 <./figs/criar nat 2.png>] [54]
-<figs/sysfirewall.png, id=1539, 881.54344pt x 331.99031pt>
+[49 <./figs/criar nat 2.png>] [50]
+<figs/sysfirewall.png, id=1482, 881.54344pt x 331.99031pt>
 File: figs/sysfirewall.png Graphic file (type png)
 <use figs/sysfirewall.png>
 Package pdftex.def Info: figs/sysfirewall.png  used on input line 1688.
@@ -1920,33 +1915,33 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 1688--1689
  [] 
  []
 
-[55 <./figs/sysfirewall.png>] [56]
+[51 <./figs/sysfirewall.png>] [52]
 Underfull \hbox (badness 10000) in paragraph at lines 1777--1778
 
  []
 
-<figs/marketplace azure bot.png, id=1595, 319.1925pt x 467.49657pt>
+<figs/marketplace azure bot.png, id=1538, 319.1925pt x 467.49657pt>
 File: figs/marketplace azure bot.png Graphic file (type png)
 <use figs/marketplace azure bot.png>
 Package pdftex.def Info: figs/marketplace azure bot.png  used on input line 1796.
 (pdftex.def)             Requested size: 398.33858pt x 583.42053pt.
-[57]
-<figs/detalhes do bot.png, id=1603, 357.58594pt x 335.75438pt>
+[53]
+<figs/detalhes do bot.png, id=1547, 357.58594pt x 335.75438pt>
 File: figs/detalhes do bot.png Graphic file (type png)
 <use figs/detalhes do bot.png>
 Package pdftex.def Info: figs/detalhes do bot.png  used on input line 1807.
 (pdftex.def)             Requested size: 398.33858pt x 374.03917pt.
- [58 <./figs/marketplace azure bot.png>] [59 <./figs/detalhes do bot.png>] [60]
+ [54 <./figs/marketplace azure bot.png>] [55 <./figs/detalhes do bot.png>] [56]
 Underfull \hbox (badness 10000) in paragraph at lines 1888--1891
 
  []
 
-) [61] [62]
+) [57] [58]
 \openout2 = `80-Detour.aux'.
 
  (80-Detour.tex
 Cap\'{\i }tulo 6.
-) [63
+) [59
 
 
 
@@ -1956,7 +1951,7 @@ Cap\'{\i }tulo 6.
 
  (90-Results.tex
 Cap\'{\i }tulo 7.
-) [64
+) [60
 
 
 
@@ -1966,7 +1961,7 @@ Cap\'{\i }tulo 7.
 
  (B0-Future.tex
 Cap\'{\i }tulo 8.
-) [65
+) [61
 
 
 
@@ -1976,27 +1971,17 @@ Cap\'{\i }tulo 8.
 
  (F0-Conclusion.tex
 Cap\'{\i }tulo 9.
-) [66
+) [62
 
 
 
 
 ]
-Overfull \hbox (6.70602pt too wide) in paragraph at lines 185--185
-[]\OT1/cmr/m/n/10.95 Wikipedia. \OT1/cmr/m/it/10.95 Python\OT1/cmr/m/n/10.95 . \OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / / en . wikipedia . org / wiki / Python _ (programming _
- []
-
-
-Overfull \hbox (18.94127pt too wide) in paragraph at lines 185--185
+Overfull \hbox (13.46626pt too wide) in paragraph at lines 186--186
 []\OT1/cmr/m/n/10.95 Netfilter project. \OT1/cmr/m/it/10.95 Net-fil-ter\OT1/cmr/m/n/10.95 . \OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / / www . netfilter . org$[] \OT1/cmr/m/n/10.95 (ace-dido em 30/04/2024). 
  []
 
-
-Overfull \hbox (3.42136pt too wide) in paragraph at lines 185--185
-[]\OT1/cmr/m/n/10.95 Nftables project. \OT1/cmr/m/it/10.95 Nfta-bles\OT1/cmr/m/n/10.95 . \OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / / www . netfilter . org / projects / nftables /
- []
-
-[67
+[63
 
 
 
@@ -2031,7 +2016,7 @@ L3 programming layer <2024-03-14>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BE9CC074256E54CD5708024FD429B5F9;12133.
+(rerunfilecheck)             Checksum: 3B19259BB4230F10AE55924415FB8AB0;10906.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -2041,10 +2026,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1814 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 49540 strings out of 476334
- 964040 string characters out of 5793017
+ 49501 strings out of 476334
+ 963127 string characters out of 5793017
  2160493 words of memory out of 5000000
- 69662 multiletter control sequences out of 15000+600000
+ 69642 multiletter control sequences out of 15000+600000
  569764 words of font info for 76 fonts, out of 8000000 for 9000
  23 hyphenation exceptions out of 8191
  99i,10n,117p,2373b,2307s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2058,9 +2043,9 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist,
 pdfTeX warning (dest): name{glo:ieee} has been referenced but does not exist, replaced by a fixed one
 
  </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk> </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1095.pk> </home/delta/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmitt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti8.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/delta/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (83 pages, 885513 bytes).
+Output written on main.pdf (79 pages, 861860 bytes).
 PDF statistics:
- 2076 PDF objects out of 2487 (max. 8388607)
- 1062 named destinations out of 1200 (max. 500000)
- 630 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2003 PDF objects out of 2073 (max. 8388607)
+ 1043 named destinations out of 1200 (max. 500000)
+ 582 words of extra memory for PDF output out of 10000 (max. 10000000)
 
