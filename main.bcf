@@ -2380,7 +2380,9 @@
     <bcf:citekey order="6" intorder="1">nftables</bcf:citekey>
     <bcf:citekey order="7" intorder="1">nftables</bcf:citekey>
     <bcf:citekey order="8" intorder="1">diffiptenft</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">daemon</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">googlecloud</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">azurecloud</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">daemon</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

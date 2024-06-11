@@ -1,9 +1,127 @@
 \chapter{Estado da Arte}
 \label{chap:art}
 
-Neste capítulo é opcional e, a existir, deve descrever o estado da arte relativamente ao seu projecto, o que implica explicar o que se passa actualmente, o que é que é usado noutros locais, ou seja, como é que as tecnologias descritas no capítulo \nameref{chap:theo}, na página \pageref{chap:theo}\footnote{referências para conteúdos noutras páginas deste documento também podem ser feitas em nota de rodapé, por exemplo:\\\emph{vide} capítulo \ref{chap:theo} -- \nameref{chap:theo}, na página \pageref{chap:theo}}, estão a ser usadas em situações semelhantes ou equiparáveis à situação que está a trabalhar neste projecto. Ou seja, quem tem o mesmo problema que se pretende resolver aqui, como está a lidar com esse problema?
+Neste capítulo de Estado de Arte serão descritos o funcionamento relacionado às conexões
+de máquinas virtuais\slash\textit{containers} em fornecedores deste tipo serviço. \\
+
+\section{Conexões das Máquinas Virtuais no Google Cloud}
+
+Nesta secção será abordado o funcionamento das conexões das máquinas virtuais no Google Cloud,
+para a descrição desta secção foi consultada a documentação oficial do Google Cloud. \cite{googlecloud} \\
+
+\title*{\textbf{Redes e Sub-redes}}
+
+
+Cada VM faz parte de uma rede VPC (Google Cloud Virtual Private Cloud), que oferece conectividade com outros produtos do Google Cloud e com a internet. As redes VPC podem ser configuradas em dois modos:
+
+\begin{itemize}
+\item Redes em modo automático: Têm uma sub-rede em cada região do Google Cloud, usando intervalos
+de endereços IP dentro de 10.128.0.0/9 e suportam apenas IPv4.
+\item Redes em modo personalizado: Permitem criar sub-redes manualmente em regiões
+selecionadas, usando intervalos de IPv4 e IPv6 especificados.
+\end{itemize}
+
+
+
+\title*{\textbf{Controladores de Interface de Rede (NICs)}}
+
+Cada VM tem uma interface de rede padrão, mas é possível criar interfaces
+adicionais para conectá-la a diferentes redes VPC
+
+\title*{\textbf{Endereços IP}}
+
+As interfaces das VMs recebem endereços IPv4 internos do intervalo primário de 
+endereços IPv4 da sub-rede. Opcionalmente, você pode configurar endereços IPv4 externos e, 
+se a sub-rede suportar IPv6, também pode configurar endereços IPv6. Estes endereços permitem 
+a comunicação com outros recursos do Google Cloud e sistemas externos. \\
+
+
+\begin{itemize}
+\item Endereços IP internos: São locais para a rede VPC, redes VPC pareadas ou 
+redes on-premises conectadas via Cloud VPN ou Cloud Interconnect.
+\item Endereços IP externos: São endereços IP públicos, roteáveis pela internet, 
+podendo ser efêmeros ou estáticos.
+\end{itemize}
+
+
+
+\title*{\textbf{Regras de Encaminhamento}}
+
+Regras de encaminhamento guiam o tráfego para recursos do Google Cloud com base 
+em endereço IP, protocolo e porta, lidando com tráfego interno e externo. Estas regras são 
+essenciais para configurações como hospedagem virtual, Cloud VPN, VIPs privados e 
+balanceamento de carga. \\
+
+
+
+
+\title*{\textbf{Regras de Firewall}}
+
+Regras de firewall da VPC gerem conexões permitidas ou negadas para VMs com 
+base em configurações especificadas. Estas regras são sempre aplicadas pelo Google 
+Cloud, protegendo as VMs independentemente do seu estado. Por padrão, as redes VPC 
+bloqueiam todas as conexões de entrada e permitem todas as conexões de saída. Regras 
+personalizadas podem ser criadas para permitir a comunicação interna entre VMs. \\
+
+
+
+
+
+
+
+
+\section{Conexões das Máquinas Virtuais no Microsoft Azure}
+
+A conectividade das máquinas virtuais (VMs) no Microsoft Azure é gererida por meio 
+de uma combinação de redes virtuais (Virtual Networks, ou VNets), sub-redes endereços IP, 
+grupos de segurança de rede (NSGs) e gateways.
+As descições que se seguem são com base na documentação da Microsoft \cite{azurecloud} \\
+
+\title*{\textbf{Redes Virtuais (VNets)}}
+
+As VNets são redes isoladas no Azure onde você pode implantar recursos do Azure, 
+como VMs. Elas permitem a comunicação segura entre diferentes recursos dentro da 
+mesma rede e com recursos externos à rede.\\
+
+\title*{\textbf{Sub-redes}}
+
+
+Dentro de uma VNet, você pode criar sub-redes para segmentar a rede em partes menores. 
+Cada VM deve ser implantada numa sub-rede específica. Isto ajuda a organizar e 
+isolar recursos de rede. \\
+
+
+\title*{\textbf{Endereços IP}
+
+\begin{itemize}
+    \item IP Privado: Cada VM em uma sub-rede recebe um endereço IP privado para 
+    comunicação interna dentro da VNet.
+    \item IP Público: Opcionalmente, uma VM pode ter um endereço IP público para 
+    ser acessível pela Internet. Esse IP pode ser estático ou dinâmico.
+\end{itemize}
+
+
+
+\title*{\textbf{Grupos de Segurança de Rede (NSGs)}
+
+Os NSGs são usados para controlar o tráfego de rede numa VNet. 
+É possivel associar NSGs a sub-redes ou interfaces de rede específicas de VMs para 
+definir regras de segurança que permitam ou neguem tráfego de rede com base no endereço 
+IP, porta e protocolo. \\
+
+
+\title*{\textbf{Azure bastion}}
+
+O Azure Bastion é um serviço PaaS que proporciona uma conectividade segura e contínua às  
+VMs diretamente pelo portal do Azure, sem a necessidade de um endereço IP público para as VMs. 
+
 
 
 \section*{Sumário}
 
-Ver o \nameref{sec:intro_summary} na página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
+Pelos exemplos apresentados, por norma as máquinas virtuais possuem tanto um endereço 
+IP público como um privado, tendo sempre um sistema NAT ou sub-rede ao longo da infraestrutura.
+É sempre possivel adicionar uma firewall no caso do Google Cloud existe uma por padrão.
+
+
+
