@@ -454,7 +454,7 @@ Esta solicitação efetuada com o curl tem o mesmo resultado do comando:
 % =============================================================================
 
 
-\section{Criação da API}
+\section{Criação da REST API}
 
 Para interagir com o daemon C\# (Port Controller) responsável por interagir com regras do iptables
 e configurações do LXC/LXD, foi criada uma API em Python com a biblioteca Flask como
@@ -521,6 +521,8 @@ from unixSocketConn import *
 
 A linha 4 é faz importação das funções defenidas do ficheiro "unixSocketConn.py", ficheiro esse, 
 responsável for enviar dados para o ficheiro da unxix socket.
+
+
 
 
 \subsection{Estrutura da API}
@@ -620,7 +622,7 @@ As solicitações devem ser feitas deve ser do tipo POST de modo a enviar dados 
 corretos para aquele aquele caminho e em formato JSON.
 
 Com comando "curl" é especificado o tipo de solicitação com a "flag" \texttt{-X <tipo de solicitação>},
-o cabeçalho com a flag \texttt{-H "<Conteúdo do cabeçalho>"}, de seguida com a flag -d os parâmetros
+o cabeçalho com a "flag" \texttt{-H "<Conteúdo do cabeçalho>"}, de seguida com a "flag" -d os parâmetros
 em formato JSON dentro de aspas simples e por fim, o URL completo para o qual se prentende enviar a
 solicitação.
 
@@ -1783,7 +1785,9 @@ Sendo assim, é apenas chamar a função "send\_dm" e passar-lhe o argumento do 
 \subsection{Microsoft Teams}
 
 Para enviar notificações para um utilizador via Miscrosoft Teams, ao contrário do Discord,
-é necessário criar um \textit{Bot} com um Framewok fornecido pela Microsoft.
+é necessário criar um \textit{Bot} com um \href{https://learn.microsoft.com/en-us/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0}{\textit{Framework}}
+fornecido pela Microsoft. \\
+
 
 
 \title*{\textbf{Registo do Bot no Azure}}
@@ -1811,7 +1815,24 @@ a seguinte configuração.
 \end{figure}
 
 
-\title*{\textbf{Funcionamento do código}
+Contudo, durante o passo de registo do BOT ocorreu o seguinte erro que impossibilitou
+a contiinuação do processo. O erro deve-se ao facto da conta utilizada associada à 
+instituição de ensino não ter as permissões necessárias.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{figs/erro bot azure.png}
+\caption{Erro do Azure no registo do BOT}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
+
+
+
+\title*{\textbf{Funcionamento do código (Teórico)}
+
+Durante o processo de desenvolvimento de código foi consultado o \href{https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/02.echo-bot}{Github da Microsoft}
+com exemplos de código para Bots, no caso, para a linguagem Python.
 
 Para garatir o funcionamento do bot é necessário instalar as seguintes bibliotecas:
 \begin{itemize}
@@ -1820,6 +1841,7 @@ Para garatir o funcionamento do bot é necessário instalar as seguintes bibliot
     \item botbuilder-integration-aiohttp
     \item aiohttp
 \end{itemize}
+
 
 O seguinte excerto de código mostra o funcionamento do envio de mensagens via Microsoft Teams.
 

@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {5.2.2}Método 2: Usar um IP para redirecionar o tráfego para o container}{22}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Método 3: Usar o Iptables para criar portas de redirecionamento}{22}{subsection.5.2.3}%
 \contentsline {section}{\numberline {5.3}Testes da API do LXD}{23}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Criação da API}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Criação da REST API}{24}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Pré-requesitos}{25}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Estrutura da API}{26}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Definição dos parâmetros}{27}{subsection.5.4.3}%
