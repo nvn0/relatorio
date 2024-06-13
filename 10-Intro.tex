@@ -46,7 +46,15 @@ todo o proceso de desnvolvimentos dos mesmos.
 
 \section{Metodologia}
 \label{sec:intro_method}
-Que metodologia pretende aplicar? Que métodos científicos e que métricas?
+
+A metodologia usada neste projeto começa com o desenvolvimento base do "Port Controller",
+da Rest API e da unix socket que permite aos dois comunicarem. Após ter essa base funcional
+foi realizada uma pesquisa sobre Iptables, Nftables, LXC e LXD e de como interagir estes, tanto
+por linha de comandos como através de código C\#. Foi feita também uma pesquisa de como
+outras plataformas abordam o tópico de controlo de conexões de \textit{containers}.
+Por consequente, deu-se continuidade ao desenvolvimento do "Port Controller" e dos 
+restantes componentes e à realização de testes dos mesmos.
+
 
 \section{Recursos tecnológicos}
 \label{sec:intro_resources}
@@ -64,6 +72,8 @@ as portas dos \textit{containers} e \textit{unix socket de servidor};
 \end{itemize}
 
 
+
+
 \section{Cronograma}
 \label{sec:intro_chronos}
 
@@ -75,10 +85,41 @@ as portas dos \textit{containers} e \textit{unix socket de servidor};
 \end{center}
 \end{figure}
 
+
 \section{Organização do relatório}
 \label{sec:intro_struct}
 
-Descreva aqui a organização do relatório. Como está estruturado o seu documento?
+Este documento está organizado pelos seguintes tópicos:
+
+Este relatório está organizado e vários capítulos, de modo, a explicar de forma
+eficaz todo o processo no decorrer da elaboração deste projeto.
+
+O documento inicia-se com o Resumo em língua Portuguesa e o Resumo em língua 
+inglesa (Abstract), seguindo-se a Declaração de honra e dos Agradecimentos.
+
+O capítulo 1, Introdução, apresenta o tema do projeto realizado, mencionado tópicos
+como os Objetivos e Recursos tecnológicos.
+
+No capítulo 2, Análise do problema, é explicado os problemas que este projeto 
+pretende resolver.
+
+No capítulo 3, Fundamentos teóricos, são referidos tecnologias e conceitos relevantes 
+para o desenvolvimento do projeto, nela são mencionadas as linguagens de programação usadas,
+programas utilizados e funcionamento destes.
+
+O capítulo 4, Estado da Arte, dá exemplos do funcionamento das conexões de outras 
+plataformas, tais como Google Cloud e Microsoft Azure.
+
+No capítulo 5
+
+No capítulo 6
+
+No capítulo 7
+
+No capítulo 9
+
+
+
 
 \section*{Sumário}
 \label{sec:intro_summary}
