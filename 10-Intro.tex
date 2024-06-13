@@ -23,6 +23,24 @@ Para a concretização deste trabalho são necessários os seguintes objetivos:\
 \section{Objetivos}
 \label{sec:object}
 
+Pretende-se, com este projecto, acrescentar funcionalidades/facilitar tarefas na plataforma ao
+DevLab/Forge do IPMAIA/UMAIA que permitam:
+
+\begin{itemize}
+\item o administrador do sistema facilmente defenir regras de \textit{firewall} no sistema host da plataforma (através do terminal ou de uma interface web);
+\item a atribuíção de endereços IP a \textit{containers} hospedados na plataforma, de modo,
+a dar conectividade aos mesmos (através do terminal ou de uma interface web);
+\item controlar quais portas dos \textit{containers} são disponiibilizadas para a rede interna da intituição;
+\item os alunos, aos quais, lhes foram atribuídos um \textit{container}, fazer um pedido ao administrador do sistema para poder
+obter ou não conectividade em determinada porta TCP/UDP;
+\item os alunos que efetuaram um pedido de abertura de porta, receber notificação (por Microsoft Teams ou Discord) quando O
+pedido for aceite ou negado.
+
+\end{itemize}
+
+Com a enumeração dos objetivos referidos, serão demonstrados ao longo deste documento
+todo o proceso de desnvolvimentos dos mesmos.
+
 
 
 
@@ -49,8 +67,13 @@ as portas dos \textit{containers} e \textit{unix socket de servidor};
 \section{Cronograma}
 \label{sec:intro_chronos}
 
-Auto-explicativo e facultativo para projecto, mas altamente recomendado.
-
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{figs/cronograma.png}
+\caption{Cronograma do projeto}
+\label{fig:bookstack}
+\end{center}
+\end{figure}
 
 \section{Organização do relatório}
 \label{sec:intro_struct}
