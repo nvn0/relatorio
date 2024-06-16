@@ -1564,7 +1564,7 @@ de utilizadores deverá ter acesso à funcionalidades de gestão de portas. \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=16cm]{figs/pedido3.png}
+\includegraphics[width=16cm]{figs/pagina de pedidos2.png}
 \caption{Página de de pedidos}
 \label{fig:bookstack}
 \end{center}
@@ -1574,8 +1574,8 @@ Nesta pagina é possível inserir os dados para fazer o pedido ao administrador 
 sitema para abrir uma determinada porta de modo dar aos utilizazdores da rede local
 conectividade ao serviço aloja no \textit{container} na porta em questão. \\
 
-Opcionalmente, é possivel inserir o ID do Discord ou Microsoft Teams para receber
-notificação sobre o pedido.
+Opcionalmente, é possivel inserir o ID do Discord, Microsoft Teams ou endereço E-mail
+para receber notificação sobre o pedido.
 
 \subsection{Página para criar a ligação NAT}
 
@@ -1635,7 +1635,7 @@ O seguinte excerto de código python mostra o que acontece quando os dados são 
 def nat():
 
     if request.method == 'POST':
-        
+            
         action = request.form.get('action')
         fw = request.form.get('fw')
         protocol= request.form.get('protocol')
@@ -1644,14 +1644,6 @@ def nat():
         int_port = request.form.get('int_port')
         int_ip = request.form.get('int_ip')
         chave = request.form.get('key_to_remove')
-        
-        
-        try:
-            notificar(int(chave))
-            remove_item(int(chave))
-        except:
-            print("Erro nao foi recebido nenhum valor para remover da lista de pedidos")
-
 
         print(action)
         print(fw)
@@ -1660,8 +1652,17 @@ def nat():
         print(ext_ip)
         print(int_port)
         print(int_ip)
-        
-        hostnat(action, fw, protocol, ext_port, ext_ip, int_ip, int_port)
+
+        # descomentar esta linha para enviar dados par o port controller
+        #hostnat(action, fw, protocol, ext_port, ext_ip, int_ip, int_port)
+
+        try:
+            notificar(int(chave))
+            remove_item(int(chave))
+        except:
+            print("Erro nao foi recebido nenhum valor para remover da lista de pedidos")
+
+            
         return redirect(url_for('views.nat', dicionario=pedidos , user=current_user))
 
     return render_template('nat.html', dicionario=pedidos , user=current_user)
@@ -1709,7 +1710,7 @@ do sistema \textit{host}.
 
 Para notificar os utilizadores que fizeram pedidos para abrir uma determinada
 porta podem opcionalmente receber uma notificação quando o seu pedido é aceite 
-através do Discord ou Microsoft Teams.
+através do Discord, Microsoft Teams ou E-mail.
 
 \subsection{Discord}
 
@@ -1829,7 +1830,7 @@ instituição de ensino não ter as permissões necessárias.
 
 
 
-\title*{\textbf{Funcionamento do código (Teórico)}
+\title*{\textbf{Funcionamento do código (Teórico)}}
 
 Durante o processo de desenvolvimento de código foi consultado o \href{https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/02.echo-bot}{Github da Microsoft}
 com exemplos de código para Bots, no caso, para a linguagem Python.
@@ -1939,9 +1940,63 @@ Esta funcionalidae de notificações pode ser testada também com o seguinte com
 \end{lstlisting}
 
 
+\subsection{Notificação via E-mail}
+
+O seguinte código mostra a função responsável por enviar notificações via E-mail.
+
+\begin{lstlisting}[language=csh, caption={Teste de notificação via Microsoft Teams}]
+import smtplib
+import os
+from dotenv import load_dotenv, dotenv_values
+
+
+#load from .env
+load_dotenv('.env')
+password: str = os.getenv('PASSWORD')
+
+
+def Send_email(email):
+    
+    sender_email = "a036785@ipmaia.pt"
+
+    
+    
+    receiver_email = email
+    
+    subject = "Pedido de porta"
+    mensagem = "O seu pedido foi aceite"
+    
+    text = f"Subject: {subject} \n\n{mensagem}"
+    
+    #server = smtplib.SMTP("smtp.gmail.com", 587)
+    server = smtplib.SMTP("smtp-mail.outlook.com", 587)
+    server.starttls()
+    
+    server.login(sender_email, password)
+    
+    server.sendmail(sender_email, receiver_email, text)
+    
+        
+\end{lstlisting}
+
+Neste excerto de código é apenas necessário fazer a importação à biblioteca core
+"smtplib". 
+Para evitar expor a palavra passe do email que envia a mensagem no código a mesma 
+é carregada a partir de um ficheiro .env .
+
+
+
+
+
 \section*{Sumário}
 
-Ver o \nameref{sec:intro_summary} página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
+Será configurado o ambiente de testes em Alpine Linux, onde serão realizados testes
+de \textit{firewall} e LXC/LXD, através de linha de comandos, com o objetivo de entender 
+o funcionamentos destas ferramentas, para de seguida, poder implementar, de forma mais eficaz,
+ações relacionadas a estas, mas através de código (no "Port Controller"). São também 
+explicadas as implementações da REST API, Interface web, unix socket e sistemas de notificações.
+
+%Ver o \nameref{sec:intro_summary} página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
 
 
 

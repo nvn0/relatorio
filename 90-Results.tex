@@ -1,7 +1,23 @@
 \chapter{Discussão de resultados}
 \label{cap:results}
-Este capítulo é opcional e pode ser omitido, mas destina-se a responder às seguintes questões:
-\begin{enumerate}
-    \item Que resultados foram obtidos?
-    \item O que é que se conseguiu com isso?
-\end{enumerate}
+%Este capítulo é opcional e pode ser omitido, mas destina-se a responder às seguintes questões:
+%\begin{enumerate}
+%    \item Que resultados foram obtidos?
+%    \item O que é que se conseguiu com isso?
+%\end{enumerate}
+
+Neste projeto, as tarefas principais (Implementação de um daemon de gestão de portas
+e respetctivo interface \textit{web} e suporte a notificações), inicialmente 
+apresentadas na proposta foram concluídas com sucesso.
+
+No caso do daemon, foi implementado com multi \textit{threading} e com interage com
+o LXC através da API do LXD de modo a ter capacidade de executar multiplas tarefass com a melhor
+\textit{performance}.
+
+No sistema de notificações, existe a possiblidade de usar Discord, E-mail e teoricamente Microsoft Teams.
+
+Adicionalmente, pode ser usada a REST API para interagir com daemon ("Port Controler")
+através da linha de comandos, caso se pretenda assim fazer.
+
+De modo geral, foi concebido diversos componentes funcionais que podem ser integrados no
+devlab(plataforma forge) do IPMAIA/UMAIA.
