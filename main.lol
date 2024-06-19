@@ -15,21 +15,19 @@
 \contentsline {lstlisting}{\numberline {5.14}{\ignorespaces ligação do Port Controller à unix socket}}{35}{lstlisting.5.14}%
 \contentsline {lstlisting}{\numberline {5.15}{\ignorespaces Leitura dos dados recebidos}}{36}{lstlisting.5.15}%
 \contentsline {lstlisting}{\numberline {5.16}{\ignorespaces Opções possiveis em Firewall.cs}}{37}{lstlisting.5.16}%
-\contentsline {lstlisting}{\numberline {5.17}{\ignorespaces Funções de firewall.cs}}{38}{lstlisting.5.17}%
-\contentsline {lstlisting}{\numberline {5.18}{\ignorespaces Constantes defenidas}}{39}{lstlisting.5.18}%
-\contentsline {lstlisting}{\numberline {5.19}{\ignorespaces Funções para executar regras no Iptables}}{40}{lstlisting.5.19}%
-\contentsline {lstlisting}{\numberline {5.20}{\ignorespaces Função que executa comandos na shell}}{40}{lstlisting.5.20}%
-\contentsline {lstlisting}{\numberline {5.21}{\ignorespaces Função que cria uma associação de ip e portas para um container}}{41}{lstlisting.5.21}%
-\contentsline {lstlisting}{\numberline {5.22}{\ignorespaces Editar o conteúdo Json}}{42}{lstlisting.5.22}%
-\contentsline {lstlisting}{\numberline {5.23}{\ignorespaces Fazer solicitação PUT com os novos dados}}{44}{lstlisting.5.23}%
-\contentsline {lstlisting}{\numberline {5.24}{\ignorespaces Edição do objeto Json "ports" para remover contúdo especificado}}{45}{lstlisting.5.24}%
-\contentsline {lstlisting}{\numberline {5.25}{\ignorespaces Ficheiro base.html}}{47}{lstlisting.5.25}%
-\contentsline {lstlisting}{\numberline {5.26}{\ignorespaces Estrutura da base de dados}}{49}{lstlisting.5.26}%
-\contentsline {lstlisting}{\numberline {5.27}{\ignorespaces Autenticação na página de login}}{49}{lstlisting.5.27}%
-\contentsline {lstlisting}{\numberline {5.28}{\ignorespaces Código em javascript par verificar parâmetros da interface web}}{52}{lstlisting.5.28}%
-\contentsline {lstlisting}{\numberline {5.29}{\ignorespaces Código em python da interface web}}{53}{lstlisting.5.29}%
-\contentsline {lstlisting}{\numberline {5.30}{\ignorespaces Envio de notificação via Discord}}{55}{lstlisting.5.30}%
-\contentsline {lstlisting}{\numberline {5.31}{\ignorespaces Envio de notificação via Microsoft Teams}}{59}{lstlisting.5.31}%
-\contentsline {lstlisting}{\numberline {5.32}{\ignorespaces Solicitação para enviar mensagem}}{60}{lstlisting.5.32}%
-\contentsline {lstlisting}{\numberline {5.33}{\ignorespaces Teste de notificação via Microsoft Teams}}{61}{lstlisting.5.33}%
-\contentsline {lstlisting}{\numberline {5.34}{\ignorespaces Teste de notificação via Microsoft Teams}}{61}{lstlisting.5.34}%
+\contentsline {lstlisting}{\numberline {5.17}{\ignorespaces Constantes defenidas}}{38}{lstlisting.5.17}%
+\contentsline {lstlisting}{\numberline {5.18}{\ignorespaces Funções para executar regras no Iptables}}{38}{lstlisting.5.18}%
+\contentsline {lstlisting}{\numberline {5.19}{\ignorespaces Edição do objeto Json "ports" para remover contúdo especificado}}{40}{lstlisting.5.19}%
+\contentsline {lstlisting}{\numberline {5.20}{\ignorespaces Estrutura da base de dados}}{42}{lstlisting.5.20}%
+\contentsline {lstlisting}{\numberline {5.21}{\ignorespaces Autenticação na página de login}}{43}{lstlisting.5.21}%
+\contentsline {lstlisting}{\numberline {5.22}{\ignorespaces Código em javascript par verificar parâmetros da interface web}}{45}{lstlisting.5.22}%
+\contentsline {lstlisting}{\numberline {5.23}{\ignorespaces Código em python da interface web}}{46}{lstlisting.5.23}%
+\contentsline {lstlisting}{\numberline {5.24}{\ignorespaces Envio de notificação via Discord}}{48}{lstlisting.5.24}%
+\contentsline {lstlisting}{\numberline {5.25}{\ignorespaces Envio de notificação via Microsoft Teams}}{52}{lstlisting.5.25}%
+\contentsline {lstlisting}{\numberline {5.26}{\ignorespaces Solicitação para enviar mensagem}}{53}{lstlisting.5.26}%
+\contentsline {lstlisting}{\numberline {5.27}{\ignorespaces Teste de notificação via Microsoft Teams}}{54}{lstlisting.5.27}%
+\contentsline {lstlisting}{\numberline {5.28}{\ignorespaces Teste de notificação via Microsoft Teams}}{54}{lstlisting.5.28}%
+\contentsline {lstlisting}{\numberline {A.1}{\ignorespaces Funções de firewall.cs}}{A1}{lstlisting.A.1}%
+\contentsline {lstlisting}{\numberline {B.1}{\ignorespaces Função que executa comandos na shell}}{A3}{lstlisting.B.1}%
+\contentsline {lstlisting}{\numberline {C.1}{\ignorespaces Função que dá conectividade aos containers através da API do LXD}}{A5}{lstlisting.C.1}%
+\contentsline {lstlisting}{\numberline {D.1}{\ignorespaces Ficheiro base.html}}{A9}{lstlisting.D.1}%

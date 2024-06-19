@@ -51,20 +51,24 @@
 \contentsline {subsection}{\numberline {5.5.2}Funcionalidades}{34}{subsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.5.3}Estrutura do código}{34}{subsection.5.5.3}%
 \contentsline {subsection}{\numberline {5.5.4}Funcionamento do código}{35}{subsection.5.5.4}%
-\contentsline {section}{\numberline {5.6}Interface Web}{46}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Ficheiro base.html}{47}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{49}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{51}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{52}{subsection.5.6.4}%
-\contentsline {section}{\numberline {5.7}Sistema de notificações}{54}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Discord}{55}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{56}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Notificação via E-mail}{61}{subsection.5.7.3}%
-\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{63}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Discussão de resultados}{64}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Trabalho futuro}{65}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Implementação das tarefas opcionais}{65}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Aumentar os meios de notificações}{65}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Implementar uma biblioteca/API para o Iptables}{65}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{66}{chapter.9}%
-\contentsline {chapter}{Referências}{67}{chapter.9}%
+\contentsline {section}{\numberline {5.6}Interface Web}{41}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Ficheiro base.html}{42}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Página de Login e Registo}{42}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Página para fazer pedidos sobre portas}{44}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}Página para criar a ligação NAT}{45}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Sistema de notificações}{47}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Discord}{48}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Microsoft Teams}{49}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Notificação via E-mail}{54}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Desvios de Procedimento}{56}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Discussão de resultados}{57}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Trabalho futuro}{58}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Implementação das tarefas opcionais}{58}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Aumentar os meios de notificações}{58}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Implementar uma biblioteca/API para o Iptables}{58}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Conclusões e reflexão crítica}{59}{chapter.9}%
+\contentsline {chapter}{Referências}{60}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Código que decide qual ação executar (firewall.cs)}{A1}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Código para executar comandos através da linguagem Bash(firewall.cs)}{A3}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Código que interage com a API do LXD(firewall.cs)}{A5}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Código base.html}{A9}{appendix.D}%
