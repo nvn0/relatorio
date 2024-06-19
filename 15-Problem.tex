@@ -2,7 +2,7 @@
 \label{cap:problem}
 
 
-O Forge da Universidade da Maia e IPMaia é um serviço com multiplas funções com 
+O Forge da Universidade da Maia e IPMAIA é um serviço com multiplas funções com 
 o objetivo de ajudar os alunos a desenvolver os seus trabalhos.
 Uma das suas funções é a disponibilização de \textit{containers} que podem ser usados
 para alojar aplicações/programas desenvolvidos pelos alunos.
@@ -14,13 +14,19 @@ SSH \cite{rfc4253}.
 
 Atualmente, não existe um sistema se controlo de portas ou \textit{firewall}, neste
 momento qualquer \textit{container} consegue abrir portas e deixá-las acessiveis 
-para qualquer utilizador dentro da rede local do IPMAIA/UMAIA.
+para qualquer utilizador dentro da rede local do IPMAIA/UMAIA. Que numa perspetiva
+da segurança não seria o mais recomendado.
+
+Outro fator, é o processo que o administrador do sistema tem que fazer para executar regras
+de \textit{firewall} no sistema \textit{host} ou na atribuição de endereços IP a \textit{containers}
+hospedados na plataforma, sendo que o proceso tem que ser feito através da linha de comandos.
 
 Sendo assim seria útil haver uma método mais fácil e cómodo para o administrador do sistema
 controlar e decidir, através de uma interface gráfica, que portas os \textit{containers} dos utilizadores deverão expor 
 para a rede local.
 
-Da mesma forma, os utilizadores poderiam fazer um pedido de abertura de porta através de uma iinterface gráfica.
+Da mesma forma, os utilizadores poderiam fazer um pedido de abertura de porta 
+através de uma interface gráfica.
 
 \section*{Sumário}
 

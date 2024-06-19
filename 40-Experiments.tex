@@ -1088,62 +1088,12 @@ anterormente defenida.
 
 Com um funcionamento idêntico à função anteriormente explicada ("Lxd\_api\_forward")
 a principal diferença está na edição do objeto JSON recebido da solicitação GET inicial,
-onde ao invés de adicionar conteúdo, neste caso será retirado.
+onde ao invés de adicionar conteúdo, neste caso será retirado. 
 
 
-\begin{lstlisting}[language=csh, caption={Edição do objeto Json "ports" para remover contúdo especificado}]
-//------ Edicao do JSON ------------------------
+ 
 
-// Encontra o indice do final dos cabecalhos na resposta
-int headersEndIndex = responseData.IndexOf("\r\n\r\n");
-
-// Extrai a parte do corpo da resposta (apos o final dos cabecalhos)
-string responseBody = responseData.Substring(headersEndIndex + 4);
-
-// Analisa o JSON do corpo da resposta
-dynamic jsonResponseObject = JsonSerializer.Deserialize<dynamic>(responseBody);
-Console.WriteLine("OBJETO JSON: " + jsonResponseObject);
-
-
-
-// Inicializa metadataElement com um valor padrao
-JsonElement metadataElement = default;
-
-// Verifica se o objeto contem a propriedade "metadata"
-if (jsonResponseObject is not null && jsonResponseObject.TryGetProperty("metadata", out metadataElement))
-{
-    // Verifica se "metadata" contem a propriedade "ports"
-    if (metadataElement.TryGetProperty("ports", out JsonElement portsElement))
-    {
-        if (portsElement.ValueKind == JsonValueKind.Array)
-        {
-            // Especifica o "target_address" e o "target_port" a serem removidos
-            string targetAddressToRemove = cont_internal_ip;
-            string targetPortToRemove = cont_internal_port;
-            string listenPortToRemove = port;
-
-            // Converte o elemento "ports" para uma lista de portas
-            foreach (JsonElement portas in portsElement.EnumerateArray())
-            {
-                // Verifica se o objeto contem as propriedades "target_address" e "target_port" e "listen_port"
-                if (portas.TryGetProperty("target_address", out JsonElement targetAddressElement) &&
-                    portas.TryGetProperty("target_port", out JsonElement targetPortElement) &&
-                    portas.TryGetProperty("listen_port", out JsonElement listenPortElement))
-                {
-                    // Verifica se o "target_address", o "target_port" e o "listen_port" correspondem aos especificados
-                    if (targetAddressElement.GetString() == targetAddressToRemove && targetPortElement.GetString() == targetPortToRemove && listenPortElement.GetString() == listenPortToRemove)
-                    {
-                        // Se corresponderem, o obj nao e adicionado lista de portas
-                        continue;
-                    }
-                }
-
-                // Adiciona o objeto a lista de portas
-                portsList.Add(portas);
-            }
-\end{lstlisting} 
-
-Neste excerto, é mostrado como o \textit{array} "ports" recebido da solicitação GET é analisado
+No excerto de código presente no anexo \ref{chap:zd}, é mostrado como o \textit{array} "ports" recebido da solicitação GET é analisado
 de modo a encontrar os objetos com os parâmetros que dizem respeito à porta e ao endereço IP do 
 \textit{container} e à porta externa associada (o endereço IP externo fora 
 do \textit{array} "ports")
@@ -1153,7 +1103,8 @@ a uma nova lista, para que de seguida como na função anterior seja inserida nu
 solicitação PUT para atualizar o conteúdo da configuração do endereço IP registado.
 
 Por fim, existe ainda a função "Lxd\_api\_forward\_reset", que apenas faz uma solicitação
-PUT com o \textit{array} "ports" vazio para o caminho referente ao endereço IP externo registado.
+PUT com o \textit{array} "ports" vazio para o caminho referente ao endereço IP
+externo registado. \\
 
 
 
@@ -1176,7 +1127,7 @@ Este comopnete está organizado com a seguinte estrutura de ficheiros:
 
 \subsection{Ficheiro base.html}
 
-O excerto de código em HTML, presente no anexo \ref{chap:zc}, não é uma pagina diretamente acessivel, é 
+O excerto de código em HTML, presente no anexo \ref{chap:ze}, não é uma pagina diretamente acessivel, é 
 usado como base para as páginas que são disponibilizadas.
 
 Serve, simplesmente para importar o Bootstrap e defenir algumas definições
@@ -1521,8 +1472,8 @@ a seguinte configuração.
 
 
 Contudo, durante o passo de registo do BOT ocorreu o seguinte erro que impossibilitou
-a contiinuação do processo. O erro deve-se ao facto da conta utilizada associada à 
-instituição de ensino não ter as permissões necessárias.
+a continuação do processo. O erro deve-se ao facto da conta utilizada, associada à 
+instituição de ensino, não ter as permissões necessárias.
 
 \begin{figure}[H]
 \begin{center}
@@ -1548,69 +1499,14 @@ Para garatir o funcionamento do bot é necessário instalar as seguintes bibliot
 \end{itemize}
 
 
-O seguinte excerto de código mostra o funcionamento do envio de mensagens via Microsoft Teams.
-
-\begin{lstlisting}[language=csh, caption={Envio de notificação via Microsoft Teams}]
-from aiohttp import web
-from botbuilder.core import BotFrameworkAdapter, BotFrameworkAdapterSettings, TurnContext
-from botbuilder.schema import Activity, ActivityTypes, ConversationReference
-
-import os
-import asyncio
-
-app_id = os.getenv("MICROSOFT_APP_ID", "my-app-id")
-app_password = os.getenv("MICROSOFT_APP_PASSWORD", "my-app-password")
-settings = BotFrameworkAdapterSettings(app_id, app_password)
-adapter = BotFrameworkAdapter(settings)
-
-
-conversation_references = {}
-
-async def send_proactive_message(conversation_reference: ConversationReference, message: str):
-    async def aux(turn_context: TurnContext):
-        await turn_context.send_activity(Activity(type=ActivityTypes.message, text=message))
-
-    await adapter.continue_conversation(conversation_reference, aux, app_id)
-
-async def messages(req: web.Request) -> web.Response:
-    body = await req.json()
-    activity = Activity().deserialize(body)
-
-    if activity.type == ActivityTypes.message and "Ola" in activity.text:
-        # Criar a referencia da conversa
-        conversation_reference = TurnContext.get_conversation_reference(activity)
-        user_id = activity.from_property.id
-        conversation_references[user_id] = conversation_reference
-
-        # Enviar mensagem para o utilizador
-        asyncio.create_task(send_proactive_message(conversation_reference, "Ola! o seu pedido foi concluido."))
-
-    return web.Response(text="OK")
-
-
-async def send_message_to_user(req: web.Request) -> web.Response:
-data = await req.json()
-user_id = data.get("user_id")
-message = data.get("message")
-
-if user_id in conversation_references:
-    conversation_reference = conversation_references[user_id]
-    await send_proactive_message(conversation_reference, message)
-    return web.Response(text="Mensagem enviada.")
-else:
-    return web.Response(status=404, text="Utilizador nao encontrado.")
+O excerto de código, presente no anexo \ref{chap:zf} mostra o funcionamento do 
+envio de mensagens via Microsoft Teams.
 
 
 
-app = web.Application()
-app.router.add_post("/api/messages", messages)
-app.router.add_post("/api/send-message", send_message_to_user)
 
-if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 3900))
-    web.run_app(app, port=port)
 
-\end{lstlisting}
+
 
 O código apresentado deve estar a ser executado num servidor que seja acessivel pela
 aplicação da interface \textit{web} para apartir desta, ser enviada uma solicitação POST

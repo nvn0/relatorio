@@ -96,6 +96,8 @@ e sistemas embutidos.
 
 %=============================================================================================
 
+\begin{comment}
+
 \section{Linguagens de programação}
 
 
@@ -108,7 +110,7 @@ interface web e sistema de notificações.
 Ambas as linguagens são suportadas em sistemas Linux e possuem bibliotecas mais 
 que permitem de forma eficaz executar os diversos componentes do projeto.
 
-
+\end{comment}
 
 
 %=============================================================================================
@@ -224,14 +226,14 @@ mantíveis em tempos recorde, com um mínimo de programadores." \cite{pyyt}
 
 \section{Bibliotecas/Frameworks relevantes para o projeto}
 
-dfgs
+
 
 \subsection{Flask (Python)}
 
 O Flask pode ser descrito como uma biblioteca ou um "microframework" que permite 
 criar aplicações web como APIs.
 
-dfgs
+\begin{comment}
 
 \section{APIs}
 
@@ -291,6 +293,9 @@ Os principais formatos de texto a serem enviados nas solicitações são:
     \item XML.
 \end{itemize}
 
+\end{comment}
+
+%=====================================================
 
 \section{Unix Socket}
 
@@ -303,14 +308,13 @@ Unix Sockets são frequentemente utilizados em sistemas Unix e Unix-like
 latência entre processos.
 
 
-\subsection{Como funciona?}
 
 Diferente das sockets de rede (TCP/IP), as Unix Sockets são usadas para 
 comunicação local entre processos no mesmo sistema. Estas não dependem de interfaces 
 de rede ou protocolos de rede.
 
 Em vez de usar endereços IP e números de porta, as Unix Sockets utilizam caminhos 
-no sistema de ficheiros (ex.: /tmp/socketfile).
+no sistema de ficheiros (ex.: /tmp/socketfile). \\
 
 \section{Containers}
 
@@ -491,7 +495,11 @@ O Iptables funciona de forma sequencial, ou seja, quando uma regra é colocada
 numa \textit{chain} essa regra tem um numero ou posição. Desta forma, quando um 
 pacote está a ser processado por uma \textit{chain} são verificadas as regras 
 dessa \textit{chain} desde a primeira até à última, até que uma corresponda a
-parametros do pacote e portanto, seja ativada.
+parametros do pacote e portanto, seja ativada. \\
+
+
+
+\begin{comment}
 
 Numa regra é possivel especificar parametros como a interface de entrada, 
 a interface de saída, IP de destino, IP de origem,o protocolo, a porta de 
@@ -540,6 +548,11 @@ iptabels -I INPUT -p tcp --dport 22 -j DROP
 
 \textbf{Nota}: Não é necessário especificar no comando a tabela  com o parametro
 \textbf{-t} quando se quer adicionar uma regra na \textit{Filter Table}.
+
+\end{comment}
+
+
+%==============================================================================
 
 \subsection{Nftables}
 
