@@ -14,6 +14,7 @@
 \contentsline {chapter}{\numberline {3}Fundamentos teóricos}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Bibliotecas/Frameworks relevantes para o projeto}{6}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Flask (Python)}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Bootstrap}{6}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Unix Socket}{6}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Containers}{7}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}LXD e LXC}{7}{subsection.3.3.1}%

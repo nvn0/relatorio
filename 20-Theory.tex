@@ -223,6 +223,12 @@ de desenvolvimento.
 mantíveis em tempos recorde, com um mínimo de programadores." \cite{pyyt}
 
 \end{comment}
+%================================================================================
+
+
+
+
+
 
 \section{Bibliotecas/Frameworks relevantes para o projeto}
 
@@ -231,8 +237,19 @@ mantíveis em tempos recorde, com um mínimo de programadores." \cite{pyyt}
 \subsection{Flask (Python)}
 
 O Flask pode ser descrito como uma biblioteca ou um "microframework" que permite 
-criar aplicações web como APIs.
+criar aplicações web como APIs de forma simples e flexivel.
 
+
+\subsection{Bootstrap}
+
+Bootstrap é um \textit{framework front-end} amplamente utilizado para o desenvolvimento 
+de interfaces web responsivas e móveis.
+É fácil de usar e de fazer a importação uma vez que basta inserir as linhas que
+fazem referência para o seu CDN na pagina html.
+
+
+
+%================================================================================
 \begin{comment}
 
 \section{APIs}
@@ -355,6 +372,8 @@ do kernel do Linux. \\
     \textit{container} pode usar.
 \end{itemize}
 
+
+
 \title*{\textbf{LXD}}
 
 Patrocinado pela Canonical Ltd. desde a sua  criação, LXD é uma camada de gestão para LXC, 
@@ -373,8 +392,14 @@ de maneira intuitiva;
 
 \subsection{Incus}
 
-Incus é a próxima geração de gestão para LXC, com o princiapl objetivo de substituiur
-O LXD.
+Incus é a próxima geração de gestão para LXC, com o principal objetivo de substituir o 
+LXD, apartir do momento que este projeto passou a ser controlado exclusivamente 
+pela Canonical. Com a criação desta \textit{fork} haverá uma solução de código aberto, que 
+não está associada a uma corporação empresarial, para a gestão de \textit{containers}.
+
+
+
+
 
 \section{Firewalls Linux}
 
@@ -637,6 +662,16 @@ relativamente simples do software de espaço de utilizador nft."
 
 \section*{Sumário}
 
-dsfg
+Foram abordados tecnologias e conceitos relevantes para o desenvolvimento do projeto.
+Como por exemplo, o Flask e Bootstrap, \textit{frameworks} ligados à componente da 
+interface \textit{web}.
+A Unix \textit{Socket} que permite a comunicação entre processos, que no caso deste
+projeto seriam o "Port Controller" e a interface \textit{web} ou REST API.
+A tecnologia principal deste projeto os \textit{containers}, é explicado a sua 
+utilidade e as ferramentas usadas, o LXC que os cria e o LXD responsável pela sua 
+gestão, é também mencionado o Incus que poderá ser a futura alterniva ao LXD.
+Por fim, são explicadas as duas principais tecnologias de \textit{firewall} em 
+ambientes Linux, o iptables e o nftables.
 
-Ver o \nameref{sec:intro_summary} na página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
+
+%Ver o \nameref{sec:intro_summary} na página \pageref{sec:intro_summary} para perceber como utilizar esta secção.
