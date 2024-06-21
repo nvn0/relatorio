@@ -130,8 +130,6 @@ INPUT /home/delta/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
-INPUT /home/delta/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
-INPUT /home/delta/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
@@ -140,6 +138,8 @@ INPUT /home/delta/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestri
 INPUT /home/delta/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
+INPUT /home/delta/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
 INPUT /home/delta/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
