@@ -1,0 +1,56 @@
+
+\chapter{Código da função que remove a associação de portas(firewall.cs)}
+\label{chap:zd}
+
+
+\begin{lstlisting}[language=csh, caption={Edição do objeto Json "ports" para remover contúdo especificado}]
+    //------ Edicao do JSON ------------------------
+    
+    // Encontra o indice do final dos cabecalhos na resposta
+    int headersEndIndex = responseData.IndexOf("\r\n\r\n");
+    
+    // Extrai a parte do corpo da resposta (apos o final dos cabecalhos)
+    string responseBody = responseData.Substring(headersEndIndex + 4);
+    
+    // Analisa o JSON do corpo da resposta
+    dynamic jsonResponseObject = JsonSerializer.Deserialize<dynamic>(responseBody);
+    Console.WriteLine("OBJETO JSON: " + jsonResponseObject);
+    
+    
+    
+    // Inicializa metadataElement com um valor padrao
+    JsonElement metadataElement = default;
+    
+    // Verifica se o objeto contem a propriedade "metadata"
+    if (jsonResponseObject is not null && jsonResponseObject.TryGetProperty("metadata", out metadataElement))
+    {
+        // Verifica se "metadata" contem a propriedade "ports"
+        if (metadataElement.TryGetProperty("ports", out JsonElement portsElement))
+        {
+            if (portsElement.ValueKind == JsonValueKind.Array)
+            {
+                // Especifica o "target_address" e o "target_port" a serem removidos
+                string targetAddressToRemove = cont_internal_ip;
+                string targetPortToRemove = cont_internal_port;
+                string listenPortToRemove = port;
+    
+                // Converte o elemento "ports" para uma lista de portas
+                foreach (JsonElement portas in portsElement.EnumerateArray())
+                {
+                    // Verifica se o objeto contem as propriedades "target_address" e "target_port" e "listen_port"
+                    if (portas.TryGetProperty("target_address", out JsonElement targetAddressElement) &&
+                        portas.TryGetProperty("target_port", out JsonElement targetPortElement) &&
+                        portas.TryGetProperty("listen_port", out JsonElement listenPortElement))
+                    {
+                        // Verifica se o "target_address", o "target_port" e o "listen_port" correspondem aos especificados
+                        if (targetAddressElement.GetString() == targetAddressToRemove && targetPortElement.GetString() == targetPortToRemove && listenPortElement.GetString() == listenPortToRemove)
+                        {
+                            // Se corresponderem, o obj nao e adicionado lista de portas
+                            continue;
+                        }
+                    }
+    
+                    // Adiciona o objeto a lista de portas
+                    portsList.Add(portas);
+                }
+    \end{lstlisting} 

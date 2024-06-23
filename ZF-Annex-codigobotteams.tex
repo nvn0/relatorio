@@ -1,0 +1,67 @@
+
+\chapter{Código da função que remove a associação de portas(firewall.cs)}
+\label{chap:zf}
+
+
+
+\begin{lstlisting}[language=csh, caption={Envio de notificação via Microsoft Teams}]
+    from aiohttp import web
+    from botbuilder.core import BotFrameworkAdapter, BotFrameworkAdapterSettings, TurnContext
+    from botbuilder.schema import Activity, ActivityTypes, ConversationReference
+    
+    import os
+    import asyncio
+    
+    app_id = os.getenv("MICROSOFT_APP_ID", "my-app-id")
+    app_password = os.getenv("MICROSOFT_APP_PASSWORD", "my-app-password")
+    settings = BotFrameworkAdapterSettings(app_id, app_password)
+    adapter = BotFrameworkAdapter(settings)
+    
+    
+    conversation_references = {}
+    
+    async def send_proactive_message(conversation_reference: ConversationReference, message: str):
+        async def aux(turn_context: TurnContext):
+            await turn_context.send_activity(Activity(type=ActivityTypes.message, text=message))
+    
+        await adapter.continue_conversation(conversation_reference, aux, app_id)
+    
+    async def messages(req: web.Request) -> web.Response:
+        body = await req.json()
+        activity = Activity().deserialize(body)
+    
+        if activity.type == ActivityTypes.message and "Ola" in activity.text:
+            # Criar a referencia da conversa
+            conversation_reference = TurnContext.get_conversation_reference(activity)
+            user_id = activity.from_property.id
+            conversation_references[user_id] = conversation_reference
+    
+            # Enviar mensagem para o utilizador
+            asyncio.create_task(send_proactive_message(conversation_reference, "Ola! o seu pedido foi concluido."))
+    
+        return web.Response(text="OK")
+    
+    
+    async def send_message_to_user(req: web.Request) -> web.Response:
+    data = await req.json()
+    user_id = data.get("user_id")
+    message = data.get("message")
+    
+    if user_id in conversation_references:
+        conversation_reference = conversation_references[user_id]
+        await send_proactive_message(conversation_reference, message)
+        return web.Response(text="Mensagem enviada.")
+    else:
+        return web.Response(status=404, text="Utilizador nao encontrado.")
+    
+    
+    
+    app = web.Application()
+    app.router.add_post("/api/messages", messages)
+    app.router.add_post("/api/send-message", send_message_to_user)
+    
+    if __name__ == "__main__":
+        port = int(os.environ.get('PORT', 3900))
+        web.run_app(app, port=port)
+    
+    \end{lstlisting}

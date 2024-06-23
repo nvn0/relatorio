@@ -1,0 +1,64 @@
+
+
+\chapter{Código que decide qual ação executar (firewall.cs)}
+\label{chap:za}
+
+
+
+
+\begin{lstlisting}[language=csh, caption={Funções de firewall.cs}]
+public void AddRule(string action, string firewall, string protocol, string port, string rule = "")
+{
+    if (firewall == "ipt" && action == "OpenPort")
+    {
+        OpenPort(protocol, port);
+    }
+    else if (firewall == "ipt" && action == "ClosePort")
+    {
+        ClosePort(protocol, port);
+    }
+    else if (firewall == "nft" && action == "OpenPort")
+    {
+        NFOpenPort(protocol, port);
+    }
+    else if (firewall == "nft" && action == "ClosePort")
+    {
+        NFClosePort(protocol, port);
+    }
+    else if (firewall == "ipt" && action == "ExecCmd" && rule != "")
+    {
+        iptCustomRule(rule);
+    }
+}
+
+
+public void AddRuleNat(string action, string firewall, string protocol, string port, string external_ip, string cont_internal_ip, string cont_internal_port, string rule = "")
+{
+
+    string sbridge_interface = bridge_interface;
+
+    if (firewall == "ipt" && action == "AddNat")
+    {
+        criar_ligacao(port, external_ip, cont_internal_port, cont_internal_ip, protocol);
+    }
+    else if (firewall == "lxcforward" && action == "AddNat")
+    {
+        Lxc_forward(sbridge_interface, port, external_ip, cont_internal_port, cont_internal_ip, protocol);
+    }
+    else if (firewall == "lxdapi" && action == "AddNat")
+    {
+        Lxd_api_forward(sbridge_interface, protocol, port, external_ip, cont_internal_ip, cont_internal_port);
+    }
+    else if (firewall == "lxdapi" && action == "RemoveNat")
+    {
+        Lxd_api_forward_remove(sbridge_interface, protocol, port, external_ip, cont_internal_ip, cont_internal_port);
+    }
+    else if (firewall == "lxdapi" && action == "ResetNat")
+    {
+        Lxd_api_forward_reset(sbridge_interface, external_ip);
+    }
+}
+    
+\end{lstlisting} 
+    
+    
