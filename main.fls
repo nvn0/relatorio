@@ -652,9 +652,6 @@ INPUT ./03-Abstract.tex
 INPUT ./03-Abstract.tex
 INPUT 03-Abstract.tex
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti10.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
-INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmr8.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
@@ -672,6 +669,9 @@ INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmsy9.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti9.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmti10.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
+INPUT /home/delta/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./05-Ack.tex
 INPUT ./05-Ack.tex
 OUTPUT 05-Ack.aux

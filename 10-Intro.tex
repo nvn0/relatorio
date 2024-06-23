@@ -14,9 +14,9 @@ plataforma pode receber pedidos para abrir novas conexões.
 Para a concretização deste trabalho são necessários os seguintes objetivos:\\
 
 \begin{itemize}
-\item \textit{Daemon} que irá interagir com a \textit{firewall} ou API do sistema de \textit{containers};
-\item Interface \textit{Web} e API para interagir com o Daemon;
-\item Sistema de notificações de eventos para Microsoft Teams e Discord.
+\item \textit{Daemon} que irá interagir com a \textit{firewall} ou \acrshort{api}\footnote{\acrshort{api} -- \acrlong{api}} do sistema de \textit{containers};
+\item Interface \textit{Web} e \acrshort{api} para interagir com o Daemon;
+\item Sistema de notificações de eventos para Microsoft Teams, Discord e E-mail.
 \end{itemize}
 
 
@@ -28,12 +28,12 @@ DevLab/Forge do IPMAIA/UMAIA que permitam:
 
 \begin{itemize}
 \item o administrador do sistema facilmente defenir regras de \textit{firewall} no sistema host da plataforma (através do terminal ou de uma interface web);
-\item a atribuíção de endereços IP a \textit{containers} hospedados na plataforma, de modo,
+\item a atribuíção de endereços \acrshort{ip}\footnote{\acrshort{ip} -- \acrlong{ip}} a \textit{containers} hospedados na plataforma, de modo,
 a dar conectividade aos mesmos (através do terminal ou de uma interface web);
 \item controlar quais portas dos \textit{containers} são disponiibilizadas para a rede interna da intituição;
 \item os alunos, aos quais, lhes foram atribuídos um \textit{container}, fazer um pedido ao administrador do sistema para poder
-obter ou não conectividade em determinada porta TCP/UDP;
-\item os alunos que efetuaram um pedido de abertura de porta, receber notificação (por Microsoft Teams,Discord ou E-mail) quando O
+obter ou não conectividade em determinada porta \acrshort{tcp}/\acrshort{udp};
+\item os alunos que efetuaram um pedido de abertura de porta, receber notificação (por Microsoft Teams, Discord ou E-mail) quando O
 pedido for aceite ou negado.
 
 \end{itemize}
@@ -67,8 +67,8 @@ No que diz respeito a recursos tecnológicos, optou-se por usar as seguintes op�
 as portas dos \textit{containers} e \textit{unix socket de servidor};
 \item Linguagem Python versão 3.11 a \textit{unix socket} cliente;
 \item Linguagem Python versão 3.11 com a biblioteca Flask para a API e sistemas de notificações;
-\item Linguagem Python versão 3.11 com a biblioteca Flask interface \textit{Web}, juntamente com HTML, CSS, Javascipt e Bootstrap.
-\item Máquina virtual com alpine linux 3.19 e WSL com ubuntu 22.04 para testar o projeto.
+\item Linguagem Python versão 3.11 com a biblioteca Flask interface \textit{Web}, juntamente com \acrshort{html}\footnote{\acrshort{html} -- \acrlong{html}}, \acrshort{css}\footnote{\acrshort{css} -- \acrlong{css}}, Javascipt e Bootstrap.
+\item Máquina virtual com alpine linux 3.19 e \acrshort{wsl}\footnote{\acrshort{wsl} -- \acrlong{wsl}} com ubuntu 22.04 para testar o projeto.
 \end{itemize}
 
 
